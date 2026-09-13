@@ -1,0 +1,11 @@
+# Cache e arquivos temporários
+__pycache__/
+*.pyc
+.system_generated/
+
+# PDF pesado baixado para referência
+docs/CAP8.pdf
+docs/CAP8_text.txt
+
+# Pacote ZIP final
+*.zip

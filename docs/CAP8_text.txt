@@ -1,0 +1,2318 @@
+Uso de veículos aéreos não tripulados
+(VANT) em Agricultura de Precisão
+
+8
+
+Lúcio André de Castro Jorge, Ricardo Y. Inamasu
+Embrapa Instrumentação – São Carlos, SP
+E-mail: lucio.jorge@embrapa.br; ricardo.inamasu@embrapa.br
+
+Resumo: O Interesse em veículos aéreos não tripulados (VANTs), também denominados de drones,
+está crescendo em todo o mundo, e em especial no Brasil, e vários esforços estão em andamento
+visando integrar as operações de VANT rotineiramente e com segurança em agricultura de precisão.
+Atualmente, as operações de VANT se limitam ao uso especial do espaço aéreo ou são limitados
+em seu acesso, por razões de segurança, por um processo de autorização de uso coordenado
+pela ANAC. Este capítulo fornece o contexto de desenvolvimento de VANT no Brasil, descreve as
+iniciativas em curso, e avalia as questões relacionadas com a integração de VANTs em agricultura
+de precisão. Questões relacionadas com aplicações potenciais na agricultura, tipos de sensores e
+aviões, as limitações de cada um e os resultados de utilização são avaliados. A intenção ao descrever
+os problemas e propor recomendações não é sugerir um conjunto de questões conclusivas, pois
+a área está em pleno desenvolvimento, mas sim para estimular a discussão, construir consensos
+e promover o planejamento estratégico entre as organizações que têm uma participação no
+surgimento de VANTs em agricultura de precisão.
+Palavras-chave: VANT, drone, monitoramento agrícola, imagens, agricultura de precisão.
+
+Use of Unmanned Aerial Vehicles (UAV) in Precision Agriculture
+Interest in Unmanned Aerial Vehicles (UAVs), called drones, is growing worldwide, and in special in
+Brazil, and several efforts is underway to integrate UAV operations routinely and safely into precision
+agriculture. Currently, UAV operations are confined to special-use airspace or are limited in their
+access, for safety reasons, by a restrictive authorization process of ANAC. This chapter provides a
+context of Brazil UAV developments, describes current initiatives, and frames and assesses the issues
+associated with the integration of UAVs in precision agriculture. Reviewed are issues related to potential
+applications in agriculture, kinds of sensors and aircrafts, limitations of each one and results of use.
+The intent in describing the issues and proposing recommendations is not to suggest a conclusive set
+of issues nor to provide a prescriptive direction, because the area is in full development, but rather
+to stimulate discussion, build consensus, and promote strategic planning among the organizations
+having a stake in the emergence of UAVs into precision agriculture.
+
+FERRAMENTAS
+
+UAV, drone, aerial monitoring, images, precision agriculture.
+
+FERRAMENTAS PARA AGRICULTURA DE PRECISÃO
+
+|
+
+109
+
+1. Introdução
+O desenvolvimento dos veículos aéreos não
+tripulados (VANTs) surgiu como uma importante
+opção na agricultura de precisão. Sua aplicação na
+área agrícola e em missões de reconhecimento vem
+sendo favorecida e facilitada pelo atual estágio de
+desenvolvimento tecnológico, principalmente pela
+redução do custo e do tamanho dos equipamentos
+e pela necessidade de otimização da produção.
+O termo “Veículo Aéreo Não Tripulado”
+é mundialmente reconhecido e inclui uma
+grande gama de aeronaves que são autônomas,
+semiautônomas ou remotamente operadas.
+Segundo a ABA - (Associação Brasileira de
+Aeromodelismo), a definição para Veículo Aéreo
+Não Tripulado (VANT) é: “um veículo capaz de
+voar na atmosfera, fora do efeito de solo, que foi
+projetado ou modificado para não receber um
+piloto humano e que é operado por controle
+remoto ou autônomo”. O Sistema Aéreo Não
+Tripulado (SANT) significa o conjunto de veículos
+aéreos não tripulados, seus controles de voo e seu
+sistema de operação, isto é, a união de todas as
+atividades que estão interligadas no plano de voo
+(Rasi, 2008).
+O interesse em Veículos Aéreos Não Tripulados
+(VANTs) tem crescido ao redor do mundo.
+Avanços recentes na tecnologia computacional,
+desenvolvimento de software, materiais mais leves,
+sistemas globais de navegação, avançados links de
+dados, sofisticados sensores e a miniaturização
+são os motivos do aumento de desenvolvimentos
+de VANTs. Hoje, mais de 40 países tem trabalho
+de desenvolvimento de VANT para diferentes
+mercados. Os Estados Unidos aparecem como
+um dos líderes em termos de tamanhos, tipos e
+sofisticações dos sistemas, voltados principalmente
+para o mercado militar ao lado de Israel. Outros
+países incluem o Japão, Koréa do Sul, Austrália,
+França, Inglaterra, Itália, Alemanha e África do
+Sul. O Japão se destaca com mais de 2000 VANTs
+aplicados em pulverização e outras aplicações na
+agricultura (SIMPSON, 2003; DE GARMO, 2004).
+Apesar dos avanços no século passado, os
+VANTs ainda são considerados por muitos como
+estando em sua fase embrionária. As tecnologias
+que estão sendo empregadas em VANTs hoje
+estão evoluindo rapidamente e se apresentam com
+grande promessa. Os sistemas autônomos estão se
+tornando mais sofisticados e confiáveis. VANTs,
+
+110 | AGRICULTURA DE PRECISÃO: RESULTADOS DE UM NOVO OLHAR
+
+em virtude da sua capacidade para assumir
+as missões de alto risco e seu potencial para
+operações de baixo custo em relação à aeronave
+tripulada, tem se tornado uma proposta ideal para
+o desenvolvimento de novas tecnologias. Pesquisas
+em áreas tais como novos materiais, células de
+combustível, software adaptativo; memórias;
+comunicações e laser poderão remodelar o
+mercado de novas aplicações.
+Przybilla e Wester-Ebbinghaus (1979) fizeram
+os primeiros experimentos com VANT em
+fotogrametria. Voaram na escala de 1:1000,
+com velocidade de obturador da câmera da
+ordem de 1/1000 s, com velocidade da aeronave
+suficiente para se obter imagens aceitáveis
+mesmo em movimento. Zischinsky et al. (2000)
+usaram imagens obtidas com um modelo do tipo
+helicópetero para obtenção do modelo 3D de uma
+mina. Estudos na agricultura começaram despertar
+interesse logo cedo (ALBERS; NYQUIST; PURDY,
+1996; SNYDER et al., 1999; JOHNSON et al.,
+2001).
+Em especial, neste momento, existem vários
+desafios e perspectivas e para a agricultura
+destacando-se o monitoramento de recursos
+naturais, meio ambiente, atmosfera, imageamento
+hiperespectral, observações de rios e lagos, bem
+como o imageamento de práticas agrícolas e
+uso do solo (JORGE et al., 1999; JORGE, 2001;
+JORGE, 2003; EISENBEISS, 2004). Herwitz et al.
+(2004) realizaram um mapeamento de 1500 ha
+de plantações de café no Havaí, obtendo imagens
+multiespectrais coloridas de alta resolução com
+um VANT.
+No Brasil, os primeiros relatos de VANT’s
+ocorreram na década de 80, quando o Centro
+Tecnológico Aeroespacial (CTA) desenvolveu
+o projeto Acauã. Este tinha fins militares
+especificamente e ficou desativado depois sendo,
+somente em 2007, reativado por uma iniciativa
+do governo de incentivo ao desenvolvimento de
+VANT no Brasil. Na área civil, também na década
+de 80, se destaca o projeto Helix, um VANT de
+asa móvel que foi desativado nos anos seguintes
+por falta de mercado e incentivo do governo.
+Mais tarde, o Cenpra desenvolveu o projeto
+do dirigível AURORA (Autonomus Unmanned
+Remote Monotoring Robotic Airship) (Medeiros,
+2007), que serviu para capacitar a equipe de
+desenvolvimento. Dentre as aplicações civis,
+principalmente focado na agricultura surgiu o
+
+projeto ARARA (Aeronave de Reconhecimento
+Assistida por Radio e Autônoma) (Jorge, 2001).
+Seu principal objetivo foi a substituição de
+aeronaves convencionais utilizadas na obtenção
+de fotografias aéreas, para monitoramento de
+áreas agrícolas e áreas sujeitas a problemas
+ambientais, por VANT’s de pequeno porte que
+realizam missões pré-estabelecidas pelos usuários.
+De 1999 a 2005 foi feito um grande esforço no
+desenvolvimento da aeronave de asa fixa deste
+projeto patenteada pela Embrapa (JORGE,
+2004), chegando a uma operação completamente
+autônoma em 2006 (TRINDADE JUNIOR;
+JORGE; AGUIAR, 2004; Jorge et al. 2004).
+A AGX Tecnologia Ltda., São Carlos, criada
+em 2002, utiliza a tecnologia ARARA para fins
+comerciais no Brasil, utilizando uma nova versão
+do VANT, totalmente construída em fibra de
+vidro e alumínio aeronáutico. Com 2,3 m de
+comprimento e 3,2m de envergadura e equipado
+com motor a gasolina de 40 cm³ e 4,8 cv.
+De acordo com Medeiros (2007), as pesquisas
+nessa área, no Brasil, ainda são muito recentes e os
+principais trabalhos com VANT’s têm no escopo
+as aplicações civis, como vigilância policial de
+áreas urbanas e de fronteira, inspeções de linhas
+de transmissão de energia, monitoramento,
+atividades de áreas agrícolas, acompanhamento
+de safra, controle de pragas e de queimada.
+A Embrapa investiu no desenvolvimento de
+outra plataforma e outra aeronave que fosse capaz
+de operar nas condições de campo adversas, que
+são áreas agrícolas, porém, com bom desempenho
+e baixo risco. Inspirados pelo exemplo da Yamaha,
+que iniciou o desenvolvimento do helicóptero
+sem piloto (RMax) (OZDEMIR, 2005) muito
+flexível e preciso durante a pulverização para
+controle de pragas em culturas de arroz, soja e
+trigo, a Embrapa iniciou a busca de uma solução
+por uma plataforma similar, desenvolvendo em
+conjunto com a Rotomotion uma nova solução
+para aplicações agrícolas. Além da aeronave,
+estão sendo desenvolvidos softwares e sistemas de
+captura de imagens adequados para as diferentes
+aplicações agrícolas.
+Também no Brasil outras inciativas criadas
+em universidades, se tornaram empresas que
+começam a atender o mercado com diferentes
+tipos de VANT, como, por exemplo, empresa
+Flight Solutions, a XMobots, a Airship, a
+Skydrones, dentre outras. Além das iniciativas
+
+destas empresas, com a facilidade de componentes
+disponíveis via internete, mais de 2000 sistemas
+já foram montados e se encontram em operação
+no Brasil.
+
+2. Componentes de um VANT
+Além da aeronave, o VANT é composto de
+uma estação de controle em solo, o (Ground
+Control Station) GCS através da qual é possível
+planejar a missão a ser executada e acompanhar
+todo o trabalho realizado remotamente. Em
+geral possibilita visualizar o mapa do local a
+ser monitorado, com a referência da posição do
+VANT.
+O VANT possui também um (Sistema de
+Posicionamento Global) GPS acoplado, assim
+como, uma unidade de navegação inercial. O
+veículo não aceita comandos de movimento
+diretamente ligados pelo GPS, devido a grande
+margem de erro deste, recorrendo a uma unidade
+de navegação inercial (IMU) garantindo uma
+melhor precisão da posição. A navegação inercial
+é utilizada por foguetes, submarinos, navios
+também para determinar coordenadas.
+Uma unidade de navegação inercial nada mais
+é que um sistema de navegação que integra as
+acelerações em Norte/Sul, Leste/Oeste por meio de
+sensores inerciais, determinando a posição. Segue
+abaixo listada algumas vantagens da navegação
+inercial:
+t Não necessita de informação exterior;
+t Não requer emissões ou recepções de sinais;
+t Imune a interferências.
+O piloto automático ou Autonomous Flight
+Control System (AFCS) é um pacote integrado
+normalmente fornecido pelo fabricante. O AFCS
+recebe o controle da estação de solo (GCS)
+através da telemetria de controle do sistema que
+atua de forma autônoma. Em geral consiste de 5
+componentes:
+t Unidade Inercial (IMU) 3 eixos, em geral com
+6 graus de liberdade;
+t Magnetômetro de 3 eixos;
+t GPS;
+t Sistema de radio com interface de servo e
+safety pilot ;
+t Computador de voo.
+Na Figura 1 podem ser vistos exemplos de CGS.
+Inclusive algumas já disponíveis para dispositivos
+móveis como celulares.
+
+FERRAMENTAS PARA AGRICULTURA DE PRECISÃO
+
+|
+
+111
+
+Segundo Neris (2001), os VANTs têm como
+componente principal um sistema de controle
+capaz de manter a aeronave estabilizada e de
+executar manobras que a conduza através de
+uma rota e missão selecionada. Atualmente o
+desenvolvimento de sistemas de controle de voo
+para esse tipo de aeronave está sendo favorecido e
+facilitado pelo grande desenvolvimento tecnológico
+verificado nos últimos anos e principalmente pela
+redução dos custos dos componentes eletrônicos.
+Isto permite que um grande número de empresas
+possam construir VANTs com sistemas de
+controle, para comercialização. Existem sistemas
+disponíveis gratuitamente na internete, como o
+Ardupilot, que pode ser configurado por qualquer
+pessoa e funciona perfeitamente.
+
+a
+
+b
+
+Figura 1. Exemplos de GCS (Fonte: Telas
+capturadas das interfaces utilizadas na Embrapa por
+Lúcio André de Castro Jorge).
+
+3. Tipos de VANT
+D e acordo com Me deiros (2007), “os
+veículos Aéreos Não Tripulados (VANT)
+são pequenas aeronaves, sem qualquer tipo
+de contato físico direto, capazes de executar
+diversas tarefas, tais como monitoramento,
+reconhecimento tático, vigilância e mapeamento
+entre outras”. Porém, os VANTs têm limitação em
+termos de capacidade de carga a bordo e condições
+climáticas. Se equipados com equipamentos de
+transmissão de dados, são capazes de transmitir,
+em tempo real os dados recolhidos. Sendo assim,
+as aeronaves não tripuladas têm sido projetadas
+para vários tipos de missão, mas o relato que se
+tem é que a origem desses veículos está ligada
+à área militar, como alvos aéreos manobráveis,
+reconhecimento tático, guerra eletrônica, entre
+outras. Os mísseis antinavios, bombas guiadas
+propulsadas ou planadas também são classificadas
+como aeronaves não tripuladas.
+Na Figura 2 podem ser observadas as áreas
+de coberturas dos VANTs comparadas com as de
+satélites e aeronaves tripuladas. Em geral, apesar
+da cobertura ser menor, se ganha em flexibilidade
+de uso, tornando muito útil para a agricultura.
+De uma forma geral os VANTs são classificados
+segundo sua categoria funcional como alvos,
+sistemas de reconhecimento ou monitoramento,
+combate, logística e de P&D.
+Na Figura 3 pode ser visualizado a diferença
+de resolução que se consegue com os VANTs
+comparada com satélites convencionais.
+A escolha da altitude de voo é feita visando
+evitar obstáculos, em geral de até 80 metros, e
+garantindo que o ângulo de distorção mínimo.
+A escolha de um voo mais alto possibilita menos
+voos, uma vez que se cobre mais área voando mais
+alto. O voo mais alto é recomendado em terrenos
+com muitas variações de relevo.
+
+Figura 2. Comparação de VANT com sistemas aéreos e satélites. (Fonte: Lúcio André de Castro Jorge).
+
+112 | AGRICULTURA DE PRECISÃO: RESULTADOS DE UM NOVO OLHAR
+
+Quanto ao alcance e altitude os VANTs são
+classificados como:
+t De mão, com 600m altitude e alcance 2km;
+t Curto alcance, com 1500m de altitude e 10km
+de alcance;
+t OTAN, de 3000m de altitude e alcance até
+50km;
+t Tático, de 5500m de altitude e alcance de 160km
+t MALE (altitude média, alcance longo), até
+9000m de altitude e alcance de 200km;
+t HALE (altitude alta, alcance longo), acima de
+9100m e altitude e alcance indefinidos;
+t HIPERSÔNICO, 15200m de altitude e alcance
+acima de 200km;
+t ORBITAL em baixa órbita;
+t CIS, transporte lua-terra.
+
+Figura 3. Diferença de resolução entre satélite
+e imagem de VANT (Fonte: Adaptado de
+apresentação Skydrones no Seminário VANTs
+promovido pela MundoGEo em 2012 evento
+Sensoriamento Remoto México).
+
+Além do alcance e altitude, diferem em asa
+fixa ou rotativa. O de asa rotativa, pode ser do
+tipo helicóptero convencional ou multirotor. A
+configuração típica pode ser vista na Figura 4.
+O veículo aéreo não tripulado do tipo
+multirotor é uma plataforma aérea com sofisticada
+eletrônica embarcada que permite transportar
+diferentes sistemas de captura de imagens. Sua
+instrumentação aviônica e sistemas de controle
+permitem voos com alta estabilidade com reduzido
+tempo de treinamento operacional. Seu tamanho
+compacto, facilidade de operação, segurança e
+custo operacional reduzido, tornam esta classe
+de VANTs a mais interessante para operação em
+mercados que tem as seguintes necessidades:
+t tempo curto de operação;
+t pouca ou nenhuma equipe de apoio;
+t pouca ou nenhuma infraestrutura de terra;
+t facilidade de transporte;
+t distância e áreas de cobertura de pequeno a
+médio tamanho (ou duração);
+t voo assistido por GPS ou totalmente autônomo
+seguindo dados pré-programados;
+t necessidade de imagens com resolução superior
+às imagens de satélite;
+t necessidade de acessar pontos difíceis.
+Os multirotores oferecem um conjunto
+de vantagens tecnológicas que otimizam sua
+performance, tais como: Estabilização autônoma
+das atitudes em voo da plataforma obtido pelo
+
+Figura 4. Modelos de VANTs (ANDRADE, 2013).
+
+FERRAMENTAS PARA AGRICULTURA DE PRECISÃO
+
+|
+
+113
+
+acionamento direto de quatro ou mais hélices
+e sistema de controle embarcado; Pouso e
+decolagem vertical (vtol) permitindo uso em
+espaço restrito, necessitando apenas 1m2 de área;
+Possibilidade de programação de voo estacionário
+ou avanço em alta velocidade até pontos prédeterminados (coordenadas geográficas), por
+computador; Comando de retorno autônomo
+para a base operacional; Baixo peso da plataforma
+e alto potencial de carregamento (sensores e
+câmeras embarcados); Possibilidade de uso de
+câmeras especiais, como infravermelho (FLIR)
+e de alta resolução (HD) de foto e vídeo; Estação
+Base (em terra) com integração de dados de
+voo, captura de imagem e cartografia; Alta
+capacidade de customização para diferentes
+aplicações. Alta convergência de tecnologias
+como: TI, robótica, nanotecnologia, materiais
+compostos, miniaturização de sensores e poder
+de processamento embarcado.
+No entanto, em geral usa motores elétricos e
+cuja bateria não supera os 30 minutos de operação
+e a capacidade de carga (payload): 800g a 4Kg.
+Em geral possuem estabilização de atitude para
+câmeras e sensores.
+O VANT de pequeno porte como o tipo asa
+delta também é uma opção interessante para
+a área agrícola. No entanto são também muito
+susceptíveis aos ventos fortes. Mas de uma forma
+geral é o que menos apresenta problemas de
+operação para usuários novos. Na Figura 5 podem
+ser vistos os modelos e fabricantes dos principais
+sistemas presentes hoje no Brasil.
+Na Tabela 1 podem ser observadas as principais
+vantagens e desvantagens dos diferentes tipos
+de VANT segundo a asa, fixa ou rotativa. Os
+aspectos que foram citados por Medeiros
+(2007) foram as condições de campo (área livre
+para pouso e decolagem), custo (valor para o
+desenvolvimento do VANT), fatores climáticos
+(condições meteorológicas), trajetória (capacidade
+de manter uma rota pré-determinada) e transporte
+(condições de acomodamento para o transporte).
+
+4. Sensores
+O uso de VANT em agricultura de precisão
+tem focado no uso de sensores baseados na
+espectroscopia de reflectância, ou seja, em
+medidas da reflexão da radiação eletromagnética
+(REM) após interação com diferentes superfícies
+
+114 | AGRICULTURA DE PRECISÃO: RESULTADOS DE UM NOVO OLHAR
+
+em diferentes comprimentos de onda, oriundas do
+chamado espectro refletido, mais especificamente
+abrangendo a região do visível (Visible – VIS –
+0.4-0.7 µm), Infravermelho próximo (Near
+Infrared – NIR - 0.7-1.3 µm) e Infravermelho de
+ondas curtas (Short Wave Infrared – SWIR - 1.32.5 µm). Cada comprimento de onda da REM
+possui um comportamento particular em relação
+à superfície dos diferentes materiais, o qual pode
+ser medido quantitativamente com base na razão
+entre energia incidente (E - irradiância) e energia
+refletida (L - radiância). A medida de reflectância
+do comportamento espectral da cultura, do
+solo ou água ao longo da REM é usualmente
+representada por um gráfico de eixo Y/reflectância
+vs eixo X/comprimento de onda, denominado
+assinatura espectral ou curva de reflectância. O
+comportamento espectral é resultado direto de
+suas propriedades físicas e químicas, bem como
+da estrutura atômica dos seus átomos, expressas
+nos segmentos de bandas através de características
+da curva de reflectância, como: depressões,
+ombros, área, curvatura e ângulos, compondo o
+que chamamos de feições espectrais diagnósticas.
+Como indicador de estresse, os sensores se
+dividem em sensores que detectam a transpiração
+e a redução de absorção de CO2 nas plantas ou
+a redução na fotossíntese. No caso de estresse
+hídrico, a temperatura aumenta, podendo ser
+detectada com câmeras térmicas ou termais. No
+caso de estresse nutricional pode ser obaservada
+a degradação do pigmento fotossintético.
+O padrão espectral da vegetação prove
+uma série de padrões para identificar o
+estádio fisiológico e de saúde das plantas. Em
+comprimentos de onda na região visível do
+espectro eletromagnético, refletância (medida
+proporcional da radiação refletida por um objeto)
+da vegetação está relacionada com os pigmentos
+fotossintéticos como a clorofila a, clorofila b,
+xantofilas, antocianinas e carotenoides (GUYOT;
+GUYON; RIOM, 1989; COCHRANE, 2000;
+CHISHOLM, 2001).
+Nos comprimentos de onda na região
+d o i n f r ave r mel ho próx i mo d o e sp e c t ro
+eletromagnético, a refletância da vegetação
+é influenciada pela estrutura interna das
+folhas, em particular, o tamanho, a forma e a
+distribuição de ar e água no interior da folha
+(CHUVIECO, 1996; KNOX, 1997; KUMAR,
+1998). Nos comprimentos de onda da região
+do infravermelho , a refletância da vegetação é
+
+a
+
+b
+
+c
+
+d
+
+e
+
+f
+
+g
+
+h
+
+i
+
+j
+
+k
+
+l
+
+Figura 5. VANTs presentes no Brasil (Fonte: Lúcio André de Castro Jorge, adaptadas de sites dos
+fabricantes: XMobots, Embrapa, Sensefly, Crop Circle, Somenge, SaqntoLab, CenPRA e ANDRADE, 2013).
+
+FERRAMENTAS PARA AGRICULTURA DE PRECISÃO
+
+|
+
+115
+
+116 | AGRICULTURA DE PRECISÃO: RESULTADOS DE UM NOVO OLHAR
+
+Tipo
+
+Desvantagem
+
+-
+
+Possui custos
+de construção
+e manutenção
+relativamente baixos
+
+Pode ser
+desmontado
+facilitando
+transporte
+
+Suporta uma carga
+considerável
+
+Permite fácil
+instalação de
+paraquedas e
+dispositivos de
+segurança
+
+Custos
+
+transporte
+
+Carga
+
+Segurança
+
+-
+
+-
+
+-
+
+Condições climáticas Possui um grau de
+tolerância maior
+para voar com
+ventos fracos
+
+Possui capacidade de Depende de
+realizar rotas longas condições de vento
+para manter rota
+
+Trajetória
+
+Necessidade de
+área de pouso e
+decolagem
+
+Avião
+
+Quando se usa
+catapulta para
+decolagem e
+paraquedas para
+pouso
+
+Vantagem
+
+Pouso e decolagem
+
+Aspectos
+
+Possui opção de
+autogiro
+
+Suporta carga Média
+
+Fácil transporte
+
+-
+
+Difícil instalação de
+paraquedas
+
+-
+
+-
+
+Alto custo de
+aquisição e
+manutenção
+
+-
+
+-
+
+Possui a capacidade
+de realizar rota
+determinada e pode
+pairar num ponto de
+interesse
+Possui tolerância
+maior para voar
+inclusive com ventos
+fortes
+
+-
+
+Desvantagem
+
+Em qualquer lugar
+pousa e decola
+
+Vantagem
+
+Helicóptero
+
+-
+
+-
+
+Fécil Transporte
+
+Baixo custo de
+manutenção
+Médio custo de
+aquisição
+
+Possui tolerância
+maior para voar
+inclusive com ventos
+fortes
+
+Possui a capacidade
+de realizar rota
+determinada e pode
+pairar num ponto de
+interesse
+
+Difícil instalação de
+paraquedas
+
+Suporta pouca carga
+
+-
+
+-
+
+-
+
+-
+
+-
+
+Desvantagem
+
+Multirotor
+Em qualquer lugar
+decola e pousa
+
+Vantagem
+
+Veículos Aéreos Não Tripulados (VANTs)
+
+Tabela 1. Vantagens e desvantagens dos diferentes tipos de VANTs (Adaptado de MEDEIROS, 2007).
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+Em qualquer lugar
+decola
+
+Não suporta uma
+carga considerável
+
+Não suporta carga
+considerável
+
+Difícil de
+transportar devido
+grande volume do
+reservatório de gás
+
+Alto custo de
+aquisição e
+manutenção
+
+Possui baixa
+tolerância em
+condições de ventos
+
+Depende de
+condições de vento
+para seguir na rota
+
+Necessita de área
+para pouso
+
+Desvantagem
+
+Dirigível ou balão
+Vantagem
+
+Reflectância (%)
+
+Pigmentos Estrutura
+das folhas
+celular
+
+Conteúdo de água
+
+Absorção
+pela clorofila
+
+Absorção
+pela água
+
+80
+70
+60
+50
+40
+30
+20
+10
+
+Principais
+bandas de
+absorção
+
+0,4 0,6 0,8 1,0 1,2 1,4 1,6 1,8 2,0 2,2 2,4 2,6
+Comprimento de onda (µm)
+Visível Infravermelho
+próximo
+
+Infravermelho médio
+
+Regiões
+espectrais
+
+Figura 6. Curva de reflectância de uma planta (Fonte: MOREIRA, 2001).
+
+Tabela 2. Tipos de sensores embarcados e respectivas aplicações (Fonte: Lúcio André de Castro Jorge,
+adaptado de catálogos de sensores comerciais: Sony, FIR, Tetracam, Headwall e CropCircle).
+Aplicações
+
+Sensores
+
+Câmeras RGB: detecção falhas de plantio,
+desenvolvimento da cultura, formação da planta,
+modelo de elevação do terreno. Olho do agricultor
+sobre a lavoura. (Visível – VIS - 0.4-0.7 µm)
+
+Câmeras Térmicas:
+Detecção de estresse hídrico/irrigação
+(Short Wave Infrared – SWIR - 1.3-2.5 µm)
+
+Cameras Multiespectrais:
+Detecção de estresse nutricional, para determinação
+de indices indicadores fisiológicos, e estrutura da
+copa, como NDVI, EVI e outros. (Infravermelho
+Próximo – NIR - 0.7-1.3 µm)
+
+Cameras Hiperespectrais: estão sendo
+desenvolvidos novos índices e métodos visualizando
+assinatura do espectro refletido e geração de índices
+espectrais combinados. Usadas para calibração de
+bandas multi a serem usadas. (NIR + SWIR)
+
+Sensores ativos: detecção de reflectância, NDVI e
+outros.
+
+FERRAMENTAS PARA AGRICULTURA DE PRECISÃO
+
+|
+
+117
+
+determinada pela absorção de água (KAUFMAN;
+REMER, 1994), assim como pela presença de
+bioquímicos como lignina, celulose, amido,
+proteínas e nitrógenos (GUYOT; GUYON;
+RIOM, 1989; KUMAR et al., 2001). Na Figura 6
+pode ser observada a reflectância de uma planta.
+Em geral podemos resumir os sensores segundo
+suas aplicações para detecção de estresse, como
+pode ser visto na Tabela 2.
+
+4.1. Visível
+No espectro visível (0,4 a 0,7µm) é possível
+obter imagens que auxiliam o produtor a visualizar
+falha de plantio, alterações no dossel, variando
+resoluções de centímetros a metros, dependendo
+da altura de voo e lente utilizada. Na Figura 7
+podem ser vistos alguns exemplos de imagens
+obtidas com VANT em altitudes que variaram
+
+4.4.1. Processamentos no visível
+Uma vez obtidas as imagens, elas podem ser
+processadas individualmente com o objetivo de
+reconhecer falhas graves de plantio que ainda
+permitem por correção como, por exemplo, falhas
+na linha de plantio de cana-de-açúcar superiores a
+50cm, conforme demonstra a imagem da Figura 8.
+Alguns processamentos, como a identificação
+de plantas com alterações espectrais, indicando
+ou estádio fenológico diferente ou alteração por
+alguma doença ou deficiência, são realizados com
+as imagens no visível, como pode ser observado
+na Figura 9.
+Muitos casos de análise das imagens de VANT,
+devido a resolução ser maior, invariavelmente,
+pode-se acompanhar o crescimento da planta no
+campo, permitindo assim estudos de fenotipagem.
+Uma exemplo de acompanhamento de germinação
+pode ser visto na Figura 10.
+
+de 100m a 300m. Esta é normalmente a faixa
+de operação de um VANT para a área agrícola
+sem que haja interferência no fluxo de aeronaves
+convencionais tripuladas.
+
+4.2. Infravermelho Próximo - NIR
+As imagens no espectro visível funcionam
+como o “olho do agricultor” sobre a cultura. No
+
+Figura 7. Imagens no visível típicas obtidas com VANT (Fonte: fotos obtidas por VANT por Lúcio André de
+Castro Jorge).
+
+118 | AGRICULTURA DE PRECISÃO: RESULTADOS DE UM NOVO OLHAR
+
+Figura 8. Falha de plantio em linhas de cana-de-açúcar (Fonte: fotos obtidas por VANT por Lúcio André de
+Castro Jorge).
+
+Figura 9. Imagens de citros com identificação de plantas com alterações espectrais (Fonte: fotos obtidas
+por VANT por Lúcio André de Castro Jorge).
+
+Figura 10. Avaliação de germinação e crescimento de híbridos de milho no campo (Fonte: fotos obtidas
+por VANT por Lúcio André de Castro Jorge).
+
+Figura 11. Imagens típicas de VANT com sensor NIR (Fonte: Adaptada do site www.Tetracam.com por
+Lúcio André de Castro Jorge).
+
+FERRAMENTAS PARA AGRICULTURA DE PRECISÃO
+
+|
+
+119
+
+entanto, algumas respostas de estresse nutricional,
+indicadores fisiológicos e estrutura do dossel são
+melhor verificados com imagens no infravermelho
+ou NIR. Na Figura 11 podem ser vistos um pivô
+irrigado e uma área cultivada na banda NIR (0,7
+a 1,3µm).
+Os sensores na faixa do Infravermelho ou NIR
+são usados geralmente em câmeras multiespectrais,
+que são câmeras alteradas trocando o filtro na
+região do azul, normalmente presente numa
+câmera no espectro visível (RGB) para a faixa do
+infravermelho. Assim configurando uma câmera
+com bandas NIR + R + G. Com estas informações
+é possível criar índices de vegetação próprios para
+avaliar o dossel, como descrito mais a frente. Na
+Figura 12 pode ser visto o diagrama básico de uma
+câmera multiespectral.
+
+4.4.1. Processamento no Espectro NIR
+Uma as maiores aplicações de imagens na faixa
+do NIR é a determinação de índices de vegetação.
+Existem vários índices na literatura.
+
+Figura 12. Diagrama de uma Câmera Multiespectral
+(Fonte: Adaptada do site catálogo câmera www.
+Tetracam.com por Lúcio André de Castro Jorge).
+
+Um índice de vegetação é uma combinação
+aritmética entre duas ou mais bandas que evidencia
+algum componente de interesse. As imagens
+multiespectrais tem permitido desenvolver
+índices que são associados a diversas propriedades
+fisiológicas da vegetação (vigor, senescência,
+estresse hídrico). Um dos índices mais conhecidos
+é o NDVI, criado a partir de aritméticas com as
+bandas NIR e visível, ou R ou G, como pode ser
+observado na Figura 13. O valores são pequenos
+e representam estresse hídrico.
+
+4.3. Hiperespectral
+No começo da década de 90 iniciaram os sensores
+hiperespectrais, cujas imagens demostraram,
+em poucos anos, uma vasta potencialidade de
+aplicações, assim como numerosas vantagens
+sobre os sensores multiespectrais convencionais.
+Se por um lado o sensor multiespectral é capaz
+de dividir o espectro eletromagnético em poucas
+bandas ou proporções espectrais (baixa resolução
+espectral), sensores hiperespectrais são capazes de
+registrar centenas de bandas contínuas através de
+diversas dimensões do espectro eletromagnético
+(alta resolução espectral), o que permite contar com
+uma curva detalhada do comportamento espectral
+de área monitorada possibilitando sua identificação
+e discriminação com grande precisão.
+Considerada uma área de vanguarda, o
+sensoriamento remoto hiperespectral ou
+espectroscopia de imageamento usando VANT
+tem como objetivo fundamental o uso dos mesmos
+princípios da espectroscopia de reflectância
+na coleta de dados para formação de imagens
+(hipercubo) com centenas de bandas estreitas
+e contíguas entre si (~0.02 µm) (van der Meer,
+2000). Assim, cada pixel da imagem corresponde
+a centenas de posições ou bandas no espectro
+
+Figura 13. Estresse hídrico em vitinicultura com o índice NDVI ((Fonte: (Fonte: Zarco-Tejada et al., 2012).
+
+120 | AGRICULTURA DE PRECISÃO: RESULTADOS DE UM NOVO OLHAR
+
+eletromagnético, sendo capaz de reproduzir
+a assinatura ou curva espectral do alvo e suas
+feições de absorção associadas Na Figura 14 pode
+ser observada uma imagem típica hiperespectral.
+Na verdade pode ser vista como um conjunto de
+várias imagens, uma para cada banda espectral
+(hipercubo).
+Na aplicação à vegetação, as imagens
+hiperespectrais possibilitam estudos detalhados
+dos padrões espectrais (assinaturas espectrais)
+das coberturas vegetais e espécies, os quais estão
+altamente associados a diversas propriedades
+fisiológicas e estruturais da planta, assim como
+fatores ambientais, fenológicos e antropogênicos
+que influenciam sobre elas (VARSHNEY; ARORA,
+2004; RESEARCH SYSTEMS, 2005).
+Desta forma, as aplicações de imagens
+hiperespectrais na vegetação tem permitido
+identificar a abundância de clorofila a e b
+(CLEVERS, 1994; GITELSON; MERZLYAK,
+1997), nitrógenos (CURRAN 1989; MATSON et al.,
+1994; GASTELLU – ETCHEGORRY et al., 1995;
+FOURTY et al., 1996; JOHNSON; BILLOW, 1996;
+SERRANO; PENUELAS; USTIN, 2002) carbono
+(USTIN et al., 2001), celulose (ZAGOLSKI et al.,
+1996; DAU G H T RY, 2 0 0 1 ; DAU G H T RY;
+HUNT JUNIOR; MCMURTREY, 2004), lignina
+(GASTELLU – ETCHEGORRY et al., 1995;
+FOURTY et al., 1996; SERRANO; PENUELAS;
+USTIN; ZARCO-TEJADA; ASNER, 2002),
+antocianina, amido (CURRAN et al., 1992;
+
+Figura 14. Imagem hiperespectral típica (Fonte:
+www.headwall.com).
+
+SERRANO et al., 2000; GITELSON; MERZLYAK;
+CHIVKUNOVA, 2001), água (HUNT JUNIOR;
+ROCK, 1989; GAO, 1995; CECCATO et al.,
+2001; JACKSON et al., 2004 ) e sideroxinol – A
+(BLACKBURN, 1999; EBBERS et al., 1992).
+Assim também, é possível identificar a presença de
+outros bioquímicos que exibem comportamentos
+espectrais claramente identificáveis e que tem
+contribuído para o entendimento da fotossíntese
+e outros processos bioquímicos, dentro eles
+os pigmentos de carotenóides e xantofila
+(caracterizados por uma forte absorção nos
+comprimentos de onda azul (região visível do
+espectro), caroteno (caracterizados por uma
+forte absorção perto dos 450 nm), fitocianina
+(caracterizados por uma forte absorção ao
+redor dos 620 nm), fitoeritrina (caracterizados
+por forte absorção nos 550 nm) (PEÑUELAS;
+BARET; FILELLA, 1995; MERZLYAK et al., 1999;
+GITELSON et al., 2002).
+Um grande número de estudos tem obtido
+êxito nas medidas dos elementos químicos com os
+sensores hiperespectrais aéreos e espaciais. Como
+exemplo, a concentração de nitrogênio foliar tem
+sido obtida usando imagens AVIRIS (Airborne
+Visible/Infrared Imaging Spectrometer), HyMap
+e Hyparion (JOHNSON; HLAVKA; PETERSON,
+1994; MATSON et al., 1994; LA CAPRA et al., 1996;
+MARTIN; ABER 1997) e a lignina, entre outros
+bioquímicos, tem sido quantificados usando dados
+AVIRIS (JOHNSON; HLAVKA; PETERSON,
+1994).
+Entre os atributos biofísicos que podem
+ser obtidos usando imagens hiperespectrais
+se incluem medidas foliares e cobertura de
+vegetal (SPANNER ET AL., 1990A, B; GONG;
+PU; MILLER, 1995), da fração da radiação
+fotosintéticamente activa (GAMON; PENUELAS;
+FIELD, 1992; GAMON; SERRANO; SURFUS,
+1997) e medições e relacionadas à arquitetura
+do dossel vegetal (ASNER; TOWNSEND, 1999).
+Outras aproximações para obter propriedades
+biofísicas a partir da refletância espectral incluem o
+emprego de modelos de radiação do dossel (USTIN;
+ZARCO-TEJADA; ASNER, 2001) e o uso de
+índices de vegetação (TREITZ; HOWARTH, 1999).
+
+4.4.1. Processamento Hiperespectral
+A imagem hiperespectral é um hipercubo
+de dados, geralmente da ordem de GBytes,
+que possui resolução suficiente para avaliar
+e s p e c t r a l m e nt e o s a l v o s c o m b a s t a nt e
+
+FERRAMENTAS PARA AGRICULTURA DE PRECISÃO
+
+|
+
+121
+
+precisão. No entanto, por se tratar de um dado
+multidimensional volumoso, é necessário aplicar
+algoritmos automáticos de detecção de padrões.
+As imagens hiperespectrais tem permitido
+desenvolver perto de 150 índices que são
+associados a diversas propriedades fisiológicas
+da vegetação (vigor, senescência, estresse
+hídrico), a maioria impossível de obter mediante
+imagens multiespectrais, devido ao pequeno
+número de bandas. Também, tem permitido a
+identificação de tipos específicos de coberturas
+e espécies vegetais, bem como pragas e doenças
+e áreas susceptíveis de incêndios, o que não é
+conseguido com o processamento de imagens
+multiespectrais, pois sua baixa resolução
+
+espectral impede a análise e discriminação de
+comprimentos de onda específicos.
+Além dos índices que podem ser gerados com
+as imagens hiperespectrais, por apresentar um
+espectro completo para cada pixel da imagem, estão
+sendo aplicados algoritmos de mineração de dados
+para buscar as características e assinaturas padrões
+sem usar aritmética com as bandas. Este tipo de
+processamento é o destaque nos últimos anos e
+ainda não estão disponíveis para usuários comuns.
+Existe um problema com o uso de sensores
+hiperespectrais em VANTs. Por se tratar de um
+sensor extremamente preciso, os problemas
+de estabilidade e precisão de posicionamento
+do VANT pode ser um limitante. Em geral
+
+Figura 15. Detalhes de uma imagem hiper (Fonte: ZARCO-TEJADA; GONZÁLEZ-DUGO; BERNI, 2012)
+
+Figura 16. Imagem hiperespectral de uma fazenda de citros (Fonte: Obtida por Lúcio André de Castro
+Jorge)
+
+122 | AGRICULTURA DE PRECISÃO: RESULTADOS DE UM NOVO OLHAR
+
+os modelos planadores são mais estáveis e
+
+4.5. Fluorescência
+
+apresentam melhores condições para uso destes
+
+Um a p l a n t a , q u a n d o i r r a d i a d a c o m
+
+sensores. O processamento fica extremamente
+
+luz ultravioleta (350 nm) ou mesmo outros
+
+prejudicado caso a imagem apresente artefatos
+
+comprimentos de onda, possuem a propriedade de
+
+provenientes de movimentos inadequados dos
+
+emitir uma luz denominada de fluorescência. Este
+
+VANTs.
+
+processo só é percebido se for realizada a inibição
+
+Nas Figuras 15 e 16 podem ser observadas
+
+da fotossíntese, deixando por alguns segundos,
+
+imagens típicas obtidas com sensor hiperespectral.
+
+a planta no escuro. Por este motivo é difícil
+
+O processamento é realizado com os espectros
+e a visualização é feita através de pseudocores
+uma vez que apresentam uma grande número
+de bandas.
+
+4.4. Termal ou Térmico
+Na Figura 17 pode ser observada uma imagem
+no visível e a respectiva imagem na faixa termal.
+Em geral é possível mapear com pseudocores
+
+obter a fluorescencia diretamente no campo por
+sensores aéreos. No entanto, usando combinação
+de sensores esta é possível de ser determinada.
+Os efeitos de fluorescência ocorrem em tempos
+muito curtos e dependem das circunstâncias. A
+fluorescência da clorofila em hortaliças se tornou
+um parâmetro importante de análise em virtude
+de que qualquer variação na planta decorrente
+
+as temperaturas do dossel. Este tipo de sensor
+
+de doenças, pragas ou qualquer adversidade
+
+é utilizado para avaliar estresse hídrico e em
+
+provoca alterações em seu teor. As moléculas de
+
+conjunto com imagens hiperespectrais serve
+
+clorofila absorvem a energia luminosa (fótons) e
+
+para determinar a fluorescência direta no campo.
+
+alteram temporariamente as suas configurações
+
+Com isto é possível mapear estresses hídricos e
+
+eletrônicas. Esses pigmentos passam do estado
+
+provocados por doenças e deficiências.
+
+fundamental singleto para um estado excitado
+
+Não é realizado processamento na imagem
+
+singleto com tempo de vida característico da
+
+térmica a não ser o mapeamento de pseudocor
+
+ordem de ≈10-8s. Após esse período, esta energia
+
+relativo às faixas de temperaturas.
+
+pode ser dissipada através de três processos:
+
+Figura 17. Detalhes de uma imagem térmica (Fonte: ZARCO-TEJADA; GONZÁLEZ-DUGO; BERNI, 2012;
+GONZALEZ-DUGO et al., 2013)
+
+FERRAMENTAS PARA AGRICULTURA DE PRECISÃO
+
+|
+
+123
+
+t Dissipação fotoquímica: onde a energia
+luminosa é utilizada para os processos
+
+5. Etapas para utilizar o VANT em
+agricultura de precisão
+
+fotoquímicos da fotossíntese;
+t Fluorescência: onde ocorre a emissão de
+radiação na região do visível;
+t Dissipação não fotoquímica: onde ocorre
+a produção de calor na forma de radiação
+infravermelha.
+A fluorescência da clorofila se tornou um
+parâmetro importante de análise em virtude de
+que qualquer variação na planta decorrente de
+doenças, pragas ou qualquer adversidade provoca
+alterações em seu teor.
+
+Na Figura 19 podem ser vistas as etapas básicas
+de utilização de VANT em agricultura de precisão.
+Estas etapas de utilização de um VANT em
+agricultura de precisão se resumem em:
+t Planejamento de voo;
+t Voo com sobreposição;
+t Obtenção das imagens georreferenciadas;
+t Processamento das imagens;
+t Geração de Mosaico;
+t Análise em uma ferramenta GIS;
+t Geração de relatórios.
+
+Além das clorofilas, as plantas superiores
+possuem uma série de compostos orgânicos que
+apresentam a propriedade de fluorescer quando
+excitados com luz ultravioleta ou visível, por
+exemplo, carotenoides e xantofilas. Dessa forma,
+a emissão de fluorescência é um espectro rico
+em informações de vários compostos químicos.
+Por ser uma técnica altamente sensível e rápida,
+ela é uma ferramenta interessante no estudo
+de processos químicos, físicos e orgânicos que
+ocorram nas plantas.
+Um exemplo típico que pode ser obtida
+a fluorescência diretamente no campo foi
+apresentado por Zarco-Tejada, González-Dugo
+e Berni (2012) e González-Duco et al. (2013).
+Na Figura 18 pode ser visto a diferenciação de
+fluorescência diretamente no campo.
+
+5.1. Planejamento de Voo:
+O planejamento de voo inicia com a seleção das
+condições do voo, ou seja, a altitude, velocidade
+de voo, resolução das imagens e resolução do pixel
+nas unidades de terreno, e, finalmente as normas
+e regulamentos de voo.
+Para definir a altitude deve ser observado se
+o voo terá visada direta, ou seja, sem obstáculos
+entre a estação de controle e a aeronave.
+Também deve ser observada qual a resolução
+em solo é desejada e, então, de acordo com a
+resolução da câmera deve ser calculada a altitude
+de voo. Na tabela 3 pode ser observado um
+exemplo de resoluções e altitude para uma câmera
+de 10Mpixel.
+Deve haver cuidado com as características
+da câmera de tal forma a evitar borramentos.
+
+Figura 18. Imagem de Fluorescencia obtido com VANT diretamente no campo (Fonte: ZARCO-TEJADA;
+GONZÁLEZ-DUGO; BERNI, 2012)
+
+124 | AGRICULTURA DE PRECISÃO: RESULTADOS DE UM NOVO OLHAR
+
+Assim, a melhor estratégia é manter o tempo de
+exposição constante, fixar o balanço de branco
+e usar o formato RAW, caso exista na câmera,
+permitindo abertura da lente automática e foco
+no infinito.
+
+O ajustes devem ser realizados antes da
+decolagem. O tempo de armazenamento da
+imagem também é maior no formato RAW,
+podendo afetar a taxa de sobreposição ao longo
+do deslocamento da aeronave.
+
+Figura19. Etapas de uso do VANT em agricultura de precisão (Fonte: http://www.skydrones.com.br Acesso
+dezembro, 2013).
+
+Tabela 3. Exemplo de resoluções para uma imagem de 10Mpixel
+Altitude (m)
+100
+122
+140
+200
+280
+420
+560
+
+Resolução (cm/pixel)
+3.5
+4.3
+5
+7.1
+10
+15
+20
+
+Cobertura no solo (m)
+129
+157
+180
+257
+360
+540
+720
+
+FERRAMENTAS PARA AGRICULTURA DE PRECISÃO
+
+|
+
+125
+
+Devido o movimento das aeronaves, os
+ajustes de velocidade de obturador da câmera
+devem ser controlados para evitar o borramento.
+Este vai depender da distância e da altitude
+programada. Uma condição razoável para se obter
+um borramento imperceptível é assegurar que a
+
+entanto, existe um compromisso com a resolução
+que se deseja obter.
+Pode-se calcular a área coberta no voo usando
+a seguinte expressão:
+Superfície Coberta (Km2) = T. V. W
+
+distância percorrida durante a tomada da foto não
+
+sendo:
+
+seja maior que metade da resolução do pixel. O pior
+
+T (h) = tempo de voo;
+
+caso ocorre quando o deslocamento é na direção do
+
+V (Km/h) = velocidade sobre o solo;
+
+vento, incrementando a velocidade de voo.
+
+W (km) = largura da foto no solo.
+
+Dada a resolução em solo que se deseja, deve-se
+selecionar a máxima exposição possível (1/800,
+
+Na Figura 21 é possível observar a cobertura
+com voos a diferentes altitudes.
+
+1/1000, 1/1250, 1/4000, 1/6000). Câmera com mais
+
+A melhor forma de decolagem para usos na
+
+megapixels tendem a borrar devido o tamanho
+
+área agrícola é a decolagem manual conforme
+
+do pixel. Isto significa que selecionando lentes
+
+demonstrado na Figura 22. Assim, não é necessário
+
+escuras, com muitos megapixels e altitudes de
+
+nenhum outro acessório auxiliar para decolagem e
+
+voo altas não é uma boa prática em dias nublados.
+
+não se corre riscos de perdas com trens de pouso
+
+Depois de definidas as condições de voo,
+
+em estradas de terra pequenas e não planas. Exceto
+
+deve-se utilizar estes parâmetros nos planejadores
+
+em casos de multirotores ou helicópteros que a
+
+de missões de cada VANT para traçar o plano de
+
+decolagem e pouso é mais simples.
+
+voo. Na Figura 20 pode ser visto um traçado de
+
+C onsiderando t amb ém a exp er iênci a
+
+voo utilizando um planejador de missão gratuito
+
+e obtenção de imagens com qualidade para
+
+disponível com a solução do ArduPilot.
+
+agricultura de precisão, a sobreposição mínima
+lateral recomentada é de 40%. Esta é suficiente
+
+5.2. Voo com sobreposição:
+A altitude de voo é determinante na quantidade
+de imagens geradas e no tamanho do pixel sobre
+o terreno. O fundamental é que se voe o mais
+alto, mais área é coberta com menos fotos. No
+
+em caso que se necessite menos precisão nos
+mosaicos. No entanto, o recomendado é 60%
+também para a sobreposição lateral. Assim, se
+obtém mais qualidade em terrenos com variações
+de inclinação.
+
+Figura 20. Planejamento de Voo no software de planejamento do ARDUPILOT. (Fonte: Tela capturada por
+Lúcio André de Castro Jorge durante operação de drone)
+
+126 | AGRICULTURA DE PRECISÃO: RESULTADOS DE UM NOVO OLHAR
+
+Figura 21. Coberturas sobre o solo a diferentes altitudes (Fonte: Adaptado de http://www.aerialrobotics.eu/
+pteryx/pteryx-mapping-secrets.pdf).
+
+Figura 22. Forma de decolagem mais simples para um VANT agrícola. Fonte: http://blog.cimmyt.org/skywalker-advances-phenotyping-in-southern-africa/). Acesso dezembro 2013).
+
+5.3. Obtenção de Imagens
+Georreferenciadas:
+Se a sobreposição linear em uma direção é dada
+por N%, a distância média entre um ponto na
+imagem nesta direção é de (100-N)%. De fato, para
+largura ou comprimento da foto tem-se 1/(100N)% pontos comuns por unidade de distância.
+Se a sobreposição é uniforme, em 2D, tem-se
+(1/(100-N)%)2 pontos comuns por unidade de
+área.
+Considerando N para sobreposição lateral e M
+para sobreposição da direção de voo, a densidade
+média de fotos em um dado ponto no mosaico
+pode ser calculada por 1/(100-N)%.(100-M)%.
+A densidade deve ser observada de tal forma a se
+obter a quantidade necessária para a determinação
+do modelo de elevação do terreno ideal.
+
+Em geral, as câmeras usam o formato EXIF
+JPG com mínima compressão para evitar
+perdas de qualidade. A obtenção da foto com
+sobreposições típicas de 60% devem ser garantidas
+pela velocidade de voo e altitude desejada. Na
+imagem da Figura 23 pode ser visto o mosaico
+obtido com as posições da aeronave no instante do
+disparo. E na Figura 24 pode ser visto o número
+de fotos e sobreposições obtidas.
+As coordenadas LAT, LONG e ALT, ou
+seja, latitude, longitude e altitude devem ser
+armazenadas diretamente com cabeçalho das
+fotos, em formatos padrões EXIF JPG ou GeoTIFF.
+Caso não se tenha como gerar automaticamente
+as imagens com coordenadas, deve-se utilizar
+softwares que juntam o log de voo com as
+coordenadas com as imagens obtidas. Esta
+
+FERRAMENTAS PARA AGRICULTURA DE PRECISÃO
+
+|
+
+127
+
+Figura 23. Posições da aeronave a cada disparo da câmera numa área de citros (Fonte: Lúcio André de
+Castro Jorge).
+
+>9
+9
+8
+7
+6
+5
+4
+3
+2
+1
+Figura 24. Densidade de fotos e sobreposições para geração do mosaico. A parte central apresenta maior
+sobreposição e melhor qualidade de mosaico final (Fonte: Lúcio André de Castro Jorge).
+
+junção é necessária para a próxima etapa que é
+a geração de mosaicos. Em geral, ferramentas de
+geração de mosaicos, podem juntar as imagens
+independentemente das coordenadas, mas isto
+resulta num mapa não georreferenciado, o que não
+é interessante quando se quer fazer análise junto
+com dados de elevação do terreno.
+
+5.4. Processamento das Imagens:
+O processamento pode ser realizado foto a
+foto, conforme já descrito, para posterior geração
+do mosaico, mas em geral é realizado no mosaico
+já pronto.
+
+128 | AGRICULTURA DE PRECISÃO: RESULTADOS DE UM NOVO OLHAR
+
+5.5. Geração de Mosaicos:
+Um mosaico de imagens consiste em unir
+grande quantidade de imagens em uma nova
+imagem (CHON; KIM; LIN, 2010). Dentre as várias
+aplicações com mosaicos de imagens, destacam-se
+os mosaicos que são construídos a partir de
+imagens de satélite (HELMER; RUEFENACHT,
+2005; BIELSKI; GRAZZINI; SOILLE, 2007;
+KERSCHNER, 2001; SOILLE, 2006) e aqueles
+que usam imagens aéreas (WANG et al., 2008;
+DU et al., 2008; LALIBERTE et al., 2010; CHON;
+KIM; LIN, 2010; PAN et al., 2009; LÓPEZ et al.,
+2011).
+
+Na obtenção de imagens aéreas é possível ao
+
+por alterações radiométricas (brilho e cor), devido
+
+usuário a escolha da resolução mais adequada
+
+a variações de altitude e orientação do avião;
+
+ao terreno, e da geometria de visualização/
+
+consequentemente há necessidade das imagens
+
+iluminação, por meio do ajuste da altura e direção
+
+serem retificadas (ROY; MEUNIER; COX, 1997)
+
+do voo em relação ao sol, minimizando o tempo
+
+antes do inicio do processo de construção de
+
+para medições de áreas (BARNSLEY et al., 1997).
+
+mosaicos.
+
+Os mosaicos aéreos agrícolas permitem
+
+As imagens retificadas são então utilizadas
+
+direcionar vistorias de campo durante o ciclo
+
+para a construção do mosaico, que une essas
+
+do cultivo ou em datas posteriores à colheita,
+
+imagens, gerando uma nova imagem. Durante
+
+fornecendo um diagnóstico preciso da área de
+
+o processo de união das imagens, elas precisam
+
+cultivo (LEBOEUF, 2000). A partir daí, podem
+
+passar por alguns ajustes geométricos, para que
+
+ser elaborados os mapas de recomendações:
+
+possam se encaixar adequadamente. No entanto,
+
+descompactação, fertilidade e aplicação de
+
+esses ajustes ocasionam uma distorção, que é
+
+insumos em taxa variável, auxiliando nas tomadas
+
+acumulada ao longo do processo, necessitando de
+
+de decisões. A eficiência da tomada de decisão
+
+uma correção, que no trabalho de Brown e Lowe
+
+está ligada à obtenção mais rápida e precisa de
+
+(2007) é realizada no final do processo.
+
+informações e também auxilia no controle de
+
+Os trabalhos de DiVerdi et al. (2009),
+
+pragas, doenças e queimadas (WULDER et al.,
+
+Liang et al. (2009), Kaynig et al. (2010), Liu et al.
+
+2004; LELONG et al., 2008). A necessidade
+
+(2011), Zhong et al. (2012) e Gui et al. (2012)
+
+de precisão das informações justifica o uso de
+
+mostram exemplos de construção de mosaicos de
+
+imagens de alta resolução, e a necessidade da
+
+imagens utilizando algoritmos que trabalham com
+
+obtenção rápida das informações justifica o uso
+
+metodologias de descritores de características nas
+
+de processamento paralelo para reduzir o custo
+
+próprias imagens.
+
+computacional ocasionado pela construção de
+mosaicos de alta resolução.
+As imagens aéreas, durante o seu processo
+de aquisição, frequentemente apresentam
+
+Uma vez obtidas as fotos gereferenciadas, estas
+possuem em seu cabeçalho as coodenadas de
+posicionamento global, GPS, que são utilizadas
+para geração do mosaico.
+
+distorções que são causadas por alterações
+
+Existem softwares comerciais que já realizam
+
+espaciais (translação, escala e rotação) e também
+
+o masaicamento automático, como por exemplo
+
+Figura 25. Mosaicamento de imagens do VANT com o software PhotScan (Fonte: Lúcio André de Castro
+Jorge).
+
+FERRAMENTAS PARA AGRICULTURA DE PRECISÃO
+
+|
+
+129
+
+o Pixel4D e o PhotoScan. Em ambos, é necessário
+que cada foto seja georreferenciada. Existem
+poucos passos a serem executados e por este
+motivo tem sido mais usados nos VANTs.
+Na Figura 25 pode ser observado um mosaico
+feito numa área de citros, com as respectivas
+posições das fotos durante a aquisição. Este
+mosaico foi obtido com baixa resolução apenas
+para demonstrar o uso do software PhotoScan.
+
+5.6. Análise em uma ferramenta GIS;
+Uma vez obtidas as imagens ou mosaicos, estes
+podem ser utilizados nos sistemas de informação
+geográfica (SIG) para fazer correlações com outros
+mapas obtidos.
+O uso do VANT torna mais fácil alimentar
+os SIGs com mais frequência, podendo ter uma
+resolução temporal muito interessante para as
+etapas da agricultura de precisão.
+São várias as análises e dependem dos objetivos.
+De uma forma geral, é bastante usada para
+definição de zonas de manejo da propriedade.
+5.7. Geração de relatórios.
+A geração de relatórios podem ser realizadas
+de forma customizada em cada caso. Em geral,
+sistemas integrados com GIS já definem mapas de
+aplicações em taxa variada baseados nos diferentes
+mapas e cruzamentos realizados no GIS.
+
+ANATEL para que esteja em plena concordância
+com as regras vigentes. Além disso, a cada
+operação deve ser feita a notificação de voo.
+Ainda existem muitos relatos de quedas de
+VANTs por diferentes motivos, sendo os principais
+a falta de manutenção, seguir procedimentos
+de operação e falhas de operação por parte do
+operador. A falha do sistema, em geral, não
+tem sido causa de quedas, uma vez que existem
+dispositivos de segurança como paraquedas,
+pousos préprogramados etc. O grande problema
+tem sido a manutenção inadequada e condições
+de operação. E no campo, estas condições são mais
+críticas ainda, considerando a robustez do campo.
+Assim, deve-se lembrar sempre que o VANT
+ainda não há domínio como uma operação com
+um trator. Exige procedimentos e cuidados.
+Mas deve certamente figurar nos próximos
+tempos como uma das ferramentas mais úteis na
+agricultura de precisão.
+
+Referências
+ALBERS, B. J.; NYQUIST, J. E.; PURDY, C. B. The department
+of energy’s use of airborne remotely piloted vehicles for
+environmental management. In: ANNUAL ASSOCIATION
+FOR UNMANNED VEHICLE SYSTEMS INTERNATIONAL
+SYMPOSIUM AND EXHIBITION, 23., 1996, Orlando.
+Proceedings… p. 839-848.
+
+6. Conclusões
+
+ANDRADE, R. O. O voo do Falcão. Pesquisa FAPESP, n.
+11, 2013.
+
+O uso de VANTs em agricultura de precisão
+tem sido cada vez maior, uma vez que a tecnologia
+está se tornando mais acessível, com preços
+acessíveis, com maior confiabilidade e com
+sensores cada vez mais precisos.
+Todo o sensoriamento remoto que se faz com
+satélites e aviões tripulados estão disponíveis nos
+VANTs. Os sistemas estão cada vez mais fáceis de
+operar e tornando-se viáveis para uso no campo.
+Apesar disso, neste momento a ANAC,
+responsável pela autorização de uso deste tipo
+de aeronaves, tem mantido grupos discutindo
+regulamentações de tipos e formas de uso de
+VANT que em breve devem se tornar disponíveis
+e padronizar o uso. É necessário que seja
+homologado o VANT pela ANAC e que sejam
+obtidas as autorizações de voo junto a ANAC e
+
+130 | AGRICULTURA DE PRECISÃO: RESULTADOS DE UM NOVO OLHAR
+
+ASNER, G. P.; TOWNSEND, A. R.; BUSTAMANTE, M. M. C.
+Spectrometry of pasture condition and biogeochemistry in the
+Central Amazon. Geophysical Research Letters, v. 26, n. 17,
+p. 2769-2772, 1999. http://dx.doi.org/10.1029/1999GL900546
+BARNSLEY, M.; BOXALL, S. R.; MATTHEWS, A. M.; WHITE,
+S. J. Editorial to special issue. International Journal of Remote
+Sensing, v. 18, p. 1861-1863, 1997.
+BIELSKI, C.; GRAZZINI, J.; SOILLE, P. Automated
+morphological image composition for mosaicing large image
+data sets. In: IEEE INTERNATIONAL SYMPOSIUM ON
+GEOSCIENCE AND REMOTE SENSING - IGARSS, 2007,
+Barcelona. Proceedings… New York: IEEE, 2007. p. 4068-4071.
+http://dx.doi.org/10.1109/IGARSS.2007.4423743
+BLACKBURN, G. A. Relationships between spectral reflectance
+and pigment concentrations in stacks of deciduous broadleaves.
+Remote Sensing of Environment, v. 70, n. 2, p. 224-237, 1999.
+http://dx.doi.org/10.1016/S0034-4257(99)00048-6
+
+BROWN, M.; LOWE, D. G. Automatic Panoramic Image
+
+DU, Q.; RAKSUNTORN, N.; ORDUYILMAZ, A.; BRUCE,
+
+Stitching using Invariant Features. International Journal of
+
+L. M. Automatic registration and mosaicking for airborne
+
+Computer Vision, v. 74, n. 1, p. 59-73, 2007.
+
+multispectral image sequences. Photogrammetric Engineering
+
+C E C C AT O, P. S . ; F L A S S E , S . ; TA R A N T O L A , S . ;
+JACQUEMOUD, S.; GREGOIRE, J. M. Detecting vegetation
+
+& Remote Sensing, v. 74, n. 2, p. 169-181, 2008. http://dx.doi.
+org/10.14358/PERS.74.2.169
+
+leaf water content using reflectance in the optical domain.
+
+EBBERS, M. J. H.; WALLIS, I. R.; DURY, S.; FLOYD, R.; FOLEY,
+
+Remote Sensing of Environment, v. 77, n. 1, p. 22-33, 2001.
+
+W. J. Spectrometric prediction of secondary metabolities and
+
+http://dx.doi.org/10.1016/S0034-4257(01)00191-2
+
+nitrogen in fresh Eucalyptus foliage: towards remote sensing
+
+CHISHOLM, L. A. Characterisation and evaluation of
+moisture stress in E. camalduensis using hyperspectral
+remote sensing. Sydney: University of New South Wales,
+2001. 15 p.
+CHON, J.; KIM, H.; LIN, C. S. Seam-line determination for
+image mosaicking: a technique minimizing the maximum
+local mismatch and the global cost. ISPRS Journal of
+Photogrammetry and Remote Sensing, v. 65, n. 1, p. 86-92,
+2010. http://dx.doi.org/10.1016/j.isprsjprs.2009.09.001
+CHUVIECO, E. Fundamentos de teledetección espacial.
+Madrid: Rialp, 1996. 568 p.
+CLEVERS, J. P. G. W. Imaging spectrometry in agricultureplant vitality and yield indicators. In: HILL. J. A. M.
+(Ed.). Imaging spectrometry-a tool for environmental
+observations. Dordrecht: Kluwer Academic Publishers, 1994.
+p. 193-219. (Eurocourses: Remote Sensing, 4). http://dx.doi.
+org/10.1007/978-0-585-33173-7_11
+COCHRANE, M. A. Using vegetation reflectance variability for
+species level classification of hyperspectral data. International
+Journal of Remote Sensing, v. 21, n. 10, p. 2075-2087, 2000.
+http://dx.doi.org/10.1080/01431160050021303
+CURRAN, P. J. Imaging spectrometry. Progress in Physical
+Geography, v. 18, n. 2, p. 247-266, 1994. http://dx.doi.
+org/10.1177/030913339401800204
+CURRAN, P. J.; DUNGAN, J. L.; MACLER, B. A.; PLUMMER,
+S. E.; PETERSON, D. L. Reflectance spectroscopy of fresh whole
+leaves for the estimation of chemical concentration. Remote
+Sensing of Environment, v. 39, n. 2, p. 153-166, 1992. http://
+dx.doi.org/10.1016/0034-4257(92)90133-5
+DAUGHTRY, C. S. T. Discriminating crop residues from soil by
+short-wave infrared reflectance. Agronomy Journal, v. 93, n. 1,
+p. 125-131, 2001. http://dx.doi.org/10.2134/agronj2001.931125x
+DAUGHTRY, C. S. T.; HUNT JUNIOR, E. R.; MCMURTREY,
+J. E. Assessing crop residue cover using shortwave infrared
+reflectance. Remote Sensing of Environment, v. 90, n. 1, p.
+126-134, 2004. http://dx.doi.org/10.1016/j.rse.2003.10.023
+DE GARMO, M. T. Issues concerning integration of
+unmanned aerial vehicles in civil airspace. McLean: Center
+for Advanced Aviation System Development-Mitre, 2004.
+PMid:14749161.
+
+of the nutritional quality of foliage for leaf-eating marsupials.
+Australian Journal of Botany, v. 50, n. 6, p. 761-768, 2002.
+http://dx.doi.org/10.1071/BT02025
+EISENBEISS, H. A mini unmanned aerial vehicle (UAV, p.
+system overview and image acquisition. In: INTERNATIONAL
+WORKSHOP ON “PROCESSING AND VISUALIZATION
+USING HIGH-RESOLUTION IMAGERY”, 2004, Pitsanulok.
+Proceedings… p. 1-7.
+EMBRAPA. Centro Nacional de Pesquisa Agropecuária. Lúcio
+André de Castro Jorge. Configuração aplicada em aeromodelo.
+BR n. DI6400311-6, 29 jan. 2004.
+FOURTY, T. F.; BARET, S.; JACQUEMOUD, G.; SCHMUCK,
+G.; VERDEBOUT, J. Leaf optical properties with explicit
+description of its biochemical composition: direct and inverse
+problems. Remote Sensing of Environment, v. 56, n. 2, p. 104117, 1996. http://dx.doi.org/10.1016/0034-4257(95)00234-0
+GAMON, J. A.; PENUELAS, J.; FIELD, C. B. A narrow-waveband
+spectral index that tracks diurnal changes in photosynthetic
+efficiency. Remote Sensing of Environment, v. 41, n. 1, p.
+35-44, 1992. http://dx.doi.org/10.1016/0034-4257(92)90059-S
+GAMON, J. A.; SERRANO, L.; SURFUS, J. S. The photochemical
+reflectance index: an optical indicator of photosynthetic
+radiation use efficiency across species, functional types and
+nutrient levels. Oecologia, v. 112, n. 4, p. 492-501, 1997. http://
+dx.doi.org/10.1007/s004420050337
+GAO, B. C. Normalized difference water index for remote sensing
+of vegetation liquid water from space. Proceedings of SPIE, v.
+2480, p. 225-236, 1995. http://dx.doi.org/10.1117/12.210877
+G A ST E L LU - E TC H E G OR RY, J. P. ; Z AG OL SK I , F. ;
+MOUGIN, E.; MARTY, G.; GIORDANO, G. An assessment
+of canopy chemistry with AVIRIS-a case-study in the
+Landes forest, south-west France. International Journal of
+Remote Sensing, v. 16, n. 3, p. 487-501, 1995. http://dx.doi.
+org/10.1080/01431169508954414
+GITELSON, A. A.; MERZLYAK, M. N. Remote estimation
+of chlorophyll content in higher plant leaves. International
+Journal of Remote Sensing, v. 18, n. 12, p. 2691-2697, 1997.
+http://dx.doi.org/10.1080/014311697217558
+GITELSON, A. A.; MERZLYAK, M. N.; CHIVKUNOVA,
+O. B. Optical properties and nondestructive estimation of
+anthocyanin content in plant leaves. Photochemistry and
+
+DIVERDI, S.; WITHER, J.; HÖLLERER, T. All around the
+
+Photobiology, v. 71, n. 1, p. 38-45, 2001. http://dx.doi.
+
+map: online spherical panorama construction. Computers &
+
+org/10.1562/0031-8655(2001)074%3C0038:OPANEO%3E2
+
+Graphics, v. 33, n. 1, p. 73-84, 2009.
+
+.0.CO;2
+
+FERRAMENTAS PARA AGRICULTURA DE PRECISÃO
+
+|
+
+131
+
+GITELSON, A. A.; ZUR, Y.; CHIVKUNOVA, O. B.;
+
+JOHNSON, L. F.; HLAVKA, C. A.; PETERSON, D. L.
+
+MERZLYAK, M. N. Assessing carotenoid content in plant
+
+Multivariate analysis of AVIRIS data for canopy biochemical
+
+leaves with reflectance spectroscopy. Photochemistry
+
+estimation along the Oregon transect. Remote Sensing of
+
+and Photobiology, v. 75, p. 272-281, 2002. http://dx.doi.
+
+Environment, v. 47, n. 2, p. 216-230, 1994. http://dx.doi.
+
+org/10.1562/0031-8655(2002)075%3C0272:ACCIPL%3E2.
+
+org/10.1016/0034-4257(94)90157-0
+
+0.CO;2
+
+JORGE, L. A. C. Determinação da cobertura de solo em
+
+GONG, P.; PU, R. L.; MILLER, J. R. Coniferous forest Leaf-Area
+
+fotografias aéreas do Projeto Arara. 2001. 97 f. Dissertação
+
+Index estimation along the Oregon transect using Compact
+
+(Mestrado em Ciências da Computação)-Universidade de São
+
+Airborne Spectrographic Imager data. Photogrammetric
+
+Paulo, São Carlos, 2001.
+
+Engineering and Remote Sensing, v. 61, n. 9, p. 1107-1117,
+1995.
+
+JORGE, L. A. C. Metodologia para utilização de aeromodelos
+em monitoramento aéreo: análise de imagens. São Carlos:
+
+GONZÁLEZ-DUGO, V.; ZARCO-TEJADA, P. J.; NICOLÁS,
+
+Embrapa Instrumentação Agropecuária, 2003. (Circular
+
+E.; NORTES, P. A.; ALARCÓN, J. J.; INTRIGLIOLO, D. S.;
+
+Técnica).
+
+FERERES, E. Using high resolution UAV thermal imagery to
+assess the variability in the water status of five fruit tree species
+
+JORGE, L. A. C.; SOUZA, N. P.; TRINDADE JUNIOR, O.;
+
+within a commercial orchard. Precision Agriculture, v. 14, n. 6,
+
+TOZZI, C. L.; TORRE NETO, A. Studies of soil conservation
+
+p. 660-678, 2013. http://dx.doi.org/10.1007/s11119-013-9322-9
+
+for precision farming by digital color image analysis. In: ASAE
+ANNUAL INTERNATIONAL MEETING, 1999, Toronto.
+
+GUI, Y.; SU, A.; DU, J. Point-pattern matching method using
+
+Proceedings…
+
+SURF and Shape Context. Optik, v 124, n. 14, p. 1869-1873, 2013.
+GUYOT, G.; GUYON, D.; RIOM, J. Factors affecting the
+
+JORGE, L. A. C.; TRINDADE JUNIOR, O.; DAINESE, R.
+
+spectral response of forest canopies: a review. Geocarto
+
+C.; CEREDA JUNIOR, A. Aeromodelo para sensoriamento
+
+International, v. 4, n. 3, p. 3-18, 1989. http://dx.doi.
+
+remoto em agricultura de precisão. In: GIS BRASIL, 2004, São
+
+org/10.1080/10106048909354217
+
+Paulo. Anais...
+
+HELMER, E. H.; RUEFENACHT, B. Cloud-free satellite
+
+KAUFMAN, Y, J.; REMER, L. A. Detection of forests using
+
+image mosaics with regression trees and histogram matching.
+
+mid-IR reflectance: an application for aerosol studies. IEEE
+
+Photogrammetric Engineering & Remote Sensing, v. 71, n. 9,
+
+Transactions on Geoscience and Remote Sensing, v. 32, p.
+
+p. 1079-1089, 2005. http://dx.doi.org/10.14358/PERS.71.9.1079
+
+672-683, 1994. http://dx.doi.org/10.1109/36.297984
+
+HERWITZ, S. R.; JOHNSON, L. F.; DUNAGAN, S. E.;
+
+KAYNIG, V.; FISCHER, B; MULLER, E.; BUHMANN, J.
+
+HIGGINS, R. G.; SULLIVAN, D. V.; ZHENG, J.; LOBITZ, B.
+
+M. Fully automatic stitching and distortion correction of
+
+M.; LEUNG, J. G.; GALLMEYER, B. A.; AOYAGI, M.; SLYE,
+
+transmission electron microscope images. Journal of Structural
+
+R. E.; BRASS, J. A. Imaging from an unmanned aerial vehicle:
+
+Biology, v. 171, p. 163-173, 2010.
+
+agricultural surveillance and decision support. Computers and
+Electronics in Agriculture, v. 44, n. 1, p. 49-61, 2004. http://
+dx.doi.org/10.1016/j.compag.2004.02.006
+HUNT JUNIOR, E. R.; ROCK, B. N. Detection of changes in
+
+KERSCHNER, M. Seamline detection in colour orthoimage
+mosaicking by use of twin snakes. ISPRS Journal of
+Photogrammetry and Remote Sensing, v. 56, n. 1, p. 53-64,
+2001. http://dx.doi.org/10.1016/S0924-2716(01)00033-8
+
+leaf water content using near - and middle -infrared reflectances.
+Remote Sensing of Environment, v. 30, n. 1, p. 43-54, 1989.
+http://dx.doi.org/10.1016/0034-4257(89)90046-1
+
+KNOX, B.; LADIGES, P.; EVANS, B. Biology. Sydney: Mc
+Graw-Hill, 1997. 225 p.
+
+JACKSON, T. L.; CHEN, D.; COSH, M.; LI, F.; ANDERSON, M.;
+
+KUMAR, L. Modeling forest resources using geographical
+
+WALTHALL, C.; DORIASWAMY, P.; HUNT, E. R. Vegetation
+
+information systems and hyperspectral remote sensing.
+
+water content mapping using landsat data derived normalized
+
+1998. 246 f. Tese (Doutorado)-University of New South Wales,
+
+difference water index for corn and soybeans. Remote Sensing
+
+Sydney, 1998.
+
+of Environment, v. 92, n. 4, p. 475-482, 2004. http://dx.doi.
+
+KUMAR, L.; SCHMIDT, K.; DURY, S.; SKIDMORE, A. Imaging
+
+org/10.1016/j.rse.2003.10.021
+
+spectrometry and vegetation science. In: VAN DER MEER,
+
+JOHNSON, L. F.; BILLOW, C. R. Spectrometric estimation
+
+F. D.; JONG, S. M. Imaging spectrometry: basic principles
+
+of total nitrogen concentration in Douglas-fir foliage.
+
+and prospective applications. Dordrecht: Kluver Academic
+
+International Journal of Remote Sensing, v. 17, n. 3, p. 489-
+
+Publishers, 2001. p. 11-155.
+
+500, 1996. http://dx.doi.org/10.1080/01431169608949022
+
+L A C R A PA , V. C . ; M E L AC K , J. M . ; G A ST I L , M . ;
+
+JOHNSON, L. F.; BOSCH, D. F.; WILLIAMS, D. C.; LOBITZ, B.
+
+VALERIANO, D. Remote sensing of foliar chemistry of
+
+M. Remote sensing of vineyard management zones: implications
+
+inundated rice with imaging spectrometry. Remote Sensing
+
+for wine quality. Applied Engineering in Agriculture, v. 17,
+
+of Environment, v. 55, n. 1, p. 50-58, 1996. http://dx.doi.
+
+n. 4, p. 557-560, 2001. http://dx.doi.org/10.13031/2013.6454
+
+org/10.1016/0034-4257(95)00185-9
+
+132 | AGRICULTURA DE PRECISÃO: RESULTADOS DE UM NOVO OLHAR
+
+LALIBERTE, A. S.; HERRICK, J. E.; RANGO, A.; WINTERS, C.
+
+ÖZDEMIR, S. Multi objetive conceptual design optimization
+
+Acquisition, orthorectification, and object-based classification
+
+of na agricultural aerial robot. 2005. 182 f. Dissertação
+
+of unmanned aerial vehicle (UAV) imagery for rangeland
+
+(Mestrado em Engenharia Aeroespacial)-Middle East Technical
+
+monitoring. Photogrammetric Engineering & Remote
+
+University, Turquia, 2005.
+
+Sensing, v. 76, n. 6, p. 661-672, 2010. http://dx.doi.org/10.14358/
+PERS.76.6.661
+
+PAN, J.; WANG, M.; LI, D. R.; LI, J. Automatic generation of
+seamline network using area Voronoi diagrams with overlap.
+
+LEBOEUF, J. Practical applications of remote sensing
+
+IEEE Transactions on Geoscience and Remote Sensing,
+
+technology: an industry perspective. HortTechnology, v. 10,
+
+v. 47, n. 6, p. 1737-1744, 2009. http://dx.doi.org/10.1109/
+
+n. 3, p. 475-480, 2000.
+
+TGRS.2008.2009880
+
+LELONG, C. C. D.; BURGER, P.; JUBELIN, G.; ROUX,
+
+PEÑUELAS, J.; BARET, F.; FILELLA, I. Semi-empirical indices
+
+B.; LABBÉ, S.; BARET, F. Assessment of unmanned aerial
+
+to assess carotenoids/chlorophyll: a ratio from leaf spectral
+
+vehicles imagery for quantitative monitoring of wheat crop
+
+reflectance. Photosynthetica, v. 31, p. 221-230, 1995.
+
+in small plots. Sensors, v. 8, p. 3557-3585, 2008. http://dx.doi.
+org/10.3390/s8053557
+
+PRZYBILLA, H. J.; WESTER-EBBINGHAUS, W. Bildflug
+mit ferngelenktem Kleinflugzeug. Bildmessung und
+
+LIANG, J.; DEMENTHON, D.; DOERMANN, D. Mosaicing
+
+Luftbildwesen, v. 47, n. 5, p. 137-142, 1979.
+
+of camera-captured document images. Computer Vision and
+Image Understanding, v. 113, p. 572-579, 2009.
+
+RASI, J. R. Desenvolvimento de um veículo aéreo não
+tripulado para aplicação em pulverização agrícola. 2008. 70
+
+LIU, G. H.; LI, Z. Y.; ZHANG, L.; XU, Y. Image retrieval based
+on micro-structure descriptor. Pattern Recognition, v. 44, p.
+2123-2133, 2011.
+LÓPEZ, D. H.; GARCÍA, B. F.; PIQUERAS, J. G.; ALCÁZAR,
+G. V. An approach to the radiometric aerotriangulation of
+
+f. Dissertação (Mestrado em Engenharia Rural)-Universidade
+Federal de Pelotas, Pelotas.
+RESEARCH SYSTEMS. What’s new in ENVI 4.2. Boulder,
+2005. 160 p.
+
+photogrammetric images. ISPRS Journal of Photogrammetry
+
+ROY, S.; MEUNIER, J.; COX, I. Cylindrical rectification to
+
+and Remote Sensing, v. 66, n. 6, p. 883-893, 2011. http://dx.doi.
+
+minimize epipolar distortion. In: IEEE COMPUTER SOCIETY
+
+org/10.1016/j.isprsjprs.2011.09.011
+
+CONFERENCE ON COMPUTER VISION AND PATTERN
+
+MARTIN, M. E.; ABER, J. D. High spectral resolution remote
+sensing of forest canopy lignin, nitrogen, and ecosystem
+
+RECOGNITION, 1997, San Juan. Proceedings… IEEE, 1997.
+p. 393-399. http://dx.doi.org/10.1109/CVPR.1997.609355
+
+processes. Ecological Applications, v. 7, n. 2, p. 431-443, 1997.
+
+SERRANO, L.; PENUELAS, J.; USTIN, S. L. Remote sensing of
+
+http://dx.doi.org/10.1890/1051-0761(1997)007[0431:HSRRS
+
+nitrogen and lignin in mediterranean vegetation from AVIRIS
+
+O]2.0.CO;2
+
+data: decomposing biochemical from structural signals. Remote
+
+MATSON, P.; JOHNSON, L.; BILLOW, C.; MILLER, J.; PU, R.
+L. Seasonal patterns and remote spectral estimation of canopy
+
+Sensing of Environment, v. 81, n. 2-3, p. 355-364, 2002. http://
+dx.doi.org/10.1016/S0034-4257(02)00011-1
+
+chemistry across the Oregon transect. Ecological Applications,
+
+SERRANO, L.; USTIN, S. L.; ROBERTS, D. A.; GAMON,
+
+v. 4, n. 2, p. 280-298, 1994. http://dx.doi.org/10.2307/1941934
+
+J. A.; PENUELAS, J. Deriving water content of chaparral
+
+MEDEIROS, F. A. Desenvolvimento de um veículo aéreo
+
+cegetation from AVIRIS data. Remote Sensing of Environment,
+
+não tripulado para aplicação em agricultura de precisão.
+
+v. 74, n. 3, p. 570-581, 2000. http://dx.doi.org/10.1016/
+
+2007. 102 f. Dissertação (Mestrado em Engenharia Agrícola)-
+
+S0034-4257(00)00147-4
+
+Universidade Federal de Santa Maria, Santa Maria, 2007.
+
+SIMPSON, A. D. Development of an unmanned aerial
+
+MERZLYAK, J. R.; GITELSON, A. A.; CHIVKUNOVA, O. B.;
+
+vehicle for low-cost remote sensing and aerial photography.
+
+RAKITIN, V. Y. Nondestructive optical detection of pigment
+
+2003. Tese (Mestrado em Ciência)-University of Kentucky,
+
+changes during leaf senescence and fruit ripening. Physiologia
+
+Lexington, 2003.
+
+Plantarum, v. 106, n. 1, p. 135-141, 1999. http://dx.doi.
+org/10.1034/j.1399-3054.1999.106119.x
+
+SNYDER, C.; HAVLIN, J.; KLUITENBERG, G.; SCHROEDER,
+T. Evaluating the economics of precision agriculture. In:
+
+MOREIRA, M. A. Fundamentos do sensoriamento remoto
+
+INTERNATIONAL CONFERENCE OF PRECISION
+
+e metodologias de aplicação. São José dos Campos: INPE,
+
+AGRICULTURE, 4., 1999, Madison. Proceedings… Madison,
+
+2001. 208 p.
+
+1999. p. 1621-1632.
+
+NERIS, L. O. Um piloto automático para as aeronaves do
+
+SOILLE, P. Morphological image compositing. IEEE
+
+projeto ARARA. 2001. 102 f. Dissertação (Mestrado em
+
+Transactions on Pattern Analysis and Machine Intelligence,
+
+Ciências da Computação)-Universidade de São Paulo, São
+
+v. 28, n. 5, p. 673-683, 2006. http://dx.doi.org/10.1109/
+
+Carlos.
+
+TPAMI.2006.99
+
+FERRAMENTAS PARA AGRICULTURA DE PRECISÃO
+
+|
+
+133
+
+SPANNER, M. A.; PIERCE, L. L.; PETERSON, D. L.; RUNNING,
+
+VAN DER MEER. F. D.; JONG. S. M.; BAKKER. W. (Ed.).
+
+S. W. Remote-sensing of temperate coniferous forest Leaf-Area
+
+Imaging spectrometry: basic analytical techniques. Imaging
+
+Index-the influence of canopy closure, understory vegetation
+
+spectrometry: basic principles and prospective applications.
+
+and background reflectance. International Journal of
+
+Dordrecht: Kluwer Academic Publishers, 2001. 157 p.
+
+Remote Sensing, v. 11, n. 1, p. 95-111, 1990a. http://dx.doi.
+
+WANG, C. X.; STEFANIDIS, A.; CROITORU, A.; AGOURIS,
+
+org/10.1080/01431169008955002
+
+P. Map registration of image sequences using linear features.
+
+SPANNER, M. A.; PIERCE, L. L.; RUNNING, S. W.; PETERSON,
+
+Photogrammetric Engineering & Remote Sensing, v. 74,
+
+D. L. The sesonality of AVHRR data of temperate coniferous
+
+n. 1, p. 25-38, 2008. http://dx.doi.org/10.14358/PERS.74.1.25
+
+forests-relationship with Leaf-Area Index. Remote Sensing
+
+ZAGOLSKI, F.; PINEL, V.; ROMIER, J.; ALCAYDE, D.;
+
+of Environment, v. 33, n. 2, p. 97-112, 1990b. http://dx.doi.
+
+FONTANARI, J.; GASTELLU-ETCHEGORRY, J. P.;
+
+org/10.1016/0034-4257(90)90036-L
+
+GIORDANO, G.; MARTY, G.; MOUGIN, E.; JOFFRE, R. Forest
+
+TREITZ, P. M.; HOWARTH, P. J. Hyperspectral remote sensing
+for estimating biophysical parameters of forest ecosystems.
+Progress in Physical Geography, v. 23, n. 3, p. 359-390, 1999.
+TRINDADE JUNIOR, O.; JORGE, L. A. C.; AGUIAR, J.
+G. B. Using UAVs for precision farming: first results. In:
+
+canopy chemistry with high spectral resolution remote sensing.
+International Journal of Remote Sensing, v. 17, n. 6, p. 11071128, 1996. http://dx.doi.org/10.1080/01431169608949073
+ZARCO-TEJADA, P. J.; GONZÁLEZ-DUGO, V.; BERNI,
+J. A. J. Fluorescence, temperature and narrow-band indices
+acquired from a UAV platform for water stress detection using
+
+UNMANNED SYSTEMS NORTH AMERICA, 2004, Baltimore.
+
+a micro-hyperspectral imager and a thermal câmera. Remote
+
+Proceedings…
+
+Sensing of Environment, v. 117, p. 322-337, 2012. http://dx.doi.
+
+USTIN, S. L.; ZARCO-TEJADA, P. J.; ASNER, G. P. The role of
+
+org/10.1016/j.rse.2011.10.007
+
+hyperspectral data in understanding the global carbon cycle.
+
+ZISCHINSKY, T.; DORFNER, L.; ROTTENSTEINER,
+
+In: JPL AIRBORNE EARTH SCIENCE WORKSHOP, 10., 2001,
+
+F. Application of a new Model Helicopter System in
+
+Pasadena. Proceedings… p. 397-410.
+
+Architectural Photogrammetry. Amsterdam: IAPRS, 2000.
+
+VARSHNEY, P. K.; ARORA, M. K. Advanced image
+
+Part B5/2. (v. XXXIII).
+
+processing techniques for remotely sensed hyperspectral
+
+ZHONG, M.; ZENG, J.; XIE, X. Panorama Stitching Based
+
+data. New York: Springer, 2004. 322 p. http://dx.doi.
+
+on SIFT Algorithm and Levenberg-Marquardt Optimization.
+
+org/10.1007/978-3-662-05605-9
+
+Physics Procedia, v. 33, p. 811-818, 2012.
+
+134 | AGRICULTURA DE PRECISÃO: RESULTADOS DE UM NOVO OLHAR
+
+
