@@ -1,62 +1,68 @@
-# Memória do Projeto FarmTech Solutions - Agrosaas (FIAP - Fase 1)
+# Memoria do Projeto FarmTech Solutions - Agrosaas (FIAP - Fase 1)
 
 ## Contexto Geral
-- **Empresa/Startup:** FarmTech Solutions
-- **Objetivo:** Desenvolver uma solução para migração de uma fazenda para a Agricultura Digital.
-- **Curso/Contexto:** FIAP - Fase 1
+- Startup: FarmTech Solutions
+- Objetivo: Desenvolver uma solucao para migracao de uma fazenda para a Agricultura Digital.
+- Curso/Contexto: FIAP - Fase 1
 
 ---
 
-## 📋 Requisitos e Funcionalidades
-
-### 1. Aplicação Python (`src/main.py` ou `app.py`)
-- **Culturas Atendidas (2 tipos):**
-  - Cultura 1: Café (Área Retangular / Cálculo por Ruas e Pulverização/Adubação)
-  - Cultura 2: Milho (Área Trapezoidal ou Circular / Adubação por Hectare ou Linha)
-- **Cálculo de Área de Plantio:**
-  - Suporte a figuras geométricas distintas (ex: Retângulo para Café, Trapézio/Círculo para Milho).
-- **Manejo de Insumos:**
-  - Cálculo de dosagem (ex: mL/metro x metros por rua x quantidade de ruas = Total de Litros/kg necessários).
-- **Estruturas de Dados:**
-  - Dados organizados obrigatoriamente em vetores/listas.
-- **Menu Interativo (Loop `while` + Decisões `if/elif/else`):**
-  1. `[1]` Entrada de dados (Cadastrar nova área/manejo).
-  2. `[2]` Saída de dados (Exibir relatório/relatórios cadastrados no terminal).
-  3. `[3]` Atualização de dados (Editar um registro em uma posição específica do vetor).
-  4. `[4]` Deleção de dados (Remover um registro em uma posição específica do vetor).
-  5. `[5]` Sair do programa.
+## REGRA FUNDAMENTAL E OBRIGATORIA
+- NUNCA UTILIZAR EMOJIS em qualquer arquivo do projeto, seja no codigo Python, R, scripts de terminal, documentação Markdown, arquivos HTML, TXT, mensagens de log ou comentarios. Usar apenas texto limpo em caracteres padrao.
 
 ---
 
-### 2. Aplicação em R (`src/analysis.R` e `src/weather.R`)
-- **Análise Estatística Básica (`analysis.R`):**
-  - Leitura dos dados de manejo/área.
-  - Cálculo estatístico: Média, Desvio Padrão, Mínimo, Máximo, Mediana.
-- **Diferencial ("Ir Além"): Conexão com API Meteorológica (`weather.R`):**
-  - Conexão via R (usando `httr` / `jsonlite` ou `curl`) a uma API pública sem chave (ex: Open-Meteo API).
-  - Coleta e exibição formatada de dados climáticos no terminal.
+## Requisitos e Funcionalidades
+
+### 1. Aplicacao Python (src/python/main.py)
+- Culturas Atendidas (2 tipos):
+  - Cultura 1: Cafe (Area Retangular / Calculo por Ruas e Pulverizacao/Adubacao)
+  - Cultura 2: Milho (Area Trapezoidal / Adubacao por Hectare)
+- Calculo de Area de Plantio:
+  - Suporte a figuras geometricas distintas (Retangulo para Cafe, Trapezio para Milho).
+- Manejo de Insumos:
+  - Calculo de dosagem (mL/metro x metros por rua x quantidade de ruas = Total de Litros/kg necessarios).
+- Estruturas de Dados:
+  - Dados organizados obrigatoriamente em vetores/listas paralelas.
+- Menu Interativo (Loop while + Decisoes if/elif/else):
+  1. [1] Entrada de dados (Cadastrar nova area/manejo).
+  2. [2] Saida de dados (Exibir relatorio/relatorios cadastrados no terminal).
+  3. [3] Atualizacao de dados (Editar um registro em uma posicao especifica do vetor).
+  4. [4] Delecao de dados (Remover um registro em uma posicao especifica do vetor).
+  5. [5] Sair do programa.
 
 ---
 
-### 3. Formação Social (Resumo de Artigo)
-- **Artigo:** Embrapa - [CAP8.pdf](https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/1003485/1/CAP8.pdf)
-- **Formatação:**
-  - Máximo 1 folha A4
+### 2. Aplicacao em R (src/r/analysis.R e src/r/weather.R)
+- Analise Estatistica Basica (analysis.R):
+  - Leitura dos dados de manejo/area.
+  - Calculo estatistico: Media, Desvio Padrao, Minimo, Maximo, Mediana.
+- Diferencial ("Ir Alem"): Conexao com API Meteorologica (weather.R):
+  - Conexao via R (usando jsonlite / httr ou url) a uma API publica sem chave (Open-Meteo API).
+  - Coleta e exibicao formatada de dados climaticos no terminal em texto simples (SEM EMOJIS).
+
+---
+
+### 3. Formacao Social (Resumo de Artigo)
+- Artigo: Embrapa - CAP8.pdf
+- Formatacao:
+  - Maximo 1 folha A4
   - Fonte Arial 11
-  - Espaçamento 1.0 entre linhas
+  - Espacamento 1.0 entre linhas
   - Margens direita e esquerda: 2 cm
 
 ---
 
-### 4. Entregáveis e Estrutura do Pacote (.ZIP)
-- Código fonte em Python (`.py`)
-- Script de análise e API em R (`.R`)
-- Resumo do artigo (`.pdf` ou `.docx`)
-- `link_video.txt` (Contendo link do vídeo no YouTube - não listado, até 5 min demonstrando a execução)
+### 4. Entregaveis e Estrutura do Pacote (.ZIP)
+- Codigo fonte em Python (.py)
+- Script de analise e API em R (.R)
+- Resumo do artigo (.pdf, .odt ou .html)
+- link_video.txt (Contendo link do video no YouTube - nao listado, ate 5 min demonstrando a execucao)
 
 ---
 
-## 🛠️ Tecnologias e Diretrizes de Código
-- **Python:** 3.x puro (sem bibliotecas externas pesadas para o menu principal).
-- **R:** `jsonlite`, `httr` (para API) e funções nativas de estatística (`mean`, `sd`, `summary`).
-- **Git/GitHub:** Versionamento de código colaborativo.
+## Tecnologias e Diretrizes de Codigo
+- Python: 3.x puro (sem bibliotecas externas pesadas para o menu principal).
+- R: jsonlite, httr (para API) e funcoes nativas de estatistica (mean, sd, summary).
+- Git/GitHub: Versionamento de codigo colaborativo.
+- FORMATACAO: Sem emojis em todo o repositorio.

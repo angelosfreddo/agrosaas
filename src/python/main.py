@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-FarmTech Solutions - Aplicação de Gestão de Agricultura Digital
+FarmTech Solutions - Aplicacao de Gestao de Agricultura Digital
 Projeto FIAP - Fase 1
 
-Este módulo implementa o gerenciamento de plantio e manejo de insumos
-para 2 culturas agrícolas (Café e Milho), utilizando vetores de dados
+Este modulo implementa o gerenciamento de plantio e manejo de insumos
+para 2 culturas agricolas (Cafe e Milho), utilizando vetores de dados
 e um menu CRUD interativo no terminal.
 """
 
@@ -15,135 +15,134 @@ import os
 # ==============================================================================
 # ESTRUTURA DE DADOS EM VETORES (LISTAS PARALELAS)
 # ==============================================================================
-vetor_ids = []           # ID identificador único do registro
-vetor_culturas = []      # Nome da cultura ('Café' ou 'Milho')
-vetor_areas_m2 = []      # Área calculada em metros quadrados (m²)
-vetor_areas_ha = []      # Área convertida em hectares (ha)
-vetor_insumos = []       # Nome do insumo (ex: 'Fosfato', 'Pulverização Fungicida')
+vetor_ids = []           # ID identificador unico do registro
+vetor_culturas = []      # Nome da cultura ('Cafe' ou 'Milho')
+vetor_areas_m2 = []      # Area calculada em metros quadrados (m²)
+vetor_areas_ha = []      # Area convertida em hectares (ha)
+vetor_insumos = []       # Nome do insumo (ex: 'Fosfato', 'Pulverizacao Fungicida')
 vetor_qtd_insumo = []    # Quantidade calculada do insumo
 vetor_unidades = []      # Unidade de medida do insumo ('Litros', 'Kg')
 
 
 def limpar_tela():
-    """Limpa o terminal para melhor navegabilidade sem erros de variável TERM."""
+    """Limpa o terminal para melhor navegabilidade sem erros de variavel TERM."""
     if os.name == 'nt':
         os.system('cls')
     else:
-        # Tenta utilizar o comando clear ignorando stderr ou código ANSI
         if os.system('clear 2>/dev/null') != 0:
             print("\033[H\033[2J", end="")
 
 
 def pausar():
-    """Pausa a execução aguardando interação do usuário."""
+    """Pausa a execucao aguardando interacao do usuario."""
     input("\nPressione ENTER para continuar...")
 
 
 # ==============================================================================
-# CÁLCULOS GEOMÉTRICOS E DE MANEJO DE INSUMOS
+# CALCULOS GEOMETRICOS E DE MANEJO DE INSUMOS
 # ==============================================================================
 def calcular_area_cafe():
     """
-    Cálculo de Área para Café: Figura Retangular.
-    Área = Comprimento x Largura
+    Calculo de Area para Cafe: Figura Retangular.
+    Area = Comprimento x Largura
     """
-    print("\n--- CÁLCULO DE ÁREA (CULTURA: CAFÉ - ÁREA RETANGULAR) ---")
+    print("\n--- CALCULOS DE AREA (CULTURA: CAFE - AREA RETANGULAR) ---")
     while True:
         try:
             comprimento = float(input("Digite o comprimento do terreno (em metros): "))
             largura = float(input("Digite a largura do terreno (em metros): "))
             if comprimento <= 0 or largura <= 0:
-                print("⚠️ As dimensões devem ser maiores que zero.")
+                print("[AVISO] As dimensoes devem ser maiores que zero.")
                 continue
             area_m2 = comprimento * largura
             return area_m2, comprimento, largura
         except ValueError:
-            print("⚠️ Entrada inválida! Digite um número válido.")
+            print("[ERRO] Entrada invalida! Digite um numero valido.")
 
 
 def calcular_area_milho():
     """
-    Cálculo de Área para Milho: Figura Trapezoidal.
-    Área = ((Base Maior + Base Menor) * Altura) / 2
+    Calculo de Area para Milho: Figura Trapezoidal.
+    Area = ((Base Maior + Base Menor) * Altura) / 2
     """
-    print("\n--- CÁLCULO DE ÁREA (CULTURA: MILHO - ÁREA TRAPEZOIDAL) ---")
+    print("\n--- CALCULOS DE AREA (CULTURA: MILHO - AREA TRAPEZOIDAL) ---")
     while True:
         try:
             b_maior = float(input("Digite a Base Maior do terreno (em metros): "))
             b_menor = float(input("Digite a Base Menor do terreno (em metros): "))
             altura = float(input("Digite a Altura/Comprimento do terreno (em metros): "))
             if b_maior <= 0 or b_menor <= 0 or altura <= 0:
-                print("⚠️ As dimensões devem ser maiores que zero.")
+                print("[AVISO] As dimensoes devem ser maiores que zero.")
                 continue
             area_m2 = ((b_maior + b_menor) * altura) / 2.0
             return area_m2
         except ValueError:
-            print("⚠️ Entrada inválida! Digite um número válido.")
+            print("[ERRO] Entrada invalida! Digite um numero valido.")
 
 
 def calcular_manejo_cafe(area_m2, comprimento):
     """
-    Cálculo de Manejo para Café: Pulverização de Defensivo por Ruas de Lavoura.
+    Calculo de Manejo para Cafe: Pulverizacao de Defensivo por Ruas de Lavoura.
     Litros = (Dosagem mL/m * Metros por Rua * Qtd de Ruas) / 1000
     """
-    print("\n--- CÁLCULO DE MANEJO DE INSUMOS (CAFÉ - PULVERIZAÇÃO) ---")
-    insumo = "Pulverização Fungicida"
+    print("\n--- CALCULO DE MANEJO DE INSUMOS (CAFE - PULVERIZACAO) ---")
+    insumo = "Pulverizacao Fungicida"
     unidade = "Litros"
     while True:
         try:
-            dosagem_ml_m = float(input("Digite a dosagem de pulverização (em mL por metro): "))
-            qtd_ruas = int(input("Digite a quantidade de ruas na lavoura de café: "))
+            dosagem_ml_m = float(input("Digite a dosagem de pulverizacao (em mL por metro): "))
+            qtd_ruas = int(input("Digite a quantidade de ruas na lavoura de cafe: "))
             if dosagem_ml_m <= 0 or qtd_ruas <= 0:
-                print("⚠️ Valores devem ser maiores que zero.")
+                print("[AVISO] Valores devem ser maiores que zero.")
                 continue
             
             total_metros_ruas = comprimento * qtd_ruas
             total_litros = (dosagem_ml_m * total_metros_ruas) / 1000.0
-            print(f"➜ Total de metros de ruas: {total_metros_ruas:.2f} m")
-            print(f"➜ Quantidade total de defensivo necessária: {total_litros:.2f} Litros")
+            print(f"-> Total de metros de ruas: {total_metros_ruas:.2f} m")
+            print(f"-> Quantidade total de defensivo necessaria: {total_litros:.2f} Litros")
             return insumo, total_litros, unidade
         except ValueError:
-            print("⚠️ Entrada inválida! Digite valores numéricos válidos.")
+            print("[ERRO] Entrada invalida! Digite valores numericos validos.")
 
 
 def calcular_manejo_milho(area_ha):
     """
-    Cálculo de Manejo para Milho: Adubação (N-P-K / Fosfato) em Kg/ha.
-    Total Kg = Dosagem em Kg/ha * Área em Hectares
+    Calculo de Manejo para Milho: Adubacao (N-P-K / Fosfato) em Kg/ha.
+    Total Kg = Dosagem em Kg/ha * Area em Hectares
     """
-    print("\n--- CÁLCULO DE MANEJO DE INSUMOS (MILHO - ADUBAÇÃO FOSFATADA) ---")
-    insumo = "Fosfato / Adubação NPK"
+    print("\n--- CALCULO DE MANEJO DE INSUMOS (MILHO - ADUBACAO FOSFATADA) ---")
+    insumo = "Fosfato / Adubacao NPK"
     unidade = "Kg"
     while True:
         try:
             dosagem_kg_ha = float(input("Digite a dosagem recomendada de adubo (em Kg por Hectare): "))
             if dosagem_kg_ha <= 0:
-                print("⚠️ A dosagem deve ser maior que zero.")
+                print("[AVISO] A dosagem deve ser maior que zero.")
                 continue
             total_kg = dosagem_kg_ha * area_ha
-            print(f"➜ Área total em hectares: {area_ha:.4f} ha")
-            print(f"➜ Quantidade total de adubo necessária: {total_kg:.2f} Kg")
+            print(f"-> Area total em hectares: {area_ha:.4f} ha")
+            print(f"-> Quantidade total de adubo necessaria: {total_kg:.2f} Kg")
             return insumo, total_kg, unidade
         except ValueError:
-            print("⚠️ Entrada inválida! Digite um número válido.")
+            print("[ERRO] Entrada invalida! Digite um numero valido.")
 
 
 # ==============================================================================
-# MENU CRUD (OPÇÕES 1 A 5)
+# MENU CRUD (OPCOES 1 A 5)
 # ==============================================================================
 def opcao_cadastrar_dados():
-    """Opção 1: Entrada de dados nos vetores."""
+    """Opcao 1: Entrada de dados nos vetores."""
     print("=" * 60)
-    print("      ENTRADA DE DADOS - CADASTRAR NOVO MANEJO AGRÍCOLA")
+    print("      ENTRADA DE DADOS - CADASTRAR NOVO MANEJO AGRICOLA")
     print("=" * 60)
-    print("Escolha a cultura agrícola:")
-    print("1. Café (Área Retangular + Manejo de Pulverização)")
-    print("2. Milho (Área Trapezoidal + Manejo de Adubação Fosfatada)")
+    print("Escolha a cultura agricola:")
+    print("1. Cafe (Area Retangular + Manejo de Pulverizacao)")
+    print("2. Milho (Area Trapezoidal + Manejo de Adubacao Fosfatada)")
     
-    opcao_cultura = input("Opção (1 ou 2): ").strip()
+    opcao_cultura = input("Opcao (1 ou 2): ").strip()
     
     if opcao_cultura == '1':
-        cultura = "Café"
+        cultura = "Cafe"
         area_m2, comprimento, largura = calcular_area_cafe()
         area_ha = area_m2 / 10000.0
         insumo, qtd_insumo, unidade = calcular_manejo_cafe(area_m2, comprimento)
@@ -154,10 +153,10 @@ def opcao_cadastrar_dados():
         area_ha = area_m2 / 10000.0
         insumo, qtd_insumo, unidade = calcular_manejo_milho(area_ha)
     else:
-        print("❌ Opção de cultura inválida! Operação cancelada.")
+        print("[ERRO] Opcao de cultura invalida! Operacao cancelada.")
         return
 
-    # Inserção nos vetores
+    # Insercao nos vetores
     novo_id = len(vetor_ids) + 1
     vetor_ids.append(novo_id)
     vetor_culturas.append(cultura)
@@ -167,21 +166,21 @@ def opcao_cadastrar_dados():
     vetor_qtd_insumo.append(qtd_insumo)
     vetor_unidades.append(unidade)
     
-    print("\n✅ Registro cadastrado com sucesso no vetor de dados!")
-    print(f"   ID: {novo_id} | Cultura: {cultura} | Área: {area_ha:.4f} ha | Insumo: {qtd_insumo:.2f} {unidade}")
+    print("\n[SUCESSO] Registro cadastrado com sucesso no vetor de dados!")
+    print(f"   ID: {novo_id} | Cultura: {cultura} | Area: {area_ha:.4f} ha | Insumo: {qtd_insumo:.2f} {unidade}")
 
 
 def opcao_listar_dados():
-    """Opção 2: Saída de dados (Leitura do vetor no terminal)."""
+    """Opcao 2: Saida de dados (Leitura do vetor no terminal)."""
     print("=" * 75)
-    print("              SAÍDA DE DADOS - RELATÓRIO DE MANEJOS")
+    print("              SAIDA DE DADOS - RELATORIO DE MANEJOS")
     print("=" * 75)
     
     if len(vetor_ids) == 0:
-        print("ℹ️ Nenhum dado cadastrado nos vetores no momento.")
+        print("[INFO] Nenhum dado cadastrado nos vetores no momento.")
         return
 
-    header = f"{'POS (Vetor)':<11} | {'ID':<4} | {'CULTURA':<8} | {'ÁREA (m²)':<12} | {'ÁREA (ha)':<10} | {'INSUMO':<22} | {'QTD NECESSÁRIA'}"
+    header = f"{'POS (Vetor)':<11} | {'ID':<4} | {'CULTURA':<8} | {'AREA (m²)':<12} | {'AREA (ha)':<10} | {'INSUMO':<22} | {'QTD NECESSARIA'}"
     print(header)
     print("-" * len(header))
     
@@ -201,57 +200,57 @@ def opcao_listar_dados():
 
 
 def opcao_atualizar_dado():
-    """Opção 3: Atualização de dados numa posição qualquer do vetor."""
+    """Opcao 3: Atualizacao de dados numa posicao qualquer do vetor."""
     opcao_listar_dados()
     if len(vetor_ids) == 0:
         return
     
-    print("\n--- ATUALIZAÇÃO DE REGISTRO EM POSIÇÃO DO VETOR ---")
+    print("\n--- ATUALIZACAO DE REGISTRO EM POSICAO DO VETOR ---")
     try:
-        pos = int(input("Digite o índice da posição do vetor que deseja atualizar: "))
+        pos = int(input("Digite o indice da posicao do vetor que deseja atualizar: "))
         if pos < 0 or pos >= len(vetor_ids):
-            print("❌ Posição inválida! Índice fora dos limites do vetor.")
+            print("[ERRO] Posicao invalida! Indice fora dos limites do vetor.")
             return
         
-        print(f"\nAtualizando registro da posição [{pos}] (Cultura atual: {vetor_culturas[pos]}):")
-        print("Digite os novos dados para substituição:")
+        print(f"\nAtualizando registro da posicao [{pos}] (Cultura atual: {vetor_culturas[pos]}):")
+        print("Digite os novos dados para substituicao:")
         
-        nova_area_m2 = float(input("Nova área total (em m²): "))
+        nova_area_m2 = float(input("Nova area total (em m²): "))
         if nova_area_m2 <= 0:
-            print("❌ Área deve ser positiva.")
+            print("[ERRO] Area deve ser positiva.")
             return
         
         nova_area_ha = nova_area_m2 / 10000.0
         nova_qtd_insumo = float(input(f"Nova quantidade de insumo ({vetor_unidades[pos]}): "))
         if nova_qtd_insumo <= 0:
-            print("❌ Quantidade deve ser positiva.")
+            print("[ERRO] Quantidade deve ser positiva.")
             return
 
-        # Atualização direta na posição do vetor
+        # Atualizacao direta na posicao do vetor
         vetor_areas_m2[pos] = nova_area_m2
         vetor_areas_ha[pos] = nova_area_ha
         vetor_qtd_insumo[pos] = nova_qtd_insumo
         
-        print(f"\n✅ Posição [{pos}] do vetor atualizada com sucesso!")
+        print(f"\n[SUCESSO] Posicao [{pos}] do vetor atualizada com sucesso!")
         
     except ValueError:
-        print("❌ Entrada inválida! Digite um número inteiro para o índice.")
+        print("[ERRO] Entrada invalida! Digite um numero inteiro para o indice.")
 
 
 def opcao_deletar_dado():
-    """Opção 4: Deleção de dados do vetor de dados."""
+    """Opcao 4: Delecao de dados do vetor de dados."""
     opcao_listar_dados()
     if len(vetor_ids) == 0:
         return
 
-    print("\n--- DELEÇÃO DE REGISTRO DO VETOR ---")
+    print("\n--- DELECAO DE REGISTRO DO VETOR ---")
     try:
-        pos = int(input("Digite o índice da posição do vetor que deseja deletar: "))
+        pos = int(input("Digite o indice da posicao do vetor que deseja deletar: "))
         if pos < 0 or pos >= len(vetor_ids):
-            print("❌ Posição inválida! Índice fora dos limites do vetor.")
+            print("[ERRO] Posicao invalida! Indice fora dos limites do vetor.")
             return
 
-        # Remoção do elemento na posição pos em todos os vetores paralelos
+        # Remocao do elemento na posicao pos em todos os vetores paralelos
         id_removido = vetor_ids.pop(pos)
         cultura_removida = vetor_culturas.pop(pos)
         vetor_areas_m2.pop(pos)
@@ -260,10 +259,10 @@ def opcao_deletar_dado():
         vetor_qtd_insumo.pop(pos)
         vetor_unidades.pop(pos)
         
-        print(f"\n✅ Registro ID {id_removido} ({cultura_removida}) removido da posição [{pos}] do vetor!")
+        print(f"\n[SUCESSO] Registro ID {id_removido} ({cultura_removida}) removido da posicao [{pos}] do vetor!")
 
     except ValueError:
-        print("❌ Entrada inválida! Digite um índice válido.")
+        print("[ERRO] Entrada invalida! Digite um indice valido.")
 
 
 def salvar_dados_csv():
@@ -275,19 +274,19 @@ def salvar_dados_csv():
         f.write("id,cultura,area_m2,area_ha,insumo,qtd_insumo,unidade\n")
         for i in range(len(vetor_ids)):
             f.write(f"{vetor_ids[i]},{vetor_culturas[i]},{vetor_areas_m2[i]:.2f},{vetor_areas_ha[i]:.4f},{vetor_insumos[i]},{vetor_qtd_insumo[i]:.2f},{vetor_unidades[i]}\n")
-    print(f"📊 Dados exportados para o R com sucesso em: {caminho_csv}")
+    print(f"[DADOS] Dados exportados para o R com sucesso em: {caminho_csv}")
 
 
 def carregar_dados_iniciais_demo():
-    """Popula os vetores com dados de demonstração iniciais caso estejam vazios."""
+    """Popula os vetores com dados de demonstracao iniciais caso estejam vazios."""
     if len(vetor_ids) > 0:
         return
     dados_demo = [
-        (1, "Café", 25000.0, 2.5, "Pulverização Fungicida", 125.0, "Litros"),
-        (2, "Milho", 45000.0, 4.5, "Fosfato / Adubação NPK", 1350.0, "Kg"),
-        (3, "Café", 18000.0, 1.8, "Pulverização Fungicida", 90.0, "Litros"),
-        (4, "Milho", 32000.0, 3.2, "Fosfato / Adubação NPK", 960.0, "Kg"),
-        (5, "Café", 50000.0, 5.0, "Pulverização Fungicida", 250.0, "Litros"),
+        (1, "Cafe", 25000.0, 2.5, "Pulverizacao Fungicida", 125.0, "Litros"),
+        (2, "Milho", 45000.0, 4.5, "Fosfato / Adubacao NPK", 1350.0, "Kg"),
+        (3, "Cafe", 18000.0, 1.8, "Pulverizacao Fungicida", 90.0, "Litros"),
+        (4, "Milho", 32000.0, 3.2, "Fosfato / Adubacao NPK", 960.0, "Kg"),
+        (5, "Cafe", 50000.0, 5.0, "Pulverizacao Fungicida", 250.0, "Litros"),
     ]
     for item in dados_demo:
         vetor_ids.append(item[0])
@@ -310,16 +309,16 @@ def main():
         limpar_tela()
         print("==========================================================")
         print("           FARMTECH SOLUTIONS - AGRICULTURA DIGITAL       ")
-        print("          SISTEMA DE GESTÃO DE PLANTIO E INSUMOS          ")
+        print("          SISTEMA DE GESTAO DE PLANTIO E INSUMOS          ")
         print("==========================================================")
         print("1. Entrada de dados (Cadastrar nova cultura/manejo)")
-        print("2. Saída de dados (Exibir vetor no terminal)")
-        print("3. Atualização de dados numa posição do vetor")
-        print("4. Deleção de dados de uma posição do vetor")
+        print("2. Saida de dados (Exibir vetor no terminal)")
+        print("3. Atualizacao de dados numa posicao do vetor")
+        print("4. Delecao de dados de uma posicao do vetor")
         print("5. Sair do programa")
         print("==========================================================")
         
-        opcao = input("Digite o número da opção desejada (1-5): ").strip()
+        opcao = input("Digite o numero da opcao desejada (1-5): ").strip()
         
         if opcao == '1':
             limpar_tela()
@@ -343,15 +342,15 @@ def main():
         elif opcao == '5':
             limpar_tela()
             salvar_dados_csv()
-            print("\n👋 Encerrando a aplicação FarmTech Solutions... Dados salvos com sucesso!")
+            print("\nEncerrando a aplicacao FarmTech Solutions... Dados salvos com sucesso!")
             print("Obrigado por utilizar nosso sistema.")
             sys.exit(0)
         else:
-            print("❌ Opção inválida! Escolha uma opção de 1 a 5.")
+            print("[ERRO] Opcao invalida! Escolha uma opcao de 1 a 5.")
             pausar()
 
 
-# Garante preenchimento e exportação inicial
+# Garante preenchimento e exportacao inicial
 carregar_dados_iniciais_demo()
 salvar_dados_csv()
 

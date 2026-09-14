@@ -3,11 +3,11 @@
 """
 Script auxiliar para compactar a entrega do Projeto FarmTech Solutions (FIAP - Fase 1)
 Gera o arquivo entregavel_farmtech_fase1.zip contendo:
-- Códigos Python (src/python/)
-- Códigos R (src/r/)
+- Codigos Python (src/python/)
+- Codigos R (src/r/)
 - Resumo do Artigo Embrapa (docs/resumo_artigo_embrapa.pdf / .odt / .html)
-- Link do Vídeo (link_video.txt)
-- Dados e documentação
+- Link do Video (link_video.txt)
+- Dados e documentacao
 """
 
 import os
@@ -32,7 +32,7 @@ def criar_zip_entrega():
         "README.md"
     ]
 
-    print(f"📦 Criando pacote ZIP de entrega: {nome_zip}...")
+    print(f"[PACOTE] Criando pacote ZIP de entrega: {nome_zip}...")
     with zipfile.ZipFile(caminho_zip, 'w', zipfile.ZIP_DEFLATED) as zipf:
         for rel_path in arquivos_e_pastas:
             full_path = os.path.join(diretorio_raiz, rel_path)
@@ -40,10 +40,10 @@ def criar_zip_entrega():
                 zipf.write(full_path, arcname=rel_path)
                 print(f"  [+] Adicionado: {rel_path}")
             else:
-                print(f"  [!] Arquivo não encontrado (ignorado): {rel_path}")
+                print(f"  [!] Arquivo nao encontrado (ignorado): {rel_path}")
 
-    print(f"\n✅ Pacote ZIP gerado com sucesso em:\n   {caminho_zip}")
-    print("🚀 Pronto para envio na plataforma FIAP!")
+    print(f"\n[SUCESSO] Pacote ZIP gerado com sucesso em:\n   {caminho_zip}")
+    print("Pronto para envio na plataforma FIAP!")
 
 if __name__ == "__main__":
     criar_zip_entrega()
