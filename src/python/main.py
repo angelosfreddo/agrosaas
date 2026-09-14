@@ -25,8 +25,13 @@ vetor_unidades = []      # Unidade de medida do insumo ('Litros', 'Kg')
 
 
 def limpar_tela():
-    """Limpa o terminal para melhor navegabilidade."""
-    os.system('cls' if os.name == 'nt' else 'clear')
+    """Limpa o terminal para melhor navegabilidade sem erros de variável TERM."""
+    if os.name == 'nt':
+        os.system('cls')
+    else:
+        # Tenta utilizar o comando clear ignorando stderr ou código ANSI
+        if os.system('clear 2>/dev/null') != 0:
+            print("\033[H\033[2J", end="")
 
 
 def pausar():
