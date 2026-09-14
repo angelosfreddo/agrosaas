@@ -3,11 +3,11 @@
 """
 Script auxiliar para compactar a entrega do Projeto FarmTech Solutions (FIAP - Fase 1)
 Gera o arquivo entregavel_farmtech_fase1.zip contendo:
-- Codigos Python (src/python/)
-- Codigos R (src/r/)
-- Resumo do Artigo Embrapa (docs/resumo_artigo_embrapa.pdf / .odt / .html)
+- Codigos Python (src/python/main.py)
+- Codigos R (src/r/analysis.R e src/r/weather.R)
+- Resumo do Artigo Embrapa (docs/resumo_artigo_embrapa.pdf)
 - Link do Video (link_video.txt)
-- Dados e documentacao
+- Dataset (data/dados_fazenda.csv) e README.md
 """
 
 import os
@@ -23,10 +23,6 @@ def criar_zip_entrega():
         "src/r/analysis.R",
         "src/r/weather.R",
         "docs/resumo_artigo_embrapa.pdf",
-        "docs/resumo_artigo_embrapa.odt",
-        "docs/resumo_artigo_embrapa.html",
-        "docs/resumo_artigo_embrapa.md",
-        "docs/script_video.md",
         "data/dados_fazenda.csv",
         "link_video.txt",
         "README.md"
