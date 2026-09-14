@@ -1,3 +1,4 @@
+#!/usr/bin/env Rscript
 # ==============================================================================
 # FarmTech Solutions - Integracao com API Meteorologica (R - Ir Alem)
 # Projeto FIAP - Fase 1

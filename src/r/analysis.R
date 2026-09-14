@@ -1,3 +1,4 @@
+#!/usr/bin/env Rscript
 # ==============================================================================
 # FarmTech Solutions - Analise Estatistica Agricola em R
 # Projeto FIAP - Fase 1
