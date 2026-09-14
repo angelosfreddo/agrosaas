@@ -1,17 +1,20 @@
 ==============================================================================
-FARMTECH SOLUTIONS - DEMONSTRAÇÃO DO PROJETO (FIAP - FASE 1)
+FARMTECH SOLUTIONS - DEMONSTRACAO DO PROJETO (FIAP - FASE 1)
 ==============================================================================
 
-LINK DO VÍDEO NO YOUTUBE (NÃO LISTADO):
-https://www.youtube.com/watch?v=SEU_CODIGO_AQUI
+LINK DO VIDEO NO YOUTUBE (NAO LISTADO):
+https://youtu.be/TMEtZRIQfZs
+
+URL ALTERNATIVA DO VIDEO:
+https://www.youtube.com/watch?v=TMEtZRIQfZs
 
 ==============================================================================
-INSTRUÇÕES DE VERIFICAÇÃO DO VÍDEO:
-- Duração: Até 5 minutos
-- Visibilidade: Não Listado (Unlisted)
-- Conteúdo demonstrado no vídeo:
-  1. Apresentação inicial da Startup FarmTech Solutions e integrantes do grupo.
-  2. Execução completa da aplicação Python (Menu, Entrada, Exibição de Vetores, Atualização e Deleção).
-  3. Execução da análise estatística em R (Análise de Média e Desvio Padrão).
-  4. Execução da integração com API Meteorológica Pública em R (Diferencial "Ir Além").
+INSTRUCOES DE VERIFICACAO DO VIDEO:
+- Duracao: Ate 5 minutos
+- Visibilidade: Nao Listado (Unlisted)
+- Conteudo demonstrado no video:
+  1. Apresentacao inicial da Startup FarmTech Solutions e integrantes do grupo.
+  2. Execucao completa da aplicacao Python (Menu, Entrada, Exibicao de Vetores, Atualizacao e Delecao).
+  3. Execucao da analise estatistica em R (Analise de Media e Desvio Padrao).
+  4. Execucao da integracao com API Meteorologica Publica em R (Diferencial "Ir Alem").
 ==============================================================================
