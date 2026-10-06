@@ -1,0 +1,82 @@
+{
+  "version": 1,
+  "author": "FarmTech Solutions",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-esp32-devkit-c-v4",
+      "id": "esp",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht1",
+      "top": -100,
+      "left": -100,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn_n",
+      "top": -50,
+      "left": 150,
+      "attrs": { "color": "green", "label": "N" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn_p",
+      "top": -50,
+      "left": 250,
+      "attrs": { "color": "green", "label": "P" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn_k",
+      "top": -50,
+      "left": 350,
+      "attrs": { "color": "green", "label": "K" }
+    },
+    {
+      "type": "wokwi-photoresistor-sensor",
+      "id": "ldr1",
+      "top": 150,
+      "left": -150,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay1",
+      "top": 150,
+      "left": 150,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    
+    [ "dht1:VCC", "esp:3V3", "red", [] ],
+    [ "dht1:GND", "esp:GND.1", "black", [] ],
+    [ "dht1:SDA", "esp:15", "cyan", [] ],
+
+    [ "btn_n:1.l", "esp:12", "green", [] ],
+    [ "btn_n:2.l", "esp:GND.2", "black", [] ],
+
+    [ "btn_p:1.l", "esp:14", "green", [] ],
+    [ "btn_p:2.l", "esp:GND.2", "black", [] ],
+
+    [ "btn_k:1.l", "esp:27", "green", [] ],
+    [ "btn_k:2.l", "esp:GND.3", "black", [] ],
+
+    [ "ldr1:VCC", "esp:3V3", "red", [] ],
+    [ "ldr1:GND", "esp:GND.1", "black", [] ],
+    [ "ldr1:AO", "esp:34", "yellow", [] ],
+
+    [ "relay1:VCC", "esp:5V", "red", [] ],
+    [ "relay1:GND", "esp:GND.3", "black", [] ],
+    [ "relay1:IN", "esp:2", "blue", [] ]
+  ],
+  "dependencies": {}
+}
