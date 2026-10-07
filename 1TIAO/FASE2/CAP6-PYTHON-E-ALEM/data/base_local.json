@@ -1,0 +1,45 @@
+{
+    "talhoes": [
+        {
+            "codigo": "T01",
+            "fazenda": "Fazenda Boa Vista",
+            "area_ha": 50.5,
+            "variedade": "RB867515",
+            "estagio_corte": 3,
+            "produtividade_t_ha": 85.0,
+            "sincronizado": true
+        }
+    ],
+    "avaliacoes": [
+        {
+            "cod_avaliacao": "AV20261007123219435",
+            "codigo_talhao": "T01",
+            "data_avaliacao": "2026-10-07",
+            "tipo_colheita": "MECANIZADA",
+            "colhedora": "COLH-101",
+            "operador": "Joao Silva",
+            "turno": "DIURNO",
+            "velocidade_kmh": 4.5,
+            "pontos_amostrados": 5,
+            "area_amostrada_m2": 50.0,
+            "amostras": {
+                "toco": 2.5,
+                "tolete": 1.2,
+                "cana_inteira": 0.5,
+                "ponteiro": 0.8,
+                "estilhaco": 0.3
+            },
+            "kg_total": 5.3,
+            "perda_t_ha": 1.06,
+            "perda_pct": 1.23,
+            "prejuizo_rs": 8527.33,
+            "classificacao": "BAIXA",
+            "sincronizado": true
+        }
+    ],
+    "exclusoes_pendentes": {
+        "talhoes": [],
+        "avaliacoes": []
+    },
+    "atualizado_em": "2026-10-07T13:41:03"
+}

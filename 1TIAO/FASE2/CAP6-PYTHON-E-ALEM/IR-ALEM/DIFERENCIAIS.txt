@@ -1,0 +1,5 @@
+DIFERENCIAIS DESTE PROJETO:
+1. Arquitetura Offline-First (salva em JSON local caso nao haja conexao).
+2. Sincronizacao em lote com Oracle Database via MERGE (Upsert).
+3. Validacoes avancadas de input com funcoes puras.
+4. Exportacao automatizada de Laudos (.txt).
