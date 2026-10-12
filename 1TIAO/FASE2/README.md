@@ -31,6 +31,7 @@ Implementamos um script em R (`r_analysis/analise_irrigacao.R`) para aplicar est
 - `CAP1-UM-MAPA-DO-TESOURO/src/api_clima/clima_api.py`: Integracao automatizada com API climatica (Ir Alem 1).
 - `CAP1-UM-MAPA-DO-TESOURO/src/data_analysis_r/analise_irrigacao.R`: Analise estatistica e preditiva (Ir Alem 2).
 - `CAP6-PYTHON-E-ALEM/`: Sistema PerdaZero de gestao de perdas na colheita e integracao com Oracle.
+- `CAP7-DECOLANDO-COM-CIENCIA-DE-DADOS/`: Analise exploratoria descritiva de dados do agronegocio (CONAB/IBGE) com base Excel e script R.
 
 ## Imagem do Circuito
 

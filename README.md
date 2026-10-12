@@ -41,6 +41,14 @@ agrosaas/
 │       │   ├── src/                                   # Modulos Python (main, calculos, banco_oracle, validacao)
 │       │   ├── IR-ALEM/DIFERENCIAIS.txt               # Descricao dos diferenciais implementados
 │       │   └── README.md                              # Documentacao do sistema PerdaZero
+│       ├── CAP7-DECOLANDO-COM-CIENCIA-DE-DADOS/       # Cap 7: Analise Estatistica Descritiva do Agronegocio
+│       │   ├── analise_agronegocio.R                  # Script R completo com estatisticas e graficos
+│       │   ├── base_dados_agronegocio.xlsx            # Base oficial Excel (36 linhas e 4 tipologias)
+│       │   ├── base_dados_agronegocio.csv             # Base de dados em CSV
+│       │   ├── grafico_1_quantitativa_produtividade.png # Histograma e Boxplot
+│       │   ├── grafico_2_qualitativa_regiao.png       # Barras e Setores
+│       │   ├── grafico_3_qualitativa_ordinal_porte.png # Barras Ordinal
+│       │   └── README.md                              # Documentacao metodologica e estatistica
 │       ├── docs/
 │       │   ├── circuito_wokwi.png                     # Imagem do circuito Wokwi
 │       │   └── roteiro_video.md                       # Roteiro de gravacao do video da Fase 2
@@ -85,3 +93,11 @@ Consulte a documentacao completa em [`1TIAO/FASE2/CAP1-UM-MAPA-DO-TESOURO/README
 - **Arquitetura Offline-First + Oracle DB:** Operacao local em JSON com sincronizacao automatica para o banco de dados Oracle da FIAP.
 
 Consulte a documentacao completa em [`1TIAO/FASE2/CAP6-PYTHON-E-ALEM/README.md`](./1TIAO/FASE2/CAP6-PYTHON-E-ALEM/README.md).
+
+---
+
+### Fase 2 - Cap 7: Decolando com Ciencia de Dados (`1TIAO/FASE2/CAP7-DECOLANDO-COM-CIENCIA-DE-DADOS`)
+- **Analise Estatistica de Dados do Agro:** Base estruturada em Excel com 36 observacoes e 4 tipologias de variaveis (CONAB, IBGE e MAPA).
+- **Estatistica Descritiva em R:** Medidas de Tendencia Central, Dispersao, Separatrizes e visualizacoes graficas (Histograma, Boxplot, Barras e Pizza).
+
+Consulte a documentacao completa em [`1TIAO/FASE2/CAP7-DECOLANDO-COM-CIENCIA-DE-DADOS/README.md`](./1TIAO/FASE2/CAP7-DECOLANDO-COM-CIENCIA-DE-DADOS/README.md).

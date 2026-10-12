@@ -1,0 +1,37 @@
+id_propriedade,municipio_uf,regiao,cultura_principal,porte_propriedade,numero_maquinas,produtividade_sc_ha
+1,Sorriso - MT,Centro-Oeste,Soja,Grande,18,63.5
+2,Rio Verde - GO,Centro-Oeste,Milho,Grande,16,65.2
+3,Sapezal - MT,Centro-Oeste,Algodão,Grande,20,71.4
+4,Nova Mutum - MT,Centro-Oeste,Soja,Grande,14,62.8
+5,Cristalina - GO,Centro-Oeste,Milho,Médio,10,58.6
+6,Maracaju - MS,Centro-Oeste,Soja,Médio,9,57.3
+7,Dourados - MS,Centro-Oeste,Milho,Médio,8,55.0
+8,Campo Novo do Parecis - MT,Centro-Oeste,Soja,Grande,15,68.1
+9,Jataí - GO,Centro-Oeste,Milho,Médio,11,60.4
+10,Cascavel - PR,Sul,Soja,Médio,7,59.8
+11,Passo Fundo - RS,Sul,Soja,Médio,6,53.2
+12,Castro - PR,Sul,Milho,Médio,8,66.5
+13,Londrina - PR,Sul,Soja,Pequeno,4,51.0
+14,Cruz Alta - RS,Sul,Soja,Médio,7,54.6
+15,Maringá - PR,Sul,Milho,Médio,6,56.4
+16,Chapecó - SC,Sul,Milho,Pequeno,5,52.8
+17,Ijuí - RS,Sul,Soja,Pequeno,4,49.5
+18,Uberaba - MG,Sudeste,Soja,Médio,8,58.0
+19,Ribeirão Preto - SP,Sudeste,Cana-de-açúcar,Grande,12,64.0
+20,Patrocínio - MG,Sudeste,Café,Médio,5,46.2
+21,Itapetininga - SP,Sudeste,Milho,Médio,7,57.9
+22,Unaí - MG,Sudeste,Soja,Médio,9,56.1
+23,Franca - SP,Sudeste,Café,Pequeno,3,44.8
+24,Varginha - MG,Sudeste,Café,Pequeno,4,43.5
+25,Luís Eduardo Magalhães - BA,Nordeste,Soja,Grande,17,67.8
+26,São Desidério - BA,Nordeste,Algodão,Grande,15,69.2
+27,Balsas - MA,Nordeste,Soja,Médio,10,58.4
+28,Barreiras - BA,Nordeste,Milho,Médio,8,55.7
+29,Uruçuí - PI,Nordeste,Soja,Médio,9,57.1
+30,Petrolina - PE,Nordeste,Fruticultura,Pequeno,3,48.0
+31,Corrente - PI,Nordeste,Milho,Pequeno,4,47.3
+32,Paragominas - PA,Norte,Soja,Médio,9,56.8
+33,Vilhena - RO,Norte,Soja,Médio,8,58.2
+34,Campos Lindos - TO,Norte,Soja,Médio,10,60.1
+35,Pedro Afonso - TO,Norte,Soja,Pequeno,5,52.4
+36,Cerejeiras - RO,Norte,Milho,Pequeno,4,50.7
