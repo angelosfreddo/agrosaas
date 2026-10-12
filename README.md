@@ -70,8 +70,13 @@ agrosaas/
   - **Rele Azul (Bomba d'Agua):** Modulo atuador que controla o fluxo hidrico.
 - **Ir Alem 1 (Python + API Open-Meteo):** Consulta de previsao de chuva em tempo real e comando Serial (`1` ou `0`) para suspensao preventiva da irrigacao.
 - **Ir Alem 2 (Data Science em R):** Analise exploratoria de historico de 10 dias e media movel de 3 dias para prescricao automatica de irrigacao.
+- **Video Demonstrativo (YouTube - Nao Listado):** [https://youtu.be/AVC19HA_oGU](https://youtu.be/AVC19HA_oGU)
 
-Consulte a documentacao completa e o circuito em [`1TIAO/FASE2/CAP1-UM-MAPA-DO-TESOURO/README.md`](./1TIAO/FASE2/CAP1-UM-MAPA-DO-TESOURO/README.md).
+#### Circuito no Wokwi:
+![Circuito Wokwi](./1TIAO/FASE2/CAP1-UM-MAPA-DO-TESOURO/docs/circuito_wokwi.png)
+
+Consulte a documentacao completa em [`1TIAO/FASE2/CAP1-UM-MAPA-DO-TESOURO/README.md`](./1TIAO/FASE2/CAP1-UM-MAPA-DO-TESOURO/README.md).
+
 
 ---
 
