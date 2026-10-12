@@ -1,0 +1,26 @@
+==============================================================================
+PERDAZERO - GESTAO DE PERDAS NA COLHEITA DE CANA (FIAP - FASE 2 - CAP 6)
+==============================================================================
+
+ALUNO / INTEGRANTE:
+Angelo Sfreddo (RM: 566580)
+Turma: 1TIAO
+
+LINK DO PROJETO NO GITHUB (CAP 6 - PYTHON E ALEM):
+https://github.com/angelosfreddo/agrosaas/tree/main/1TIAO/FASE2/CAP6-PYTHON-E-ALEM
+
+LINK DO REPOSITORIO RAIZ:
+https://github.com/angelosfreddo/agrosaas
+
+==============================================================================
+RESUMO DA ENTREGA (CAPITULOS 3, 4, 5 E 6):
+1. Problema do Agronegocio: Monitoramento, calculo economico (ATR) e diagnostico
+   de causa-raiz para reducao das perdas na colheita mecanizada de cana-de-acucar.
+2. Subalgoritmos (Cap. 3): Funcoes e procedimentos modulares com passagem de
+   parametros (calculos.py, validacao.py, arquivos.py, repositorio.py, banco_oracle.py).
+3. Estruturas de Dados (Cap. 4): Listas, Tuplas, Dicionarios e Tabela de Memoria.
+4. Manipulacao de Arquivos (Cap. 5): Leitura/escrita JSON (parametros, modo offline,
+   importacao/exportacao em lote) e arquivos Texto .TXT (laudos tecnicos e logs).
+5. Banco de Dados Oracle (Cap. 6): Integracao via oracledb com bind variables,
+   DDL automatizado e sincronizacao Offline-First (Upsert/Merge).
+==============================================================================
