@@ -1,66 +1,115 @@
-# PerdaZero - Sistema de Gestao de Perdas na Colheita
+# PerdaZero - Sistema de Gestao de Perdas na Colheita Mecanizada
 
-Bem-vindo ao **PerdaZero**, a solucao em software (AgroSaaS) para monitoramento e gestao inteligente de perdas na colheita mecanizada de cana-de-acucar. Este sistema foi desenvolvido como entrega da Fase 2 do curso da FIAP (Gestao do Agronegocio em Python).
-
-## O Que Este Sistema Faz?
-Na colheita mecanizada, as perdas de materia-prima (cana deixada no chao) podem chegar a 15%. O produtor raramente sabe **quanto perdeu, onde perdeu e qual foi a causa**. 
-
-O PerdaZero resolve isso! Ele roda direto no campo (ate mesmo sem internet), registra os residuos da colheita, faz o calculo agronomico transformando Quilos (Kg) em Toneladas por Hectare (t/ha), calcula o prejuizo financeiro e diagnostica onde a colhedora falhou. 
-
-Quando a internet volta, ele manda tudo pro banco de dados Oracle da matriz.
+> **FIAP - Fase 2: Gestao do Agronegocio em Python (Capitulos 3, 4, 5 e 6)**  
+> **Turma:** 1TIAO  
+> **Integrantes:**  
+> - Angelo Sfreddo (RM: 566580)  
 
 ---
 
-## Como Executar o Programa
+## 1. O Problema do Agronegocio Tratado
 
-### Pre-requisitos
-1. Ter o Python 3 instalado.
-2. Ativar sua Virtual Environment (`.venv`).
-3. Instalar as dependencias (`pip install pandas oracledb`).
+O Brasil e lider global na producao de cana-de-acucar (com safras superiores a 600 milhoes de toneladas), sendo pilar fundamental da matriz bioenergetica (etanol) e de acucar. Entretanto, a transicao da colheita manual para a colheita mecanizada gerou um gargalo critico:
+* **Perdas Elevadas:** Enquanto a colheita manual apresentava perdas de aproximadamente 5%, na **colheita mecanizada as perdas de materia-prima deixada no solo chegam a 15%** (dados SOCICANA / UNICESUMAR).
+* **Prejuizo Financeiro:** Em uma regiao tipica com produtividade de 100 t/ha, cada ponto percentual perdido representa milhoes de reais em biomassa e Acucar Total Recuperavel (ATR) deixados no campo.
+* **Falta de Diagnostico em Tempo Real:** O gestor rural e o operador de colhedora frequentemente nao sabem **quanto perderam, onde perderam e qual o componente da maquina que causou a perda**.
 
-### Executando
-Basta abrir o terminal, navegar ate a pasta do projeto e rodar:
-```bash
-python src/main.py
+O **PerdaZero** atua como uma solucao **AgroSaaS / Edge-Computing** para solucionar essa dor: permite que fiscais de qualidade e engenheiros agronomicos realizem amostragens de campo com molduras tecnicas, registrem os tipos de residuos (toco, tolete, cana inteira, ponteiro e estilhaco), calculem a perda em t/ha, percentual e prejuizo em R$ (modelo ATR), e recebam um **diagnostico de causa-raiz imediato** para regulagem da colhedora.
+
+---
+
+## 2. Conteudos da Disciplina Atendidos
+
+| Conteudo | Aplicacao no Projeto |
+| :--- | :--- |
+| **Subalgoritmos (Cap. 3)** | Funcoes e procedimentos puros modulares com passagem de parametros em `calculos.py`, `validacao.py`, `interface.py`, `arquivos.py`, `repositorio.py` e `banco_oracle.py`. |
+| **Estruturas de Dados (Cap. 4)** | **Tuplas** para constantes de dominio e retornos `(valido, valor)`; **Dicionarios** para base de conhecimento, parametros e registros; **Listas** para colecoes de talhoes e amostras; **Tabela de Memoria** em `ctx` com manipulacao de matrizes/tabelas no prompt. |
+| **Manipulacao de Arquivos (Cap. 5)** | **JSON** para parametros (`config/parametros.json`), base offline (`data/base_local.json`), importacao de lotes (`data/coleta_campo_exemplo.json`) e exportacao; **Texto (.TXT)** para laudos tecnicos em `output/laudos/`, log de auditoria em `output/log_operacoes.txt` e descarte de dados rejeitados. |
+| **Banco de Dados Oracle (Cap. 6)** | Integracao via `oracledb` com o banco FIAP (`oracle.fiap.com.br:1521/ORCL`), tabelas `PZ_TALHAO` e `PZ_AVALIACAO_PERDA` com *constraints* (`CHECK`, `FK`), indices e uso estrito de *bind variables* contra SQL Injection. |
+
+---
+
+## 3. Diferenciais e Inovacoes ("Ir Alem")
+
+1. **Arquitetura Offline-First:** No campo, o sinal 4G/5G costuma ser inexistente ou instavel. O PerdaZero salva localmente em JSON (`base_local.json`) e, assim que conectado ao Oracle, realiza a sincronizacao em lote (*Upsert/Merge*).
+2. **Diagnostico de Causa-Raiz da Colhedora:** O sistema correlaciona a composicao do residuo com a falha mecanica:
+   * *Toco alto:* corte basal alto, facas desgastadas ou suspensao desregulada.
+   * *Tolete/rebolo:* velocidade de translado excessiva ou descompasso do transbordo.
+   * *Cana inteira:* divisores de linha desajustados ou colheita contra o acamamento.
+   * *Ponteiro:* despontador muito baixo cortando colmo util.
+   * *Estilhaco:* facas do picador cegas ou rotacao excessiva do extrator primario.
+3. **Simulador Financeiro com Regras CONSECANA/ATR:** Projeta o ganho monetario direto ao reduzir o percentual de perdas para a meta agronômica estabelecida.
+4. **Validacao Robusta de Entradas:** Dupla camada de consistencia que impede caracteres que quebram queries, tipos inconsistentes ou valores fora das faixas agronomicas.
+
+---
+
+## 4. Estrutura de Diretorios
+
+```text
+├── config/
+│   └── parametros.json             # Parametros economicos (ATR, preco) e metas
+├── data/
+│   ├── base_local.json             # Base de dados local (Modo Offline)
+│   └── coleta_campo_exemplo.json   # Arquivo JSON de exemplo para importacao em lote
+├── output/                         # Criado automaticamente durante a execucao
+│   ├── laudos/                     # Laudos tecnicos emitidos em arquivo .txt
+│   ├── exportacoes/                # Dados consolidados exportados em JSON
+│   └── log_operacoes.txt           # Trilha de auditoria das operacoes
+├── scripts/
+│   └── ddl_perdazero.sql           # Script SQL com criacao das tabelas no Oracle
+├── src/
+│   ├── main.py                     # Ponto de entrada e fluxo dos menus
+│   ├── calculos.py                 # Funcoes agronomicas, financeiras e diagnostico
+│   ├── validacao.py                # Consistencia de entradas do usuario e dados JSON
+│   ├── interface.py                # Formatacao visual do terminal, cores e tabelas
+│   ├── arquivos.py                 # Leitura e escrita de JSON e TXT
+│   ├── repositorio.py              # Camada de uniao: memoria + JSON local + Oracle
+│   └── banco_oracle.py             # Conexao e operacoes SQL no Oracle Database
+├── tests/
+│   └── test_calculos.py            # Testes unitarios das regras agronomicas
+├── requirements.txt                # Dependencias do projeto
+└── README.md                       # Documentacao do projeto
 ```
 
 ---
 
-## Estrutura e Pastas do Projeto
-- `src/` -> Codigo-fonte (A logica principal esta em `main.py`).
-- `config/` -> Arquivo `parametros.json` onde os engenheiros agronomicos ajustam os precos da cana, do ATR e as tolerancias de perda.
-- `data/` -> Onde o arquivo `base_local.json` e criado para fazer o modo Offline funcionar.
-- `laudos/` -> Onde o sistema salva os Laudos impressos (.txt) que sao gerados no menu 6.
-- `scratch/` -> Rascunhos.
+## 5. Como Executar
+
+### Pre-requisitos
+* Python 3.10 ou superior instalado.
+* Criacao e ativacao de ambiente virtual (opcional, mas recomendado):
+  ```bash
+  python -m venv .venv
+  source .venv/bin/activate    # Linux / Mac
+  # .venv\Scripts\activate     # Windows
+  ```
+* Instalacao das dependencias:
+  ```bash
+  pip install -r requirements.txt
+  ```
+
+### Executando o Sistema
+```bash
+python src/main.py
+```
+
+### Executando os Testes Unitarios
+```bash
+python -m unittest discover tests
+```
 
 ---
 
-## Navegando Pelos Menus
-Ao rodar o programa, voce vera 9 opcoes:
+## 6. Navegacao Pelos Menus do Sistema
 
-1. **`[1] Cadastrar Talhao`**: O "Talhao" e o pedaco de terra. Voce informa a area, fazenda, variedade da cana e qual a produtividade esperada.
-2. **`[2] Listar Talhoes`**: Mostra na tela uma tabela com todas as rocas cadastradas.
-3. **`[3] Excluir Talhao`**: Deleta o registro do sistema (Cuidado: deleta em cascata as avaliacoes tambem).
-4. **`[4] Registrar Avaliacao de Perdas`**: O coracao do sistema. O fiscal preenche os quilos de cana que achou no chao (toco, cana inteira, rebolo) e o sistema te devolve instantaneamente se a colheita foi Otima, Aceitavel ou Critica.
-5. **`[5] Importar Dados de Coleta (JSON)`**: Em vez de digitar na mao, se voce tiver um pendrive com varias coletas do campo, o sistema importa tudo de uma vez.
-6. **`[6] Ranking de Eficiencia de Colheita`**: Monta um podio mostrando quais colhedoras ou quais operadores deram mais prejuizo para a Usina.
-7. **`[7] Gerar Laudos de Perda (TXT)`**: Cria um "recibo" tecnico (.txt) que o fiscal pode mandar por WhatsApp para o operador da maquina consertar a colheita na hora.
-8. **`[8] Banco de dados Oracle`**: Abre o menu de Conexao (onde a magica Offline acontece).
-9. **`[0] Sair`**: Fecha o sistema com seguranca.
+Ao iniciar o programa, voce acessara o painel principal:
 
----
-
-## Integracao com Oracle e o Modo "Offline-First"
-O PerdaZero nao trava se voce ficar sem internet!
-
-* **Modo Offline:** Por padrao, ou se a internet cair, ele funciona 100% usando o `base_local.json`.
-* **Conectando no Banco:** Va no Menu `[8]` -> Digite `[1]`. Insira seu **RM da FIAP** e sua **Senha** (data de nascimento com 6 numeros). O sistema se conecta ao banco `oracle.fiap.com.br`.
-* **Sincronizacao:** Assim que conecta, ele cria as tabelas automaticamente se for seu primeiro acesso e **faz upload** de todas as coletas que voce salvou no modo offline para a nuvem da Oracle.
-
-## Entendendo os Resultados (Diagnostico)
-Ao registrar uma perda, observe a classificacao:
-* **[OTIMO / BOM]**: Tudo certo! Operador mandando bem.
-* **[ACEITAVEL / ALERTA]**: Atencao, precisa regular as facas da maquina.
-* **[CRITICO]**: Pare a maquina! Muito dinheiro sendo deixado no chao.
-
-> **Dica de Mestre:** Para testar a importacao automatica, escolha a opcao de menu `[5]` e digite `data/coleta_campo_exemplo.json`. Ele importara coletas de teste prontas em 1 segundo.
+* **`[1] Talhoes (cadastro)`**: Gerencia os talhoes cadastrados (Cadastrar, Listar, Alterar e Excluir com confirmacao).
+* **`[2] Registrar avaliacao de perdas`**: Modulo central de campo. Informa as massas recolhidas por tipo de perda e recebe na hora a classificacao (*BAIXA, MODERADA, ALTA, CRITICA*), perda em t/ha, % de perda e recomendacoes corretivas.
+* **`[3] Consultar avaliacoes`**: Lista historica das amostragens e busca detalhada por codigo.
+* **`[4] Painel gerencial`**: Indicadores consolidados, ranking de perdas por operador/colhedora e distribuicao dos tipos de residuo.
+* **`[5] Simulador de ganho`**: Calculadora de ROI simulando a economia financeira em R$ ao atingir as metas agronomicas de reducao de perdas.
+* **`[6] Arquivos`**: Emite laudos tecnicos individuais em `.txt`, exporta base para JSON, importa coletas de campo em lote (como `data/coleta_campo_exemplo.json`) e exibe o log de auditoria.
+* **`[7] Banco de dados Oracle`**: Painel de integracao com o banco FIAP. Permite conectar com usuario/senha, sincronizar registros offline pendentes e descarregar atualizacoes.
+* **`[8] Parametros`**: Permite aos engenheiros agronomicos ajustar precos do ATR, produtividade padrao e tolerancias de perda.
+* **`[0] Sair`**: Salva o estado atual na base local e encerra a aplicacao de forma segura.
