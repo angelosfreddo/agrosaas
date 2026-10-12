@@ -1,0 +1,20 @@
+==============================================================================
+FARMTECH SOLUTIONS - DEMONSTRACAO DO PROJETO (FIAP - FASE 2 - CAP 1)
+==============================================================================
+
+LINK DO VIDEO NO YOUTUBE (NAO LISTADO - ATE 5 MINUTOS):
+https://youtu.be/AVC19HA_oGU
+
+URL ALTERNATIVA DO VIDEO:
+https://www.youtube.com/watch?v=AVC19HA_oGU
+
+LINK DO REPOSITORIO GITHUB:
+https://github.com/angelosfreddo/agrosaas
+
+==============================================================================
+CONTEUDO DEMONSTRADO NO VIDEO:
+1. Apresentacao da Startup FarmTech Solutions e contexto agronomico (Milho).
+2. Simulacao IoT no Wokwi (ESP32, DHT22, Botoes NPK, LDR pH e Rele Azul).
+3. Programa Ir Alem 1: Integracao Python com API Open-Meteo e comando Serial.
+4. Programa Ir Alem 2: Data Science e estatistica preditiva em R.
+==============================================================================

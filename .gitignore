@@ -7,5 +7,7 @@ __pycache__/
 docs/CAP8.pdf
 docs/CAP8_text.txt
 
-# Pacote ZIP final
+# Pacote ZIP final e geradores locais
 *.zip
+gerar_zip*.py
+**/gerar_zip*.py

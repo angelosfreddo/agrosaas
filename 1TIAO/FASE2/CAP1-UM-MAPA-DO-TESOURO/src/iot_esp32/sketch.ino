@@ -1,3 +1,13 @@
+// ============================================================================
+// Projeto: FarmTech Solutions - Sistema de Irrigacao Inteligente (Fase 2)
+// Cultura Agricola: Milho (Zea mays)
+// Referencia Agronomica: Embrapa Milho e Sorgo
+// - Umidade Critica: < 40% (aciona irrigacao) | Capacidade de Campo: >= 60%
+// - pH Ideal do Solo: 5.5 a 6.8 (alerta para calagem se fora de 6.0 a 7.0)
+// - Nutrientes NPK: Fertirrigacao automatica em caso de deficiencia
+// - Previsao Climatica: Integracao via Monitor Serial com modulo Python
+// ============================================================================
+
 #include <DHT.h>
 
 // Definicao dos pinos

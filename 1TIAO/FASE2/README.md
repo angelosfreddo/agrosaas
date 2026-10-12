@@ -25,16 +25,19 @@ Ele avalia a probabilidade de chuva nas proximas 12 horas. Se houver chuva forte
 ## Ir Alem 2: Data Science (R)
 Implementamos um script em R (`r_analysis/analise_irrigacao.R`) para aplicar estatistica a tomada de decisao. O script gera e analisa uma serie historica da umidade e temperatura do solo, calculando media, desvio padrao, minimo e maximo. Atraves da media movel de umidade dos ultimos 3 dias (tendencia), o algoritmo prescreve matematicamente a necessidade de acionar a irrigacao, complementando a visao instantanea do IoT.
 
-## Estrutura de Arquivos
-- `esp32/sketch.ino`: Codigo C/C++ rodando no ESP32.
-- `esp32/diagram.json`: Estrutura do circuito para o simulador Wokwi.
-- `python/clima_api.py`: Integracao automatizada com API climatica (Ir Alem 1).
-- `r_analysis/analise_irrigacao.R`: Analise estatistica e preditiva (Ir Alem 2).
+## Estrutura de Arquivos (Cap 1 - Um Mapa do Tesouro)
+- `CAP1-UM-MAPA-DO-TESOURO/src/iot_esp32/sketch.ino`: Codigo C/C++ rodando no ESP32.
+- `CAP1-UM-MAPA-DO-TESOURO/src/iot_esp32/diagram.json`: Estrutura do circuito para o simulador Wokwi.
+- `CAP1-UM-MAPA-DO-TESOURO/src/api_clima/clima_api.py`: Integracao automatizada com API climatica (Ir Alem 1).
+- `CAP1-UM-MAPA-DO-TESOURO/src/data_analysis_r/analise_irrigacao.R`: Analise estatistica e preditiva (Ir Alem 2).
+- `CAP6-PYTHON-E-ALEM/`: Sistema PerdaZero de gestao de perdas na colheita e integracao com Oracle.
 
 ## Imagem do Circuito
-*(Dica: Coloque aqui o print do seu diagrama do Wokwi com a montagem finalizada, renomeando o arquivo de imagem para `circuito_wokwi.png` dentro da pasta `docs` e descomentando a linha abaixo)*
-<!-- ![Circuito Wokwi](./docs/circuito_wokwi.png) -->
+
+![Circuito Wokwi](./docs/circuito_wokwi.png)
 
 ## Video Demonstrativo
-*(Insira o link para o seu video nao-listado do YouTube aqui com o pitch do grupo e a demonstracao rodando)*
-[Link do Video no YouTube]
+- **Link no YouTube (Nao Listado):** [https://youtu.be/AVC19HA_oGU](https://youtu.be/AVC19HA_oGU)
+- Consulte tambem em [`CAP1-UM-MAPA-DO-TESOURO/link_video.txt`](./CAP1-UM-MAPA-DO-TESOURO/link_video.txt) e o roteiro em [`docs/roteiro_video.md`](./docs/roteiro_video.md).
+
+
