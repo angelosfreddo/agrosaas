@@ -1,0 +1,385 @@
+==============================================================================
+IR ALEM 2 - EVIDENCIA DE CARGA E CONSULTAS NO MONGODB (FARMTECH SOLUTIONS)
+==============================================================================
+Data/Hora da execucao : 2026-11-02 15:45:31
+Banco / Colecao       : farmtech_solutions.leituras_brutas_esp32
+Status da conexao     : MODO VALIDACAO LOCAL (PyMongo/mongomock - defina MONGODB_URI para Atlas/servidor)
+Total de documentos   : 2881
+
+------------------------------------------------------------------------------
+CONSULTA 1 - Leituras com umidade critica (< 40%) e bomba ligada (Total: 34)
+Filtro PyMongo: {'umidade': {'$gte': 0.0, '$lt': 40.0}, 'bomba': 1}
+------------------------------------------------------------------------------
+[
+  {
+    "data_hora": "2026-02-23 13:00",
+    "umidade": 37.2,
+    "ph": 6.08,
+    "fosforo": 1,
+    "potassio": 1,
+    "acao": "FERTIRRIGACAO"
+  },
+  {
+    "data_hora": "2026-03-18 15:00",
+    "umidade": 37.4,
+    "ph": 6.02,
+    "fosforo": 1,
+    "potassio": 1,
+    "acao": "FERTIRRIGACAO"
+  },
+  {
+    "data_hora": "2026-01-10 11:00",
+    "umidade": 37.8,
+    "ph": 6.25,
+    "fosforo": 1,
+    "potassio": 0,
+    "acao": "FERTIRRIGACAO"
+  },
+  {
+    "data_hora": "2026-04-27 14:00",
+    "umidade": 38.1,
+    "ph": 6.3,
+    "fosforo": 1,
+    "potassio": 1,
+    "acao": "IRRIGACAO"
+  },
+  {
+    "data_hora": "2026-01-17 19:00",
+    "umidade": 38.2,
+    "ph": 6.24,
+    "fosforo": 1,
+    "potassio": 1,
+    "acao": "IRRIGACAO"
+  },
+  {
+    "data_hora": "2026-04-17 10:00",
+    "umidade": 38.4,
+    "ph": 5.66,
+    "fosforo": 1,
+    "potassio": 1,
+    "acao": "IRRIGACAO"
+  },
+  {
+    "data_hora": "2026-02-04 22:00",
+    "umidade": 38.7,
+    "ph": 6.08,
+    "fosforo": 0,
+    "potassio": 1,
+    "acao": "FERTIRRIGACAO"
+  },
+  {
+    "data_hora": "2026-02-26 15:00",
+    "umidade": 38.8,
+    "ph": 5.9,
+    "fosforo": 0,
+    "potassio": 1,
+    "acao": "FERTIRRIGACAO"
+  }
+]
+
+------------------------------------------------------------------------------
+CONSULTA 2 - Leituras por estado de bomba em FERTIRRIGACAO (Total: 23)
+Filtro PyMongo: {'bomba': 1, 'acao': 'FERTIRRIGACAO'}
+------------------------------------------------------------------------------
+[
+  {
+    "data_hora": "2026-01-02 10:00",
+    "umidade": 39.7,
+    "ph": 6.28,
+    "acao": "FERTIRRIGACAO",
+    "sensores": {
+      "S3_nutrientes": {
+        "P": 0,
+        "K": 1,
+        "N": 1
+      }
+    }
+  },
+  {
+    "data_hora": "2026-01-10 11:00",
+    "umidade": 37.8,
+    "ph": 6.25,
+    "acao": "FERTIRRIGACAO",
+    "sensores": {
+      "S3_nutrientes": {
+        "P": 1,
+        "K": 0,
+        "N": 0
+      }
+    }
+  },
+  {
+    "data_hora": "2026-01-12 18:00",
+    "umidade": 39.6,
+    "ph": 6.3,
+    "acao": "FERTIRRIGACAO",
+    "sensores": {
+      "S3_nutrientes": {
+        "P": 1,
+        "K": 1,
+        "N": 0
+      }
+    }
+  },
+  {
+    "data_hora": "2026-01-14 18:00",
+    "umidade": 39.7,
+    "ph": 6.19,
+    "acao": "FERTIRRIGACAO",
+    "sensores": {
+      "S3_nutrientes": {
+        "P": 1,
+        "K": 1,
+        "N": 0
+      }
+    }
+  },
+  {
+    "data_hora": "2026-01-25 23:00",
+    "umidade": 39.9,
+    "ph": 6.2,
+    "acao": "FERTIRRIGACAO",
+    "sensores": {
+      "S3_nutrientes": {
+        "P": 1,
+        "K": 1,
+        "N": 0
+      }
+    }
+  },
+  {
+    "data_hora": "2026-02-02 19:00",
+    "umidade": 39.5,
+    "ph": 6.16,
+    "acao": "FERTIRRIGACAO",
+    "sensores": {
+      "S3_nutrientes": {
+        "P": 0,
+        "K": 1,
+        "N": 1
+      }
+    }
+  },
+  {
+    "data_hora": "2026-02-04 22:00",
+    "umidade": 38.7,
+    "ph": 6.08,
+    "acao": "FERTIRRIGACAO",
+    "sensores": {
+      "S3_nutrientes": {
+        "P": 0,
+        "K": 1,
+        "N": 1
+      }
+    }
+  },
+  {
+    "data_hora": "2026-02-08 14:00",
+    "umidade": 39.6,
+    "ph": 6.04,
+    "acao": "FERTIRRIGACAO",
+    "sensores": {
+      "S3_nutrientes": {
+        "P": 1,
+        "K": 1,
+        "N": 0
+      }
+    }
+  }
+]
+
+------------------------------------------------------------------------------
+CONSULTA 3 - Leituras brutas incompletas/anomalas com subdocumento (Total: 39)
+Filtro PyMongo: {'diagnostico_bruto.leitura_integra': False}
+------------------------------------------------------------------------------
+[
+  {
+    "data_hora": "2026-01-08 06:00",
+    "umidade_raw": "nan",
+    "ph_raw": "6.33",
+    "acao": "FALHA_SENSOR",
+    "diagnostico_bruto": {
+      "leitura_integra": false,
+      "anomalias_detectadas": [
+        "DHT22_NAN_TIMEOUT"
+      ]
+    }
+  },
+  {
+    "data_hora": "2026-01-11 04:00",
+    "umidade_raw": "62.4",
+    "ph_raw": "-0.41",
+    "acao": "DESLIGADA_NUTRIENTE_BAIXO",
+    "diagnostico_bruto": {
+      "leitura_integra": false,
+      "anomalias_detectadas": [
+        "PH_FORA_FAIXA_0_14"
+      ]
+    }
+  },
+  {
+    "data_hora": "2026-01-17 03:00",
+    "umidade_raw": "102.8",
+    "ph_raw": "6.48",
+    "acao": "DESLIGADA",
+    "diagnostico_bruto": {
+      "leitura_integra": false,
+      "anomalias_detectadas": [
+        "UMIDADE_FORA_FAIXA_0_100"
+      ]
+    }
+  },
+  {
+    "data_hora": "2026-01-18 21:00",
+    "umidade_raw": "52.7",
+    "ph_raw": "15.27",
+    "acao": "REPOUSO",
+    "diagnostico_bruto": {
+      "leitura_integra": false,
+      "anomalias_detectadas": [
+        "PH_FORA_FAIXA_0_14"
+      ]
+    }
+  },
+  {
+    "data_hora": "2026-01-19 15:00",
+    "umidade_raw": "43.8",
+    "ph_raw": "14.73",
+    "acao": "REPOUSO",
+    "diagnostico_bruto": {
+      "leitura_integra": false,
+      "anomalias_detectadas": [
+        "PH_FORA_FAIXA_0_14"
+      ]
+    }
+  },
+  {
+    "data_hora": "2026-01-21 00:00",
+    "umidade_raw": "nan",
+    "ph_raw": "6.10",
+    "acao": "FALHA_SENSOR",
+    "diagnostico_bruto": {
+      "leitura_integra": false,
+      "anomalias_detectadas": [
+        "DHT22_NAN_TIMEOUT"
+      ]
+    }
+  },
+  {
+    "data_hora": "2026-01-21 07:00",
+    "umidade_raw": "nan",
+    "ph_raw": "6.19",
+    "acao": "FALHA_SENSOR",
+    "diagnostico_bruto": {
+      "leitura_integra": false,
+      "anomalias_detectadas": [
+        "DHT22_NAN_TIMEOUT"
+      ]
+    }
+  },
+  {
+    "data_hora": "2026-01-22 18:00",
+    "umidade_raw": "52.1",
+    "ph_raw": "17.44",
+    "acao": "REPOUSO",
+    "diagnostico_bruto": {
+      "leitura_integra": false,
+      "anomalias_detectadas": [
+        "PH_FORA_FAIXA_0_14"
+      ]
+    }
+  }
+]
+
+------------------------------------------------------------------------------
+CONSULTA 4 - Agregacao NoSQL ($group) por acao decidida pelo firmware
+------------------------------------------------------------------------------
+[
+  {
+    "total_ciclos": 1840,
+    "horas_bomba_ligada": 0,
+    "umidade_media": 50.637336956521736,
+    "ph_medio": 6.098467391304348,
+    "_id": "REPOUSO"
+  },
+  {
+    "total_ciclos": 317,
+    "horas_bomba_ligada": 0,
+    "umidade_media": 65.17981072555204,
+    "ph_medio": 5.994637223974763,
+    "_id": "DESLIGADA_NUTRIENTE_BAIXO"
+  },
+  {
+    "total_ciclos": 257,
+    "horas_bomba_ligada": 0,
+    "umidade_media": 65.31906614785993,
+    "ph_medio": 6.187743190661479,
+    "_id": "DESLIGADA"
+  },
+  {
+    "total_ciclos": 243,
+    "horas_bomba_ligada": 243,
+    "umidade_media": 50.568312757201646,
+    "ph_medio": 6.098395061728396,
+    "_id": "IRRIGACAO_EM_ANDAMENTO"
+  },
+  {
+    "total_ciclos": 162,
+    "horas_bomba_ligada": 0,
+    "umidade_media": 53.3074074074074,
+    "ph_medio": 6.2199382716049385,
+    "_id": "BLOQUEIO_CHUVA"
+  },
+  {
+    "total_ciclos": 22,
+    "horas_bomba_ligada": 22,
+    "umidade_media": 39.24090909090909,
+    "ph_medio": 6.0659090909090905,
+    "_id": "FERTIRRIGACAO"
+  },
+  {
+    "total_ciclos": 14,
+    "horas_bomba_ligada": 14,
+    "umidade_media": 39.16428571428571,
+    "ph_medio": 6.1085714285714285,
+    "_id": "IRRIGACAO"
+  }
+]
+
+------------------------------------------------------------------------------
+CONSULTA 5 - Agregacao NoSQL ($group) mensal de uso da bomba e deficit P/K
+------------------------------------------------------------------------------
+[
+  {
+    "leituras_brutas": 743,
+    "horas_bomba_ligada": 79,
+    "horas_chuva": 33,
+    "ciclos_p_baixo": 12,
+    "ciclos_k_baixo": 30,
+    "_id": "2026-01"
+  },
+  {
+    "leituras_brutas": 673,
+    "horas_bomba_ligada": 65,
+    "horas_chuva": 42,
+    "ciclos_p_baixo": 195,
+    "ciclos_k_baixo": 1,
+    "_id": "2026-02"
+  },
+  {
+    "leituras_brutas": 745,
+    "horas_bomba_ligada": 65,
+    "horas_chuva": 51,
+    "ciclos_p_baixo": 105,
+    "ciclos_k_baixo": 85,
+    "_id": "2026-03"
+  },
+  {
+    "leituras_brutas": 720,
+    "horas_bomba_ligada": 73,
+    "horas_chuva": 37,
+    "ciclos_p_baixo": 276,
+    "ciclos_k_baixo": 337,
+    "_id": "2026-04"
+  }
+]

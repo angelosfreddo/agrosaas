@@ -1,0 +1,71 @@
+==============================================================================
+EVIDENCIA DAS CONSULTAS DE GESTAO AGRICOLA - FARMTECH SOLUTIONS (FASE 3)
+==============================================================================
+Motor SQL utilizado na execucao: ORACLE
+
+------------------------------------------------------------------------------
+INFO 1 - Quantidade total de agua aplicada e acionamentos da bomba em cada mes
+------------------------------------------------------------------------------
+ANO_MES  QTD_ACIONAMENTOS  TOTAL_HORAS_BOMBA  DURACAO_MEDIA_H  AGUA_APLICADA_LITROS  AGUA_APLICADA_M3  CICLOS_FERTIRRIGACAO
+2026-01                10                 79             7.90                395000               395                     5
+2026-02                10                 65             6.50                325000               325                     7
+2026-03                 9                 65             7.22                325000               325                     5
+2026-04                 9                 73             8.11                365000               365                     6
+[Arquivo exportado: docs/evidencias/consulta_01_agua_por_mes.csv]
+
+------------------------------------------------------------------------------
+INFO 2 - Variacao mensal do nivel de pH do solo e horas sob alerta de acidez
+------------------------------------------------------------------------------
+ANO_MES  TOTAL_LEITURAS  PH_MINIMO  PH_MEDIO  PH_MAXIMO  HORAS_ALERTA_PH
+2026-01             744       5.97      6.26       6.38                2
+2026-02             672       5.95      6.11       6.25               14
+2026-03             744       5.83      5.97       6.12              489
+2026-04             720       5.70      5.96       6.41              541
+[Arquivo exportado: docs/evidencias/consulta_02_variacao_ph.csv]
+
+------------------------------------------------------------------------------
+INFO 3 - Top 10 dias com maior tempo de bomba ligada e maior consumo de agua
+------------------------------------------------------------------------------
+  DATA_DIA  HORAS_BOMBA_LIGADA  AGUA_APLICADA_LITROS  UMIDADE_MIN_DIA  UMIDADE_MEDIA_DIA  PH_MEDIO_DIA
+2026-01-10                  10                 50000             37.8              47.33          6.30
+2026-04-27                   9                 45000             38.1              46.75          6.36
+2026-04-17                   9                 45000             38.4              48.76          5.79
+2026-04-30                   9                 45000             38.8              48.97          6.31
+2026-01-06                   9                 45000             39.3              53.20          6.29
+2026-03-12                   9                 45000             39.5              50.90          6.01
+2026-02-08                   9                 45000             39.6              47.73          6.13
+2026-04-24                   9                 45000             39.7              50.89          6.18
+2026-04-14                   9                 45000             39.8              50.23          5.83
+2026-03-25                   9                 45000             39.8              47.48          5.92
+[Arquivo exportado: docs/evidencias/consulta_03_top_dias_irrigacao.csv]
+
+------------------------------------------------------------------------------
+INFO 4 - Relacao entre disponibilidade de nutrientes (P, K, N) e acoes do sistema
+------------------------------------------------------------------------------
+             ACAO_SISTEMA  HORAS_REGISTRADAS  UMIDADE_MEDIA  PH_MEDIO  HORAS_DEFICIT_P  HORAS_DEFICIT_K  HORAS_DEFICIT_N
+                  REPOUSO               1838          50.64      6.07              383              366              742
+DESLIGADA_NUTRIENTE_BAIXO                318          65.19      6.02               90               38              272
+                DESLIGADA                259          65.20      6.15                0                0                0
+   IRRIGACAO_EM_ANDAMENTO                243          50.57      6.10               51               22               84
+           BLOQUEIO_CHUVA                162          53.31      6.04               49               20               80
+            FERTIRRIGACAO                 23          40.18      6.09                9                5               15
+             FALHA_SENSOR                 22          51.28      6.06                4                3                4
+                IRRIGACAO                 15          39.76      6.11                0                0                0
+[Arquivo exportado: docs/evidencias/consulta_04_nutrientes_e_acoes.csv]
+
+------------------------------------------------------------------------------
+INFO 5 - Culturas com maior consumo de insumos e dose media por hectare (Fases 1 e 2)
+------------------------------------------------------------------------------
+       CULTURA                         INSUMO UNIDADE_INSUMO  QTD_TALHOES  AREA_TOTAL_HA  CONSUMO_TOTAL_INSUMO  DOSE_MEDIA_POR_HA
+Cana-de-acucar Vinhaca / Adubacao de Soqueira             m3            1           50.5                  6060             120.00
+         Milho         Fosfato / Adubacao NPK             Kg            2            7.7                  2310             300.00
+          Cafe         Pulverizacao Fungicida         Litros            3           36.8                  1440              39.13
+[Arquivo exportado: docs/evidencias/consulta_05_consumo_insumos_culturas.csv]
+
+------------------------------------------------------------------------------
+INFO 6 - Monitoramento dos talhoes e avaliacoes de perda na colheita (Fase 2)
+------------------------------------------------------------------------------
+           COD_AVALIACAO CODIGO_TALHAO           FAZENDA VARIEDADE DATA_AVALIACAO COLHEDORA   OPERADOR  PERDA_T_HA  PERDA_PCT  PREJUIZO_RS CLASSIFICACAO
+AV-COLETA-T01-2026-10-07           T01 Fazenda Boa Vista  RB867515     2026-10-07  COLH-101 Joao Silva        1.06       1.25      8527.33         BAIXA
+     AV20261007123219435           T01 Fazenda Boa Vista  RB867515     2026-10-07  COLH-101 Joao Silva        1.06       1.23      8527.33         BAIXA
+[Arquivo exportado: docs/evidencias/consulta_06_avaliacoes_fase2.csv]

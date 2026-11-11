@@ -1,0 +1,26 @@
+==============================================================================
+IR ALEM 1 - RELATORIO DE OTIMIZACAO DE MEMORIA DO ESP32 (FARMTECH SOLUTIONS)
+==============================================================================
+
+1. MAPEAMENTO DE VARIAVEIS (ANTES vs DEPOIS)
+   Variavel / Constante   | Fase 2 (Original)      | Fase 3 (Otimizado)        | Economia
+   ---------------------- | ---------------------- | ------------------------- | --------
+   Pinos de hardware (6)  | #define / int (24 B)   | constexpr uint8_t (0 B)   | 100% RAM
+   previsaoChuva (global) | bool (1 B)             | bit 3 em estadoGlobal     | compartilhado
+   nivelN_ok, P_ok, K_ok  | 3 x bool (3 B)         | bits 0..2 em estadoGlobal | -3 B
+   Flags de decisao (3)   | 3 x bool (3 B)         | avaliacao inline / bitmask| -2 B
+   valorLDR (ADC 0..4095) | int (4 B, com sinal)   | uint16_t (2 B, sem sinal) | -50%
+   pH (escala 0.0..14.0)  | float + double (8 B)   | uint8_t phDec (1 B, 0..140)| -87.5%
+   umidade (0.0..100.0%)  | float (4 B)            | uint16_t umidadeDec (2 B) | -50%
+   TOTAL VARIAVEIS SKETCH | 16 bytes + double      | 6 bytes (zero double)     | -62.5%
+
+2. MEDICAO DAS SECOES DO OBJETO COMPILADO (g++ -Os / size -A)
+   - Segmento .rodata (strings constantes): 865 B -> 773 B (-10.6%)
+   - Soma (.text + .rodata) do sketch     : 2010 B -> 1962 B
+   - Flash total ESP32 (Arduino Core)     : 274,916 B (21.0%) -> 271,492 B (20.7%) [-3,424 B]
+   - RAM estatica ESP32 (DRAM/IRAM)       : 21,588 B -> 21,508 B [-80 B]
+
+3. TESTE DE EQUIVALENCIA DA LOGICA DE IRRIGACAO
+   - Combinacoes testadas (umidade x pH x NPK x chuva): 784
+   - Resultado da comparacao bit a bit do pino RELE  : 100% IDENTICO
+   - Evidencia grafica salva em                      : IR-ALEM/docs/comparativo_compilacao_esp32.png

@@ -1,0 +1,29 @@
+==============================================================================
+ANALISE ESTATISTICA COMPLEMENTAR EM R - FARMTECH SOLUTIONS (FASE 3)
+==============================================================================
+
+1. ESTATISTICAS DESCRITIVAS - UMIDADE DO SOLO (%)
+   Media ..............: 53.57 %
+   Desvio Padrao ......: 8.14 %
+   Mediana ............: 52.80 %
+   Minimo / Maximo ....: 35.20 % / 79.20 %
+
+2. ESTATISTICAS DESCRITIVAS - NIVEL DE pH DO SOLO
+   Media ..............: 6.08
+   Desvio Padrao ......: 0.187
+   Mediana ............: 6.07
+   Minimo / Maximo ....: 5.60 / 6.55
+
+3. CORRELACAO DE PEARSON COM O ACIONAMENTO DA BOMBA
+   cor(umidade_suavizada , bomba) = -0.3501
+   cor(ph_suavizado      , bomba) = +0.0383
+   cor(fosforo           , bomba) = -0.0105
+   cor(potassio          , bomba) = +0.0560
+   cor(nitrogenio        , bomba) = +0.0432
+   cor(chuva             , bomba) = -0.0807
+
+4. PROPORCAO DE HORAS COM BOMBA LIGADA POR FAIXA DE UMIDADE
+                  faixa bomba.horas bomba.ligada bomba.taxa
+       1_Critica (<40%)          42           34      80.95
+ 2_Histerese (40-59.9%)        2213          247      11.16
+     3_Adequada (>=60%)         625            1       0.16

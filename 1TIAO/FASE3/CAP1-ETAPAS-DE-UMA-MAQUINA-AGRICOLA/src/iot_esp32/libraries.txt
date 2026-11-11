@@ -1,0 +1,4 @@
+# Bibliotecas usadas pelo projeto no Wokwi
+DHT sensor library
+Adafruit Unified Sensor
+

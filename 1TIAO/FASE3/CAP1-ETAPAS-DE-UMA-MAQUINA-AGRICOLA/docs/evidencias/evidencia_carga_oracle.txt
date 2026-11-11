@@ -1,0 +1,24 @@
+==============================================================================
+EVIDENCIA DE CARGA REPETIVEL NO BANCO DE DADOS - FARMTECH SOLUTIONS (FASE 3)
+==============================================================================
+Data/Hora da execucao : 2026-11-10 21:56:54
+DSN Oracle configurado: oracle.fiap.com.br:1521/ORCL
+Usuario configurado   : RM566580
+Status da sessao      : CONECTADO E SINCRONIZADO COM ORACLE (RM566580@oracle.fiap.com.br:1521/ORCL)
+
+FONTES DE DADOS CARREGADAS:
+  1. data/fases_anteriores/fase1/dados_fazenda.csv (Fase 1 - CSV culturas e insumos)
+  2. data/fases_anteriores/fase2/base_local.json (Fase 2 - JSON talhoes e avaliacoes)
+  3. data/fases_anteriores/fase2/coleta_campo_exemplo.json (Fase 2 - JSON coleta de campo)
+  4. data/fases_anteriores/fase2/parametros.json (Fase 2 - JSON parametros ATR)
+  5. data/fases_anteriores/fase2/log_operacoes.txt (Fase 2 - TXT log de auditoria)
+  6. data/processed/leituras_tratadas.csv (Fase 3 - CSV leituras tratadas)
+  7. data/processed/acionamentos_bomba.csv (Fase 3 - CSV historico da bomba)
+
+VERIFICACAO DE IDEMPOTENCIA (CARGA REPETIDA 2 VEZES SEGUIDAS SEM DUPLICAR):
+  Tabela                     | 1a Carga | 2a Carga (Repetida) | Duplicatas
+  -------------------------- | -------- | ------------------- | ----------
+  FT3_MANEJO_CULTURA         |        6 |                   6 |          0
+  FT3_LEITURA_SENSOR         |     2880 |                2880 |          0
+  FT3_ACIONAMENTO_BOMBA      |       38 |                  38 |          0
+  FT3_AVALIACAO_FASE2        |        2 |                   2 |          0

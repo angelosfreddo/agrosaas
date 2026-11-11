@@ -1,0 +1,4 @@
+faixa_umidade,horas_observadas,horas_bomba_ligada,umidade_media,percentual_tempo
+Adequada / Capacidade de Campo (>= 60%),625,1,65.19,21.7
+Critica (< 40% - exige irrigacao),42,34,39.03,1.46
+Transicao / Histerese (40% a 59.9%),2213,247,50.56,76.84

@@ -1,0 +1,1 @@
+12/10/2026 18:10:48 | CONEXAO ORACLE usuario=RM566580 dsn=oracle.fiap.com.br:1521/ORCL tabelas_criadas=[] sincronizados=0

@@ -1,0 +1,60 @@
+{
+  "documento_padrao_fertirrigacao": {
+    "_id": "ciclo_00035_2026-01-02T10:00",
+    "ordem_coleta": 35,
+    "data_hora": "2026-01-02 10:00",
+    "ano_mes": "2026-01",
+    "umidade_raw": "39.7",
+    "umidade": 39.7,
+    "ph_raw": "6.28",
+    "ph": 6.28,
+    "fosforo": 0,
+    "potassio": 1,
+    "nitrogenio": 1,
+    "bomba": 1,
+    "chuva": 0,
+    "acao": "FERTIRRIGACAO",
+    "origem": "WOKWI",
+    "sensores": {
+      "S1_umidade_pct": 39.7,
+      "S2_ph_ldr": 6.28,
+      "S3_nutrientes": {
+        "P": 0,
+        "K": 1,
+        "N": 1
+      }
+    }
+  },
+  "documento_com_anomalia_bruta": {
+    "_id": "ciclo_00175_2026-01-08T06:00",
+    "ordem_coleta": 175,
+    "data_hora": "2026-01-08 06:00",
+    "ano_mes": "2026-01",
+    "umidade_raw": "nan",
+    "umidade": null,
+    "ph_raw": "6.33",
+    "ph": 6.33,
+    "fosforo": 1,
+    "potassio": 1,
+    "nitrogenio": 1,
+    "bomba": 0,
+    "chuva": 0,
+    "acao": "FALHA_SENSOR",
+    "origem": "SIMULADO",
+    "sensores": {
+      "S1_umidade_pct": null,
+      "S2_ph_ldr": 6.33,
+      "S3_nutrientes": {
+        "P": 1,
+        "K": 1,
+        "N": 1
+      }
+    },
+    "diagnostico_bruto": {
+      "leitura_integra": false,
+      "anomalias_detectadas": [
+        "DHT22_NAN_TIMEOUT"
+      ]
+    }
+  }
+}

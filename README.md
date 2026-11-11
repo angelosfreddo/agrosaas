@@ -53,6 +53,22 @@ agrosaas/
 │       │   ├── circuito_wokwi.png                     # Imagem do circuito Wokwi
 │       │   └── roteiro_video.md                       # Roteiro de gravacao do video da Fase 2
 │       └── README.md                                  # Visao geral da Fase 2
+│   └── FASE3/                                         # Fase 3: Banco de Dados Estruturado, Python Cientifico, NoSQL e IA
+│       ├── CAP1-ETAPAS-DE-UMA-MAQUINA-AGRICOLA/       # Cap 1: Historico de Irrigacao, Pandas/NumPy, Oracle, ESP32 e MongoDB
+│       │   ├── data/                                  # CSVs brutos (Wokwi), tratados, indicadores e bases das Fases 1 e 2
+│       │   ├── docs/                                  # Graficos Matplotlib/Seaborn, evidencias SQL e roteiro de video
+│       │   ├── notebooks/                             # Jupyter Notebook interativo da analise exploratoria
+│       │   ├── src/                                   # Firmware ESP32 CSV, pipeline Python (Pandas/NumPy/Oracle) e scripts SQL
+│       │   ├── IR-ALEM/                               # Ir Alem 1 (ESP32 otimizado + R) e Ir Alem 2 (MongoDB NoSQL)
+│       │   ├── link_entrega_portal.txt                # Arquivo .txt para submissao no Portal do Aluno
+│       │   └── README.md                              # Documentacao completa do Cap 1 (Fase 3)
+│       ├── CAP11-MODELAGEM-IA-FARMTECH/               # Cap 11: Analise exploratoria e 5 modelos de ML (produtos_agricolas.csv)
+│       │   ├── data/                                  # Base original produtos_agricolas.csv (2.200 amostras, 22 culturas)
+│       │   ├── notebooks/                             # Jupyter Notebook executado com graficos e comparativo de 5 modelos
+│       │   ├── src/                                   # Script orquestrador de geracao e execucao do notebook
+│       │   ├── requirements.txt                       # Dependencias de Ciencia de Dados e Scikit-Learn
+│       │   └── README.md                              # Documentacao tecnica da modelagem de IA
+│       └── README.md                                  # Visao geral da Fase 3
 └── README.md                                          # Documentacao unificada do repositorio
 ```
 
@@ -101,3 +117,21 @@ Consulte a documentacao completa em [`1TIAO/FASE2/CAP6-PYTHON-E-ALEM/README.md`]
 - **Estatistica Descritiva em R:** Medidas de Tendencia Central, Dispersao, Separatrizes e visualizacoes graficas (Histograma, Boxplot, Barras e Pizza).
 
 Consulte a documentacao completa em [`1TIAO/FASE2/CAP7-DECOLANDO-COM-CIENCIA-DE-DADOS/README.md`](./1TIAO/FASE2/CAP7-DECOLANDO-COM-CIENCIA-DE-DADOS/README.md).
+
+---
+
+### Fase 3 - Cap 1: Etapas de uma Maquina Agricola (`1TIAO/FASE3/CAP1-ETAPAS-DE-UMA-MAQUINA-AGRICOLA`)
+- **Parte 1 (Coleta e Processamento Cientifico):** Exportacao das leituras do Monitor Serial do Wokwi (ESP32), serie historica de 4 meses (2.880 horas), limpeza de anomalias e reducao de ruido por media movel de 6h com Pandas e NumPy, calculo de indicadores hidricos e geracao de 4 paineis graficos com Matplotlib e Seaborn (incluindo mapa de calor da correlacao de Pearson).
+- **Parte 2 (Oracle Database e Primeira Persistencia):** Mapeamento de 6 informacoes relevantes de gestao, modelagem e criacao de 4 tabelas (`FT3_MANEJO_CULTURA`, `FT3_LEITURA_SENSOR`, `FT3_ACIONAMENTO_BOMBA`, `FT3_AVALIACAO_FASE2`), carga repetivel sem duplicacao (`MERGE INTO`) integrando os dados das Fases 1, 2 e 3, e 6 consultas SQL analiticas.
+- **Ir Alem 1 (ESP32 Eficiente):** Otimizacao de tipos de variaveis e memoria no firmware C/C++ (`uint8_t`, `uint16_t`, bitmask, ponto fixo em decimos e `PROGMEM`), reduzindo em 62,5% as variaveis do sketch e preservando 100% da logica em 784 cenarios testados, alem de analise estatistica complementar em R.
+- **Ir Alem 2 (Leituras Brutas em Banco NoSQL):** Carga das 2.881 leituras brutas como documentos JSON no MongoDB via `pymongo`, execucao de 5 consultas/agregacoes NoSQL e comparacao pratica entre MongoDB e Oracle Database.
+
+Consulte a documentacao completa em [`1TIAO/FASE3/CAP1-ETAPAS-DE-UMA-MAQUINA-AGRICOLA/README.md`](./1TIAO/FASE3/CAP1-ETAPAS-DE-UMA-MAQUINA-AGRICOLA/README.md) e os desafios extras em [`1TIAO/FASE3/CAP1-ETAPAS-DE-UMA-MAQUINA-AGRICOLA/IR-ALEM/README.md`](./1TIAO/FASE3/CAP1-ETAPAS-DE-UMA-MAQUINA-AGRICOLA/IR-ALEM/README.md).
+
+---
+
+### Fase 3 - Cap 11: Modelagem de IA da FarmTech Solutions (`1TIAO/FASE3/CAP11-MODELAGEM-IA-FARMTECH`)
+- **Analise Exploratoria e Perfil Ideal:** Estudo completo de `produtos_agricolas.csv` (2.200 observacoes balanceadas entre 22 culturas e 7 variaveis edafoclimaticas), com seis graficos estatisticos e comparacao de Arroz (`rice`), Maca (`apple`) e Cafe (`coffee`) frente ao perfil medio geral.
+- **Cinco Modelos Preditivos Comparados:** Pipeline em Scikit-Learn avaliado em validacao cruzada estratificada (5 folds) e conjunto de teste (440 amostras), destacando a **Floresta Aleatoria** com **99,55%** de acuracia no teste, seguida por SVM RBF (`98,41%`), Arvore de Decisao (`98,18%`), KNN (`97,95%`) e Regressao Logistica (`97,27%`).
+
+Consulte a documentacao completa em [`1TIAO/FASE3/CAP11-MODELAGEM-IA-FARMTECH/README.md`](./1TIAO/FASE3/CAP11-MODELAGEM-IA-FARMTECH/README.md).

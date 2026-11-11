@@ -1,0 +1,52 @@
+==============================================================================
+RELATORIO DE TRATAMENTO E INDICADORES DE MANEJO - FARMTECH SOLUTIONS (FASE 3)
+==============================================================================
+
+1. AUDITORIA DE LIMPEZA E TRATAMENTO (PANDAS / NUMPY)
+   - Linhas no CSV bruto ......................: 2881
+   - Datas invalidas removidas ................: 0
+   - Linhas duplicadas removidas ..............: 5
+   - Leituras de umidade ausentes (nan) .......: 22
+   - Leituras de umidade fora de [0, 100]% ....: 4
+   - Leituras de pH fora de [0, 14] ...........: 13
+   - Horas perdidas reindexadas na grade ......: 4
+   - Total de registros no CSV tratado ........: 2880
+   - Desvio padrao da umidade (antes/depois) ..: 8.13% -> 7.83%
+   - Desvio padrao do pH (antes/depois) .......: 0.187 -> 0.171
+
+2. RESUMO GERAL DE IRRIGACAO E MANEJO
+   - Vazao adotada para a bomba ...............: 5,000 L/h (5.0 m3/h)
+   - Total de eventos de acionamento ..........: 38
+   - Tempo total de bomba ligada ..............: 282 horas
+   - Volume total de agua aplicado ............: 1,410,000 L (1,410.0 m3)
+
+3. INDICADORES POR MES
+ano_mes  leituras  horas_bomba_ligada  num_acionamentos  umidade_media  umidade_min  umidade_max  ph_medio  ph_min  ph_max  horas_alerta_ph  horas_deficit_npk  horas_bloqueio_chuva  volume_agua_litros  volume_agua_m3
+2026-01       744                  79                10          53.65        40.38        76.12      6.26    5.97    6.38                2                196                    33            395000.0           395.0
+2026-02       672                  65                10          53.28        40.05        75.20      6.11    5.95    6.25               14                496                    42            325000.0           325.0
+2026-03       744                  65                 9          55.52        40.97        77.67      5.97    5.83    6.12              489                458                    51            325000.0           325.0
+2026-04       720                  73                 9          51.71        38.10        68.82      5.96    5.70    6.41              541                565                    37            365000.0           365.0
+
+4. FAIXAS DE UMIDADE OBSERVADAS
+                          faixa_umidade  horas_observadas  horas_bomba_ligada  umidade_media  percentual_tempo
+Adequada / Capacidade de Campo (>= 60%)               625                   1          65.19             21.70
+      Critica (< 40% - exige irrigacao)                42                  34          39.03              1.46
+    Transicao / Histerese (40% a 59.9%)              2213                 247          50.56             76.84
+
+5. TOP 5 DIAS COM MAIOR TEMPO DE BOMBA LIGADA
+      data  leituras  horas_bomba_ligada  num_acionamentos  umidade_media  umidade_min  umidade_max  ph_medio  ph_min  ph_max  horas_alerta_ph  horas_deficit_npk  horas_bloqueio_chuva  volume_agua_litros  volume_agua_m3
+2026-01-10        24                  10                 1          45.50        40.38        59.52      6.30    6.23    6.36                0                 24                     0             50000.0            50.0
+2026-01-06        24                   9                 1          49.71        40.90        74.27      6.29    6.23    6.36                0                  0                     0             45000.0            45.0
+2026-02-08        24                   9                 1          46.57        42.30        56.08      6.13    6.07    6.16                0                 24                     0             45000.0            45.0
+2026-02-21        24                   9                 1          49.59        41.17        59.70      6.10    6.03    6.19                0                 24                     0             45000.0            45.0
+2026-03-12        24                   9                 1          49.19        41.72        61.47      6.01    5.93    6.06                5                 11                     0             45000.0            45.0
+
+6. MATRIZ DE CORRELACAO DE PEARSON
+                Umidade (%)  pH do Solo  Fosforo (P)  Potassio (K)  Nitrogenio (N)  Previsao Chuva  Bomba Ligada
+Umidade (%)          1.0000     -0.0226       0.0798        0.1149         -0.1198         -0.0426       -0.3501
+pH do Solo          -0.0226      1.0000       0.1710        0.4514          0.1181         -0.0487        0.0383
+Fosforo (P)          0.0798      0.1710       1.0000       -0.0104          0.2003         -0.0628       -0.0105
+Potassio (K)         0.1149      0.4514      -0.0104        1.0000         -0.0748          0.0235        0.0560
+Nitrogenio (N)      -0.1198      0.1181       0.2003       -0.0748          1.0000         -0.0374        0.0432
+Previsao Chuva      -0.0426     -0.0487      -0.0628        0.0235         -0.0374          1.0000       -0.0807
+Bomba Ligada        -0.3501      0.0383      -0.0105        0.0560          0.0432         -0.0807        1.0000

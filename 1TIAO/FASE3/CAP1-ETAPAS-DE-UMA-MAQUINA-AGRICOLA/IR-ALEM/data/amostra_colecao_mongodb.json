@@ -1,0 +1,652 @@
+[
+  {
+    "_id": "ciclo_00001_2026-01-01T00:00",
+    "ordem_coleta": 1,
+    "data_hora": "2026-01-01 00:00",
+    "ano_mes": "2026-01",
+    "umidade_raw": "56.0",
+    "umidade": 56.0,
+    "ph_raw": "6.20",
+    "ph": 6.2,
+    "fosforo": 1,
+    "potassio": 1,
+    "nitrogenio": 1,
+    "bomba": 0,
+    "chuva": 0,
+    "acao": "REPOUSO",
+    "origem": "WOKWI",
+    "sensores": {
+      "S1_umidade_pct": 56.0,
+      "S2_ph_ldr": 6.2,
+      "S3_nutrientes": {
+        "P": 1,
+        "K": 1,
+        "N": 1
+      }
+    }
+  },
+  {
+    "_id": "ciclo_00002_2026-01-01T01:00",
+    "ordem_coleta": 2,
+    "data_hora": "2026-01-01 01:00",
+    "ano_mes": "2026-01",
+    "umidade_raw": "55.4",
+    "umidade": 55.4,
+    "ph_raw": "6.36",
+    "ph": 6.36,
+    "fosforo": 1,
+    "potassio": 1,
+    "nitrogenio": 1,
+    "bomba": 0,
+    "chuva": 0,
+    "acao": "REPOUSO",
+    "origem": "WOKWI",
+    "sensores": {
+      "S1_umidade_pct": 55.4,
+      "S2_ph_ldr": 6.36,
+      "S3_nutrientes": {
+        "P": 1,
+        "K": 1,
+        "N": 1
+      }
+    }
+  },
+  {
+    "_id": "ciclo_00003_2026-01-01T02:00",
+    "ordem_coleta": 3,
+    "data_hora": "2026-01-01 02:00",
+    "ano_mes": "2026-01",
+    "umidade_raw": "55.1",
+    "umidade": 55.1,
+    "ph_raw": "6.34",
+    "ph": 6.34,
+    "fosforo": 1,
+    "potassio": 1,
+    "nitrogenio": 1,
+    "bomba": 0,
+    "chuva": 0,
+    "acao": "REPOUSO",
+    "origem": "WOKWI",
+    "sensores": {
+      "S1_umidade_pct": 55.1,
+      "S2_ph_ldr": 6.34,
+      "S3_nutrientes": {
+        "P": 1,
+        "K": 1,
+        "N": 1
+      }
+    }
+  },
+  {
+    "_id": "ciclo_00004_2026-01-01T03:00",
+    "ordem_coleta": 4,
+    "data_hora": "2026-01-01 03:00",
+    "ano_mes": "2026-01",
+    "umidade_raw": "54.1",
+    "umidade": 54.1,
+    "ph_raw": "6.38",
+    "ph": 6.38,
+    "fosforo": 1,
+    "potassio": 1,
+    "nitrogenio": 1,
+    "bomba": 0,
+    "chuva": 0,
+    "acao": "REPOUSO",
+    "origem": "WOKWI",
+    "sensores": {
+      "S1_umidade_pct": 54.1,
+      "S2_ph_ldr": 6.38,
+      "S3_nutrientes": {
+        "P": 1,
+        "K": 1,
+        "N": 1
+      }
+    }
+  },
+  {
+    "_id": "ciclo_00005_2026-01-01T04:00",
+    "ordem_coleta": 5,
+    "data_hora": "2026-01-01 04:00",
+    "ano_mes": "2026-01",
+    "umidade_raw": "53.5",
+    "umidade": 53.5,
+    "ph_raw": "6.36",
+    "ph": 6.36,
+    "fosforo": 1,
+    "potassio": 1,
+    "nitrogenio": 1,
+    "bomba": 0,
+    "chuva": 0,
+    "acao": "REPOUSO",
+    "origem": "WOKWI",
+    "sensores": {
+      "S1_umidade_pct": 53.5,
+      "S2_ph_ldr": 6.36,
+      "S3_nutrientes": {
+        "P": 1,
+        "K": 1,
+        "N": 1
+      }
+    }
+  },
+  {
+    "_id": "ciclo_00006_2026-01-01T05:00",
+    "ordem_coleta": 6,
+    "data_hora": "2026-01-01 05:00",
+    "ano_mes": "2026-01",
+    "umidade_raw": "53.5",
+    "umidade": 53.5,
+    "ph_raw": "6.38",
+    "ph": 6.38,
+    "fosforo": 1,
+    "potassio": 1,
+    "nitrogenio": 1,
+    "bomba": 0,
+    "chuva": 0,
+    "acao": "REPOUSO",
+    "origem": "WOKWI",
+    "sensores": {
+      "S1_umidade_pct": 53.5,
+      "S2_ph_ldr": 6.38,
+      "S3_nutrientes": {
+        "P": 1,
+        "K": 1,
+        "N": 1
+      }
+    }
+  },
+  {
+    "_id": "ciclo_00007_2026-01-01T06:00",
+    "ordem_coleta": 7,
+    "data_hora": "2026-01-01 06:00",
+    "ano_mes": "2026-01",
+    "umidade_raw": "53.8",
+    "umidade": 53.8,
+    "ph_raw": "6.30",
+    "ph": 6.3,
+    "fosforo": 1,
+    "potassio": 1,
+    "nitrogenio": 1,
+    "bomba": 0,
+    "chuva": 0,
+    "acao": "REPOUSO",
+    "origem": "WOKWI",
+    "sensores": {
+      "S1_umidade_pct": 53.8,
+      "S2_ph_ldr": 6.3,
+      "S3_nutrientes": {
+        "P": 1,
+        "K": 1,
+        "N": 1
+      }
+    }
+  },
+  {
+    "_id": "ciclo_00008_2026-01-01T07:00",
+    "ordem_coleta": 8,
+    "data_hora": "2026-01-01 07:00",
+    "ano_mes": "2026-01",
+    "umidade_raw": "53.6",
+    "umidade": 53.6,
+    "ph_raw": "6.22",
+    "ph": 6.22,
+    "fosforo": 1,
+    "potassio": 1,
+    "nitrogenio": 1,
+    "bomba": 0,
+    "chuva": 0,
+    "acao": "REPOUSO",
+    "origem": "WOKWI",
+    "sensores": {
+      "S1_umidade_pct": 53.6,
+      "S2_ph_ldr": 6.22,
+      "S3_nutrientes": {
+        "P": 1,
+        "K": 1,
+        "N": 1
+      }
+    }
+  },
+  {
+    "_id": "ciclo_00009_2026-01-01T08:00",
+    "ordem_coleta": 9,
+    "data_hora": "2026-01-01 08:00",
+    "ano_mes": "2026-01",
+    "umidade_raw": "53.3",
+    "umidade": 53.3,
+    "ph_raw": "6.42",
+    "ph": 6.42,
+    "fosforo": 1,
+    "potassio": 1,
+    "nitrogenio": 1,
+    "bomba": 0,
+    "chuva": 0,
+    "acao": "REPOUSO",
+    "origem": "WOKWI",
+    "sensores": {
+      "S1_umidade_pct": 53.3,
+      "S2_ph_ldr": 6.42,
+      "S3_nutrientes": {
+        "P": 1,
+        "K": 1,
+        "N": 1
+      }
+    }
+  },
+  {
+    "_id": "ciclo_00010_2026-01-01T09:00",
+    "ordem_coleta": 10,
+    "data_hora": "2026-01-01 09:00",
+    "ano_mes": "2026-01",
+    "umidade_raw": "52.6",
+    "umidade": 52.6,
+    "ph_raw": "6.25",
+    "ph": 6.25,
+    "fosforo": 1,
+    "potassio": 1,
+    "nitrogenio": 1,
+    "bomba": 0,
+    "chuva": 0,
+    "acao": "REPOUSO",
+    "origem": "WOKWI",
+    "sensores": {
+      "S1_umidade_pct": 52.6,
+      "S2_ph_ldr": 6.25,
+      "S3_nutrientes": {
+        "P": 1,
+        "K": 1,
+        "N": 1
+      }
+    }
+  },
+  {
+    "_id": "ciclo_00011_2026-01-01T10:00",
+    "ordem_coleta": 11,
+    "data_hora": "2026-01-01 10:00",
+    "ano_mes": "2026-01",
+    "umidade_raw": "51.8",
+    "umidade": 51.8,
+    "ph_raw": "6.37",
+    "ph": 6.37,
+    "fosforo": 1,
+    "potassio": 1,
+    "nitrogenio": 1,
+    "bomba": 0,
+    "chuva": 0,
+    "acao": "REPOUSO",
+    "origem": "WOKWI",
+    "sensores": {
+      "S1_umidade_pct": 51.8,
+      "S2_ph_ldr": 6.37,
+      "S3_nutrientes": {
+        "P": 1,
+        "K": 1,
+        "N": 1
+      }
+    }
+  },
+  {
+    "_id": "ciclo_00012_2026-01-01T11:00",
+    "ordem_coleta": 12,
+    "data_hora": "2026-01-01 11:00",
+    "ano_mes": "2026-01",
+    "umidade_raw": "50.9",
+    "umidade": 50.9,
+    "ph_raw": "6.32",
+    "ph": 6.32,
+    "fosforo": 1,
+    "potassio": 1,
+    "nitrogenio": 1,
+    "bomba": 0,
+    "chuva": 0,
+    "acao": "REPOUSO",
+    "origem": "WOKWI",
+    "sensores": {
+      "S1_umidade_pct": 50.9,
+      "S2_ph_ldr": 6.32,
+      "S3_nutrientes": {
+        "P": 1,
+        "K": 1,
+        "N": 1
+      }
+    }
+  },
+  {
+    "_id": "ciclo_00013_2026-01-01T12:00",
+    "ordem_coleta": 13,
+    "data_hora": "2026-01-01 12:00",
+    "ano_mes": "2026-01",
+    "umidade_raw": "50.6",
+    "umidade": 50.6,
+    "ph_raw": "6.35",
+    "ph": 6.35,
+    "fosforo": 1,
+    "potassio": 1,
+    "nitrogenio": 1,
+    "bomba": 0,
+    "chuva": 0,
+    "acao": "REPOUSO",
+    "origem": "WOKWI",
+    "sensores": {
+      "S1_umidade_pct": 50.6,
+      "S2_ph_ldr": 6.35,
+      "S3_nutrientes": {
+        "P": 1,
+        "K": 1,
+        "N": 1
+      }
+    }
+  },
+  {
+    "_id": "ciclo_00014_2026-01-01T13:00",
+    "ordem_coleta": 14,
+    "data_hora": "2026-01-01 13:00",
+    "ano_mes": "2026-01",
+    "umidade_raw": "49.5",
+    "umidade": 49.5,
+    "ph_raw": "6.40",
+    "ph": 6.4,
+    "fosforo": 1,
+    "potassio": 1,
+    "nitrogenio": 1,
+    "bomba": 0,
+    "chuva": 0,
+    "acao": "REPOUSO",
+    "origem": "WOKWI",
+    "sensores": {
+      "S1_umidade_pct": 49.5,
+      "S2_ph_ldr": 6.4,
+      "S3_nutrientes": {
+        "P": 1,
+        "K": 1,
+        "N": 1
+      }
+    }
+  },
+  {
+    "_id": "ciclo_00015_2026-01-01T14:00",
+    "ordem_coleta": 15,
+    "data_hora": "2026-01-01 14:00",
+    "ano_mes": "2026-01",
+    "umidade_raw": "48.1",
+    "umidade": 48.1,
+    "ph_raw": "6.36",
+    "ph": 6.36,
+    "fosforo": 1,
+    "potassio": 1,
+    "nitrogenio": 1,
+    "bomba": 0,
+    "chuva": 0,
+    "acao": "REPOUSO",
+    "origem": "WOKWI",
+    "sensores": {
+      "S1_umidade_pct": 48.1,
+      "S2_ph_ldr": 6.36,
+      "S3_nutrientes": {
+        "P": 1,
+        "K": 1,
+        "N": 1
+      }
+    }
+  },
+  {
+    "_id": "ciclo_00016_2026-01-01T15:00",
+    "ordem_coleta": 16,
+    "data_hora": "2026-01-01 15:00",
+    "ano_mes": "2026-01",
+    "umidade_raw": "47.9",
+    "umidade": 47.9,
+    "ph_raw": "6.23",
+    "ph": 6.23,
+    "fosforo": 1,
+    "potassio": 1,
+    "nitrogenio": 1,
+    "bomba": 0,
+    "chuva": 0,
+    "acao": "REPOUSO",
+    "origem": "WOKWI",
+    "sensores": {
+      "S1_umidade_pct": 47.9,
+      "S2_ph_ldr": 6.23,
+      "S3_nutrientes": {
+        "P": 1,
+        "K": 1,
+        "N": 1
+      }
+    }
+  },
+  {
+    "_id": "ciclo_00017_2026-01-01T16:00",
+    "ordem_coleta": 17,
+    "data_hora": "2026-01-01 16:00",
+    "ano_mes": "2026-01",
+    "umidade_raw": "47.5",
+    "umidade": 47.5,
+    "ph_raw": "6.34",
+    "ph": 6.34,
+    "fosforo": 1,
+    "potassio": 1,
+    "nitrogenio": 1,
+    "bomba": 0,
+    "chuva": 0,
+    "acao": "REPOUSO",
+    "origem": "WOKWI",
+    "sensores": {
+      "S1_umidade_pct": 47.5,
+      "S2_ph_ldr": 6.34,
+      "S3_nutrientes": {
+        "P": 1,
+        "K": 1,
+        "N": 1
+      }
+    }
+  },
+  {
+    "_id": "ciclo_00018_2026-01-01T17:00",
+    "ordem_coleta": 18,
+    "data_hora": "2026-01-01 17:00",
+    "ano_mes": "2026-01",
+    "umidade_raw": "46.9",
+    "umidade": 46.9,
+    "ph_raw": "6.40",
+    "ph": 6.4,
+    "fosforo": 1,
+    "potassio": 1,
+    "nitrogenio": 1,
+    "bomba": 0,
+    "chuva": 0,
+    "acao": "REPOUSO",
+    "origem": "WOKWI",
+    "sensores": {
+      "S1_umidade_pct": 46.9,
+      "S2_ph_ldr": 6.4,
+      "S3_nutrientes": {
+        "P": 1,
+        "K": 1,
+        "N": 1
+      }
+    }
+  },
+  {
+    "_id": "ciclo_00019_2026-01-01T18:00",
+    "ordem_coleta": 19,
+    "data_hora": "2026-01-01 18:00",
+    "ano_mes": "2026-01",
+    "umidade_raw": "46.5",
+    "umidade": 46.5,
+    "ph_raw": "6.34",
+    "ph": 6.34,
+    "fosforo": 1,
+    "potassio": 1,
+    "nitrogenio": 1,
+    "bomba": 0,
+    "chuva": 0,
+    "acao": "REPOUSO",
+    "origem": "WOKWI",
+    "sensores": {
+      "S1_umidade_pct": 46.5,
+      "S2_ph_ldr": 6.34,
+      "S3_nutrientes": {
+        "P": 1,
+        "K": 1,
+        "N": 1
+      }
+    }
+  },
+  {
+    "_id": "ciclo_00020_2026-01-01T19:00",
+    "ordem_coleta": 20,
+    "data_hora": "2026-01-01 19:00",
+    "ano_mes": "2026-01",
+    "umidade_raw": "45.8",
+    "umidade": 45.8,
+    "ph_raw": "6.34",
+    "ph": 6.34,
+    "fosforo": 1,
+    "potassio": 1,
+    "nitrogenio": 1,
+    "bomba": 0,
+    "chuva": 0,
+    "acao": "REPOUSO",
+    "origem": "WOKWI",
+    "sensores": {
+      "S1_umidade_pct": 45.8,
+      "S2_ph_ldr": 6.34,
+      "S3_nutrientes": {
+        "P": 1,
+        "K": 1,
+        "N": 1
+      }
+    }
+  },
+  {
+    "_id": "ciclo_00021_2026-01-01T20:00",
+    "ordem_coleta": 21,
+    "data_hora": "2026-01-01 20:00",
+    "ano_mes": "2026-01",
+    "umidade_raw": "46.1",
+    "umidade": 46.1,
+    "ph_raw": "6.02",
+    "ph": 6.02,
+    "fosforo": 1,
+    "potassio": 1,
+    "nitrogenio": 1,
+    "bomba": 0,
+    "chuva": 0,
+    "acao": "REPOUSO",
+    "origem": "WOKWI",
+    "sensores": {
+      "S1_umidade_pct": 46.1,
+      "S2_ph_ldr": 6.02,
+      "S3_nutrientes": {
+        "P": 1,
+        "K": 1,
+        "N": 1
+      }
+    }
+  },
+  {
+    "_id": "ciclo_00022_2026-01-01T21:00",
+    "ordem_coleta": 22,
+    "data_hora": "2026-01-01 21:00",
+    "ano_mes": "2026-01",
+    "umidade_raw": "45.1",
+    "umidade": 45.1,
+    "ph_raw": "5.96",
+    "ph": 5.96,
+    "fosforo": 1,
+    "potassio": 1,
+    "nitrogenio": 1,
+    "bomba": 0,
+    "chuva": 0,
+    "acao": "REPOUSO",
+    "origem": "WOKWI",
+    "sensores": {
+      "S1_umidade_pct": 45.1,
+      "S2_ph_ldr": 5.96,
+      "S3_nutrientes": {
+        "P": 1,
+        "K": 1,
+        "N": 1
+      }
+    }
+  },
+  {
+    "_id": "ciclo_00023_2026-01-01T22:00",
+    "ordem_coleta": 23,
+    "data_hora": "2026-01-01 22:00",
+    "ano_mes": "2026-01",
+    "umidade_raw": "45.1",
+    "umidade": 45.1,
+    "ph_raw": "5.76",
+    "ph": 5.76,
+    "fosforo": 1,
+    "potassio": 1,
+    "nitrogenio": 1,
+    "bomba": 0,
+    "chuva": 0,
+    "acao": "REPOUSO",
+    "origem": "WOKWI",
+    "sensores": {
+      "S1_umidade_pct": 45.1,
+      "S2_ph_ldr": 5.76,
+      "S3_nutrientes": {
+        "P": 1,
+        "K": 1,
+        "N": 1
+      }
+    }
+  },
+  {
+    "_id": "ciclo_00024_2026-01-01T23:00",
+    "ordem_coleta": 24,
+    "data_hora": "2026-01-01 23:00",
+    "ano_mes": "2026-01",
+    "umidade_raw": "45.3",
+    "umidade": 45.3,
+    "ph_raw": "5.81",
+    "ph": 5.81,
+    "fosforo": 1,
+    "potassio": 1,
+    "nitrogenio": 1,
+    "bomba": 0,
+    "chuva": 0,
+    "acao": "REPOUSO",
+    "origem": "WOKWI",
+    "sensores": {
+      "S1_umidade_pct": 45.3,
+      "S2_ph_ldr": 5.81,
+      "S3_nutrientes": {
+        "P": 1,
+        "K": 1,
+        "N": 1
+      }
+    }
+  },
+  {
+    "_id": "ciclo_00025_2026-01-02T00:00",
+    "ordem_coleta": 25,
+    "data_hora": "2026-01-02 00:00",
+    "ano_mes": "2026-01",
+    "umidade_raw": "44.6",
+    "umidade": 44.6,
+    "ph_raw": "5.92",
+    "ph": 5.92,
+    "fosforo": 1,
+    "potassio": 1,
+    "nitrogenio": 1,
+    "bomba": 0,
+    "chuva": 0,
+    "acao": "REPOUSO",
+    "origem": "WOKWI",
+    "sensores": {
+      "S1_umidade_pct": 44.6,
+      "S2_ph_ldr": 5.92,
+      "S3_nutrientes": {
+        "P": 1,
+        "K": 1,
+        "N": 1
+      }
+    }
+  }
+]

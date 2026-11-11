@@ -1,0 +1,22 @@
+{
+    "economia": {
+        "preco_kg_atr_rs": 1.18,
+        "atr_medio_kg_t": 135.0,
+        "observacao": "Preco do kg de ATR (modelo CONSECANA) e ATR medio da usina. Ajuste conforme a safra vigente."
+    },
+    "agronomia": {
+        "produtividade_padrao_t_ha": 80.0,
+        "area_padrao_ponto_m2": 10.0,
+        "velocidade_ideal_min_kmh": 4.0,
+        "velocidade_ideal_max_kmh": 6.0,
+        "participacao_minima_diagnostico_pct": 20.0
+    },
+    "metas": {
+        "meta_perda_pct": 4.0,
+        "faixas_classificacao_pct": [2.5, 5.0, 10.0],
+        "observacao": "Faixas: ate 2.5 BAIXA | ate 5.0 MODERADA (referencia da colheita manual) | ate 10.0 ALTA | acima CRITICA (aproximando os 15% citados pela SOCICANA)."
+    },
+    "oracle": {
+        "dsn_padrao": "oracle.fiap.com.br:1521/ORCL"
+    }
+}

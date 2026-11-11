@@ -1,0 +1,5 @@
+ano_mes,leituras,horas_bomba_ligada,num_acionamentos,umidade_media,umidade_min,umidade_max,ph_medio,ph_min,ph_max,horas_alerta_ph,horas_deficit_npk,horas_bloqueio_chuva,volume_agua_litros,volume_agua_m3
+2026-01,744,79,10,53.65,40.38,76.12,6.26,5.97,6.38,2,196,33,395000.0,395.0
+2026-02,672,65,10,53.28,40.05,75.2,6.11,5.95,6.25,14,496,42,325000.0,325.0
+2026-03,744,65,9,55.52,40.97,77.67,5.97,5.83,6.12,489,458,51,325000.0,325.0
+2026-04,720,73,9,51.71,38.1,68.82,5.96,5.7,6.41,541,565,37,365000.0,365.0
