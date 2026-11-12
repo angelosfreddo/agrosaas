@@ -1,7 +1,7 @@
 ==============================================================================
 EVIDENCIA DE CARGA REPETIVEL NO BANCO DE DADOS - FARMTECH SOLUTIONS (FASE 3)
 ==============================================================================
-Data/Hora da execucao : 2026-11-10 21:56:54
+Data/Hora da execucao : 2026-11-10 23:37:37
 DSN Oracle configurado: oracle.fiap.com.br:1521/ORCL
 Usuario configurado   : RM566580
 Status da sessao      : CONECTADO E SINCRONIZADO COM ORACLE (RM566580@oracle.fiap.com.br:1521/ORCL)

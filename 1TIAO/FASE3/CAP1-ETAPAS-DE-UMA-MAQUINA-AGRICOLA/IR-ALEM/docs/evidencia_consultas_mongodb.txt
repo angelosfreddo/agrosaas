@@ -1,7 +1,7 @@
 ==============================================================================
 IR ALEM 2 - EVIDENCIA DE CARGA E CONSULTAS NO MONGODB (FARMTECH SOLUTIONS)
 ==============================================================================
-Data/Hora da execucao : 2026-11-02 15:45:31
+Data/Hora da execucao : 2026-11-11 23:05:52
 Banco / Colecao       : farmtech_solutions.leituras_brutas_esp32
 Status da conexao     : MODO VALIDACAO LOCAL (PyMongo/mongomock - defina MONGODB_URI para Atlas/servidor)
 Total de documentos   : 2881

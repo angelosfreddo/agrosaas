@@ -15,8 +15,8 @@ LINK RAIZ DO REPOSITORIO:
 https://github.com/angelosfreddo/agrosaas
 
 LINKS DOS VIDEOS DEMONSTRATIVOS NO YOUTUBE (NAO LISTADOS - ATE 4 MINUTOS):
-- Video Demonstrativo Principal (Parte 1 e Parte 2): [INSERIR_LINK_YOUTUBE_PRINCIPAL_AQUI]
-- Video Demonstrativo Ir Alem 1 (ESP32 Eficiente): [INSERIR_LINK_YOUTUBE_IR_ALEM_1_AQUI]
-- Video Demonstrativo Ir Alem 2 (MongoDB NoSQL): [INSERIR_LINK_YOUTUBE_IR_ALEM_2_AQUI]
+- Video Demonstrativo Principal (Parte 1 e Parte 2): https://youtu.be/i0BP7iumE9o
+- Video Demonstrativo Ir Alem 1 (ESP32 Eficiente): https://youtu.be/vSLT66K6HfE
+- Video Demonstrativo Ir Alem 2 (MongoDB NoSQL): https://youtu.be/XN2zP-8JdFA
 ==============================================================================
 

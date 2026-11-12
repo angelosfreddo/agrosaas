@@ -5,9 +5,9 @@
 - **RM:** 566580
 - **Turma:** 1TIAO
 - **Links dos Videos Demonstrativos (YouTube - Nao Listado, ate 4 min):**
-  - Video Principal (Parte 1 e Parte 2): *(inserir link apos gravacao - ver roteiro em `../docs/roteiro_video.md`)*
-  - Video Ir Alem 1 (ESP32 Eficiente): *(inserir link apos gravacao)*
-  - Video Ir Alem 2 (MongoDB NoSQL): *(inserir link apos gravacao)*
+  - Video Principal (Parte 1 e Parte 2): [https://youtu.be/i0BP7iumE9o](https://youtu.be/i0BP7iumE9o)
+  - Video Ir Alem 1 (ESP32 Eficiente): [https://youtu.be/vSLT66K6HfE](https://youtu.be/vSLT66K6HfE)
+  - Video Ir Alem 2 (MongoDB NoSQL): [https://youtu.be/XN2zP-8JdFA](https://youtu.be/XN2zP-8JdFA)
 
 ---
 

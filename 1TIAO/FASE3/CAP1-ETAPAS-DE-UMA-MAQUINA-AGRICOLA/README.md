@@ -106,9 +106,9 @@ A organizacao segue o padrao oficial do repositorio modelo da coordenacao (`FIAP
 ## Links e Videos Demonstrativos
 
 - **Repositorio GitHub Privado (compartilhado com `fiap-tutoria`):** `https://github.com/angelosfreddo/agrosaas/tree/main/1TIAO/FASE3/CAP1-ETAPAS-DE-UMA-MAQUINA-AGRICOLA`
-- **Video Demonstrativo Principal (Parte 1 e Parte 2 - YouTube Nao Listado, ate 4 min):** `[INSERIR_LINK_YOUTUBE_PRINCIPAL_AQUI]`
-- **Video Demonstrativo Ir Alem 1 (ESP32 Eficiente - YouTube Nao Listado, ate 4 min):** `[INSERIR_LINK_YOUTUBE_IR_ALEM_1_AQUI]`
-- **Video Demonstrativo Ir Alem 2 (MongoDB NoSQL - YouTube Nao Listado, ate 4 min):** `[INSERIR_LINK_YOUTUBE_IR_ALEM_2_AQUI]`
+- **Video Demonstrativo Principal (Parte 1 e Parte 2 - YouTube Nao Listado, ate 4 min):** [https://youtu.be/i0BP7iumE9o](https://youtu.be/i0BP7iumE9o)
+- **Video Demonstrativo Ir Alem 1 (ESP32 Eficiente - YouTube Nao Listado, ate 4 min):** [https://youtu.be/vSLT66K6HfE](https://youtu.be/vSLT66K6HfE)
+- **Video Demonstrativo Ir Alem 2 (MongoDB NoSQL - YouTube Nao Listado, ate 4 min):** [https://youtu.be/XN2zP-8JdFA](https://youtu.be/XN2zP-8JdFA)
 - **Documentacao detalhada dos desafios Ir Alem 1 e 2:** [`IR-ALEM/README.md`](./IR-ALEM/README.md)
 
 ---
