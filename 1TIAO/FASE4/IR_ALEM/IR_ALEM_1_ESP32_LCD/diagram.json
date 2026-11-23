@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "author": "Angelo Guilherme Sfreddo (RM566580)",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 40, "left": 0, "attrs": {} },
+    { "type": "wokwi-lcd1602", "id": "lcd", "top": -220, "left": -20, "attrs": { "pins": "i2c" } },
+    { "type": "wokwi-dht22", "id": "dht", "top": -80, "left": -180, "attrs": { "temperature": "25.0", "humidity": "60" } },
+    { "type": "wokwi-potentiometer", "id": "pot_umid", "top": -80, "left": 180, "attrs": { "label": "Umid Solo" } },
+    { "type": "wokwi-led", "id": "led_verde", "top": 200, "left": 40, "attrs": { "color": "green", "label": "Normal" } },
+    { "type": "wokwi-led", "id": "led_bomba", "top": 200, "left": 90, "attrs": { "color": "blue", "label": "Bomba On" } },
+    { "type": "wokwi-led", "id": "led_alerta", "top": 200, "left": 140, "attrs": { "color": "red", "label": "Alerta Praga" } }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "esp:GND.1", "lcd:GND", "black", [ "v0" ] ],
+    [ "esp:3V3", "lcd:VCC", "red", [ "v0" ] ],
+    [ "esp:21", "lcd:SDA", "blue", [ "v0" ] ],
+    [ "esp:22", "lcd:SCL", "yellow", [ "v0" ] ],
+    [ "esp:GND.1", "dht:GND", "black", [ "v0" ] ],
+    [ "esp:3V3", "dht:VCC", "red", [ "v0" ] ],
+    [ "esp:15", "dht:SDA", "green", [ "v0" ] ],
+    [ "esp:GND.2", "pot_umid:GND", "black", [ "v0" ] ],
+    [ "esp:3V3", "pot_umid:VCC", "red", [ "v0" ] ],
+    [ "esp:34", "pot_umid:SIG", "orange", [ "v0" ] ],
+    [ "esp:2", "led_verde:A", "green", [ "v0" ] ],
+    [ "esp:GND.2", "led_verde:C", "black", [ "v0" ] ],
+    [ "esp:4", "led_bomba:A", "blue", [ "v0" ] ],
+    [ "esp:GND.2", "led_bomba:C", "black", [ "v0" ] ],
+    [ "esp:5", "led_alerta:A", "red", [ "v0" ] ],
+    [ "esp:GND.2", "led_alerta:C", "black", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
+

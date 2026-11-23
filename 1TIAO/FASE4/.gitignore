@@ -1,0 +1,29 @@
+# Ambientes Virtuais e Pacotes
+.venv/
+env/
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Segredos e Variáveis de Ambiente (Segurança Cibernética)
+.env
+*.key
+*.pem
+credentials.json
+
+# C / C++ e microcontroladores
+*.o
+*.hex
+*.bin
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# IDE e Sistema Operacional
+.vscode/
+.idea/
+.DS_Store
+*.swp
+*~
+

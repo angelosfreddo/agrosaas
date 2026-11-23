@@ -11,3 +11,8 @@ docs/CAP8_text.txt
 *.zip
 gerar_zip*.py
 **/gerar_zip*.py
+
+# Segredos e variáveis de ambiente
+.env
+*.env
+**/.env

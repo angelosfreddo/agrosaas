@@ -1,0 +1,57 @@
+================================================================================
+FIAP - CURSO DE INTELIGENCIA ARTIFICIAL (1TIAO)
+PROJETO FASE 4: SAFRA DO CONHECIMENTO CIBERNETICO
+FARMTECH SOLUTIONS
+================================================================================
+
+ALUNO: Angelo Guilherme Sfreddo
+RM: 566580
+TURMA: 1TIAO
+ANO: 2026
+
+--------------------------------------------------------------------------------
+LINKS OBRIGATORIOS DE ENTREGA
+--------------------------------------------------------------------------------
+
+1. REPOSITORIO GITHUB (PRIVADO):
+https://github.com/angelosfreddo/agrosaas/tree/main/1TIAO/FASE4
+(Acesso compartilhado com o perfil oficial da coordenacao: fiap-tutoria)
+
+2. VIDEO DEMONSTRATIVO NO YOUTUBE (NAO LISTADO - MAXIMO 4 MINUTOS):
+https://youtu.be/S4xxspncWF8
+
+--------------------------------------------------------------------------------
+RESUMO DA ENTREGA E ARQUITETURA
+--------------------------------------------------------------------------------
+
+PARTE 1 - MODELO PREDITIVO E PAINEL DE MONITORAMENTO (OBRIGATORIO)
+- Preparacao e saneamento de historico de 2.880 leituras horarias da Fase 3.
+- Treinamento e avaliacao de modelos Scikit-Learn (Random Forest, Gradient Boosting,
+  Regressao Logistica, Arvore de Decisao) com 5-Fold Stratified Cross-Validation.
+- Acuracia media superior a 99% e analise de superioridade agronomica frente a
+  regra estatica da Fase 2 (prevencao de estresse hidrico em faixas intermediarias).
+- Dashboard interativo Streamlit com monitoramento temporal de sensores (NPK, pH,
+  umidade), filtros dinamicos e simulador de inferencia preditiva em tempo real.
+- Cadastro e gestao CRUD de ocorrencias de campo (pragas, doencas, geadas).
+
+PARTE 2 - MEMORIA E SEGURANCA DOS DADOS (OBRIGATORIO)
+- Modelo de dados definitivo: DER conceitual e modelo relacional com 8 tabelas
+  (culturas, talhoes, sensores, leituras, irrigacao, ocorrencias, previsoes, auditoria).
+- Dicionario de dados e script DDL compativel com Oracle Database e SQLite.
+- Analise de riscos cibernéticos formal (ativos, ameacas, vetores, matriz de riscos).
+- Tres contramedidas implementadas:
+  1) Segredo e credenciais isolados em variaveis de ambiente (.env / .env.example).
+  2) Autenticacao com protecao por hash SHA-256 e salt de aplicacao.
+  3) Trilha de auditoria com hash criptografico de integridade e detector de adulteracao.
+
+IR ALEM 1 - RECOMENDACAO NO CAMPO COM DISPLAY LCD NO ESP32 (OPCIONAL)
+- Firmware C++ no Wokwi para ESP32 e display LCD 16x2 I2C.
+- Parser de comandos seriais e script Python de transmissao de previsoes da IA.
+- Diagrama esquematico e instrucoes completas em IR_ALEM/IR_ALEM_1_ESP32_LCD/.
+
+IR ALEM 2 - DESCOBERTA DE PERFIS DE SOLO POR CLUSTERIZACAO K-MEANS (OPCIONAL)
+- Pipeline nao supervisionado com analise do Metodo do Cotovelo e Silhouette Score.
+- Segmentacao em 3 clusters agronomicos (Equilibrado, Deficit N, Acidez/Deficit K).
+- Graficos gerados e aba interativa integrada diretamente no Streamlit.
+================================================================================
+

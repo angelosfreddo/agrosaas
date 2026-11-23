@@ -53,22 +53,32 @@ agrosaas/
 │       │   ├── circuito_wokwi.png                     # Imagem do circuito Wokwi
 │       │   └── roteiro_video.md                       # Roteiro de gravacao do video da Fase 2
 │       └── README.md                                  # Visao geral da Fase 2
-│   └── FASE3/                                         # Fase 3: Banco de Dados Estruturado, Python Cientifico, NoSQL e IA
-│       ├── CAP1-ETAPAS-DE-UMA-MAQUINA-AGRICOLA/       # Cap 1: Historico de Irrigacao, Pandas/NumPy, Oracle, ESP32 e MongoDB
-│       │   ├── data/                                  # CSVs brutos (Wokwi), tratados, indicadores e bases das Fases 1 e 2
-│       │   ├── docs/                                  # Graficos Matplotlib/Seaborn, evidencias SQL e roteiro de video
-│       │   ├── notebooks/                             # Jupyter Notebook interativo da analise exploratoria
-│       │   ├── src/                                   # Firmware ESP32 CSV, pipeline Python (Pandas/NumPy/Oracle) e scripts SQL
-│       │   ├── IR-ALEM/                               # Ir Alem 1 (ESP32 otimizado + R) e Ir Alem 2 (MongoDB NoSQL)
-│       │   ├── link_entrega_portal.txt                # Arquivo .txt para submissao no Portal do Aluno
-│       │   └── README.md                              # Documentacao completa do Cap 1 (Fase 3)
-│       ├── CAP11-MODELAGEM-IA-FARMTECH/               # Cap 11: Analise exploratoria e 5 modelos de ML (produtos_agricolas.csv)
-│       │   ├── data/                                  # Base original produtos_agricolas.csv (2.200 amostras, 22 culturas)
-│       │   ├── notebooks/                             # Jupyter Notebook executado com graficos e comparativo de 5 modelos
-│       │   ├── src/                                   # Script orquestrador de geracao e execucao do notebook
-│       │   ├── requirements.txt                       # Dependencias de Ciencia de Dados e Scikit-Learn
-│       │   └── README.md                              # Documentacao tecnica da modelagem de IA
-│       └── README.md                                  # Visao geral da Fase 3
+│   ├── FASE3/                                         # Fase 3: Banco de Dados Estruturado, Python Cientifico, NoSQL e IA
+│   │   ├── CAP1-ETAPAS-DE-UMA-MAQUINA-AGRICOLA/       # Cap 1: Historico de Irrigacao, Pandas/NumPy, Oracle, ESP32 e MongoDB
+│   │   │   ├── data/                                  # CSVs brutos (Wokwi), tratados, indicadores e bases das Fases 1 e 2
+│   │   │   ├── docs/                                  # Graficos Matplotlib/Seaborn, evidencias SQL e roteiro de video
+│   │   │   ├── notebooks/                             # Jupyter Notebook interativo da analise exploratoria
+│   │   │   ├── src/                                   # Firmware ESP32 CSV, pipeline Python (Pandas/NumPy/Oracle) e scripts SQL
+│   │   │   ├── IR-ALEM/                               # Ir Alem 1 (ESP32 otimizado + R) e Ir Alem 2 (MongoDB NoSQL)
+│   │   │   ├── link_entrega_portal.txt                # Arquivo .txt para submissao no Portal do Aluno
+│   │   │   └── README.md                              # Documentacao completa do Cap 1 (Fase 3)
+│   │   ├── CAP11-MODELAGEM-IA-FARMTECH/               # Cap 11: Analise exploratoria e 5 modelos de ML (produtos_agricolas.csv)
+│   │   │   ├── data/                                  # Base original produtos_agricolas.csv (2.200 amostras, 22 culturas)
+│   │   │   ├── notebooks/                             # Jupyter Notebook executado com graficos e comparativo de 5 modelos
+│   │   │   ├── src/                                   # Script orquestrador de geracao e execucao do notebook
+│   │   │   ├── requirements.txt                       # Dependencias de Ciencia de Dados e Scikit-Learn
+│   │   │   └── README.md                              # Documentacao tecnica da modelagem de IA
+│   │   └── README.md                                  # Visao geral da Fase 3
+│   └── FASE4/                                         # Fase 4: Safra do Conhecimento Cibernetico (ML, Streamlit, Seguranca, K-Means)
+│       ├── assets/                                    # Diagramas, matriz de confusao e graficos dos modelos
+│       ├── data/                                      # Base SQLite populada com historico de 2.880 leituras
+│       ├── docs/                                      # Dicionario de dados, analise de riscos, roteiro e modelagem SQL
+│       ├── IR_ALEM/                                   # Ir Alem 1 (ESP32 LCD 16x2) e Ir Alem 2 (Clusterizacao K-Means)
+│       ├── models/                                    # Modelos serializados .joblib (Random Forest, K-Means, Scalers)
+│       ├── notebooks/                                 # Jupyter Notebook do pipeline preditivo
+│       ├── src/                                       # Dashboard Streamlit, seguranca (SHA-256/Salt), treino e banco
+│       ├── entrega_fase4.txt                          # Arquivo .txt para submissao oficial no Portal do Aluno
+│       └── README.md                                  # Documentacao mestre da Fase 4
 └── README.md                                          # Documentacao unificada do repositorio
 ```
 
@@ -135,3 +145,21 @@ Consulte a documentacao completa em [`1TIAO/FASE3/CAP1-ETAPAS-DE-UMA-MAQUINA-AGR
 - **Cinco Modelos Preditivos Comparados:** Pipeline em Scikit-Learn avaliado em validacao cruzada estratificada (5 folds) e conjunto de teste (440 amostras), destacando a **Floresta Aleatoria** com **99,55%** de acuracia no teste, seguida por SVM RBF (`98,41%`), Arvore de Decisao (`98,18%`), KNN (`97,95%`) e Regressao Logistica (`97,27%`).
 
 Consulte a documentacao completa em [`1TIAO/FASE3/CAP11-MODELAGEM-IA-FARMTECH/README.md`](./1TIAO/FASE3/CAP11-MODELAGEM-IA-FARMTECH/README.md).
+
+---
+
+### Fase 4: Safra do Conhecimento Cibernetico (`1TIAO/FASE4`)
+- **Parte 1 (Modelo Preditivo e Painel de Monitoramento):**
+  - Preparacao do historico de 2.880 leituras horarias da Fase 3 e treinamento de modelos no Scikit-Learn com 5-Fold Stratified CV (Random Forest, Gradient Boosting, Regressao Logistica, Arvore de Decisao).
+  - Superioridade agronomica demonstrada frente a regra rigida da Fase 2 (`umidade < 30%`), antecipando irrigacao em 193 cenarios com estresse hidrico moderado (30% a 50% de umidade).
+  - Dashboard interativo completo em Streamlit com graficos temporais de NPK/pH/umidade, simulador preditivo em tempo real e operacoes CRUD de ocorrencias de campo.
+- **Parte 2 (Memoria e Seguranca dos Dados):**
+  - Modelo relacional definitivo com 8 tabelas, DER conceitual/logico, script DDL SQL e dicionario de dados detalhado.
+  - Analise de riscos ciberneticos e implementacao de 3 contramedidas: credenciais isoladas em `.env`, controle de acesso com hash SHA-256 e salt de aplicacao, e trilha de auditoria com assinatura criptografica SHA-256 e teste de deteccao de adulteracao.
+- **Ir Alem 1 (Recomendacao no Campo com ESP32 e Display LCD):**
+  - Firmware em C++ no Wokwi integrado a display LCD 16x2 I2C e script Python serial transmitindo decisoes preditivas da IA para o campo.
+- **Ir Alem 2 (Descoberta de Perfis de Solo por Clusterizacao K-Means):**
+  - Modelo nao supervisionado K-Means com Metodo do Cotovelo e Silhouette Score para identificacao de 3 perfis edafoclimaticos na lavoura, integrado nativamente ao Streamlit.
+- **Video Demonstrativo (YouTube - Nao Listado):** [https://youtu.be/S4xxspncWF8](https://youtu.be/S4xxspncWF8)
+
+Consulte a documentacao completa em [`1TIAO/FASE4/README.md`](./1TIAO/FASE4/README.md).
